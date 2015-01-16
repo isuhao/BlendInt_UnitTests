@@ -41,7 +41,6 @@ if(ENABLE_OPENCV)
 	add_subdirectory(CVVideoViewport)
 endif()
 
-#add_subdirectory(ClockWidget)
 #add_subdirectory(Layout)
 #add_subdirectory(Stack)
 #add_subdirectory(Timer)
@@ -83,3 +82,4 @@ endif()
 #add_subdirectory(HBlock)
 
 add_subdirectory(Block)
+add_subdirectory(FcConfig)
