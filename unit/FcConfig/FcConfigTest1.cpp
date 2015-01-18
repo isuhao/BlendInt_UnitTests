@@ -27,7 +27,6 @@ TEST_F(FcConfigTest1, List1)
 
 	RefPtr<Fc::ObjectSet> os = Fc::ObjectSet::build(FC_FAMILY, FC_STYLE, FC_FILE, (char*)NULL);
 
-
 	if(os) {
 		fprintf(stdout, "object set\n");
 	}
@@ -52,3 +51,48 @@ TEST_F(FcConfigTest1, List1)
 
 	ASSERT_TRUE(true);
 }
+
+/*
+TEST_F(FcConfigTest1, Match1)
+{
+	Fc::Pattern pattern1;
+	pattern1.add(FC_SIZE, 12);
+	pattern1.add(FC_WEIGHT, FC_WEIGHT_REGULAR);
+	pattern1.add(FC_SLANT, FC_SLANT_ROMAN);
+	pattern1.add(FC_FAMILY, "Arial Unicode MS");
+
+	Fc::Config::substitute(0, pattern1, FcMatchPattern);
+	pattern1.default_substitute();
+
+	FcResult result;
+	Fc::Pattern match1 = Fc::Config::match (0, pattern1, &result);
+
+	if(match1) {
+		match1.print();
+	}
+
+	Fc::Pattern pattern2;
+	pattern2.add(FC_SIZE, 14);
+	pattern2.add(FC_WEIGHT, FC_WEIGHT_REGULAR);
+	pattern2.add(FC_SLANT, FC_SLANT_ROMAN);
+	pattern2.add(FC_FAMILY, "Arial Unicode MS");
+
+	Fc::Config::substitute(0, pattern2, FcMatchPattern);
+	pattern2.default_substitute();
+
+	Fc::Pattern match2 = Fc::Config::match (0, pattern2, &result);
+
+	if(match2) {
+		match2.print();
+	}
+
+	if(match1 == match2) {
+		fprintf(stdout, "Equal");
+	}
+
+	fprintf(stdout, "match1 hash: 0x%X\n", match1.hash());
+	fprintf(stdout, "match2 hash: 0x%X\n", match2.hash());
+	
+	ASSERT_TRUE(true);
+}
+*/
