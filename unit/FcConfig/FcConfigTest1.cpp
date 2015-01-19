@@ -52,7 +52,6 @@ TEST_F(FcConfigTest1, List1)
 	ASSERT_TRUE(true);
 }
 
-/*
 TEST_F(FcConfigTest1, Match1)
 {
 	Fc::Pattern pattern1;
@@ -95,4 +94,3 @@ TEST_F(FcConfigTest1, Match1)
 	
 	ASSERT_TRUE(true);
 }
-*/
