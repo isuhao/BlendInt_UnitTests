@@ -35,6 +35,8 @@ add_subdirectory(TimeRuler)
 add_subdirectory(HorizontalLayout)
 add_subdirectory(Time)
 
+add_subdirectory(Freetype)
+
 add_subdirectory(Performance)
 
 if(ENABLE_OPENCV)
@@ -57,7 +59,6 @@ endif()
 #add_subdirectory(AbstractForm)
 #add_subdirectory(ImageView)
 #add_subdirectory(TextureFont)
-#add_subdirectory(Freetype)
 #add_subdirectory(Label)
 #add_subdirectory(MenuBar)
 #add_subdirectory(ScrollView)

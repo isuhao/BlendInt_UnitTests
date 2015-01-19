@@ -1,8 +1,9 @@
 #include "FreetypeTest1.hpp"
-#include <BlendInt/Core/Freetype.hpp>
+#include <BlendInt/Font/FtFace.hpp>
 #include <BlendInt/Gui/Glyph.hpp>
 
 using namespace BlendInt;
+using namespace BlendInt::Ft;
 
 FreetypeTest1::FreetypeTest1()
 : testing::Test()
@@ -17,14 +18,14 @@ FreetypeTest1::~FreetypeTest1()
 
 TEST_F(FreetypeTest1, Library1)
 {
-	FTLibrary lib;
-	FTFace face;
+	Library lib;
+	Face face;
 	FTStroker stroker;
 
-	lib.Initialize();
+	lib.Init();
 	lib.SetLcdFilter(FT_LCD_FILTER_DEFAULT);
 
-	face.New(lib, "/usr/share/fonts/adobe-source-han-sans/SourceHanSansCN-Normal.otf");
+	face.New(lib, "/usr/share/fonts/adobe-source-han-sans-cn/SourceHanSansCN-Regular.otf");
 	face.SetCharSize(24 << 6, 0, 96, 0);
 
 	FT_GlyphSlot slot = face.face()->glyph;
@@ -50,9 +51,12 @@ TEST_F(FreetypeTest1, Library1)
 					(face.face()->size->metrics.ascender >> 6) - (face.face()->size->metrics.descender >> 6),
 					face.face()->size->metrics.height >> 6);
 
+	/*
 	stroker.New(lib);
 
 	stroker.Done();
+	*/
+
 	face.Done();
 	lib.Done();
 
