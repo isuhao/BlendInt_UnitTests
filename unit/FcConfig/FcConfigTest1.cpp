@@ -21,6 +21,45 @@ FcConfigTest1::~FcConfigTest1()
  *
  * Expected result: 
  */
+
+TEST_F(FcConfigTest1, Pattern1)
+{
+	FcInit();
+
+	Fc::Pattern pattern1;
+	pattern1.add(FC_FAMILY, "Droid Sans");
+	pattern1.add(FC_WEIGHT, FC_WEIGHT_EXTRABOLD);
+
+	//pattern1.print();
+
+	Fc::Config::substitute(0, pattern1, FcMatchPattern);
+	pattern1.default_substitute();
+
+	//pattern1.print();
+
+	FcResult result;
+	Fc::Pattern match1 = Fc::Config::match (0, pattern1, &result);
+
+	if(match1) {
+		match1.print();
+	}
+
+	Fc::Pattern pattern2 = match1;
+	//pattern2.print();
+
+	bool ret = pattern2 == match1;
+
+	//pattern1.destroy();
+	match1.destroy();
+	pattern2.destroy();
+
+	FcFini();
+
+	ASSERT_TRUE(ret);
+}
+
+/*
+
 TEST_F(FcConfigTest1, List1)
 {
 	Fc::Pattern pattern;
@@ -94,3 +133,5 @@ TEST_F(FcConfigTest1, Match1)
 	
 	ASSERT_TRUE(true);
 }
+
+*/
