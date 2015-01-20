@@ -27,8 +27,12 @@ TEST_F(FcConfigTest1, Pattern1)
 	FcInit();
 
 	Fc::Pattern pattern1;
-	pattern1.add(FC_FAMILY, "Droid Sans");
-	pattern1.add(FC_WEIGHT, FC_WEIGHT_EXTRABOLD);
+#ifdef __APPLE__
+	pattern1.add(FC_FAMILY, "sans-serif");
+#else
+    pattern1.add(FC_FAMILY, "Droid Sans");
+#endif
+	pattern1.add(FC_WEIGHT, FC_WEIGHT_REGULAR);
 
 	//pattern1.print();
 

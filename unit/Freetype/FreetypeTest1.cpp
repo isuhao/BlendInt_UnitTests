@@ -26,12 +26,12 @@ TEST_F(FreetypeTest1, Library1)
 	lib.SetLcdFilter(FT_LCD_FILTER_DEFAULT);
 
 	face.New(lib, "/usr/share/fonts/adobe-source-han-sans-cn/SourceHanSansCN-Regular.otf");
-	face.SetCharSize(24 << 6, 0, 96, 0);
+	face.set_char_size(24 << 6, 0, 96, 0);
 
 	FT_GlyphSlot slot = face.face()->glyph;
 
 	for(int i = 33; i < 127; i++) {
-		face.LoadChar(i, FT_LOAD_RENDER);
+		face.load_char(i, FT_LOAD_RENDER);
 
 		DBG_PRINT_MSG("bitmap left: %d,"
 						"bitmap top: %d,"

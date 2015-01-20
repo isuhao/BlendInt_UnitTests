@@ -2,5 +2,15 @@
 
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
 
-add_library (Common Window.cpp UnitTestContext.cpp UnitTestCursor.cpp)
+file(GLOB sourcefiles "*/*.cpp")
+list(APPEND test_common_SRC ${sourcefiles})
+file(GLOB sourcefiles "*.cpp")
+list(APPEND test_common_SRC ${sourcefiles})
+
+file(GLOB headerfiles "*.hpp")
+list(APPEND test_common_SRC ${headerfiles})
+file(GLOB headerfiles "*/*.hpp")
+list(APPEND test_common_SRC ${headerfiles})
+
+add_library (Common ${test_common_SRC})
 target_link_libraries(Common BlendInt ${LIBS})
