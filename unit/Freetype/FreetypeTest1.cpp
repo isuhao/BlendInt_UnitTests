@@ -20,7 +20,7 @@ TEST_F(FreetypeTest1, Library1)
 {
 	Library lib;
 	Face face;
-	FTStroker stroker;
+	// FTStroker stroker;
 
 	lib.Init();
 	lib.SetLcdFilter(FT_LCD_FILTER_DEFAULT);
