@@ -25,16 +25,19 @@ FcConfigTest1::~FcConfigTest1()
 TEST_F(FcConfigTest1, Pattern1)
 {
 	FcInit();
+	//Fc::Config config = Fc::Config::init_load_config_and_fonts();
 
 	Fc::Pattern pattern1;
-#ifdef __APPLE__
-	pattern1.add(FC_FAMILY, "sans-serif");
-#else
-    pattern1.add(FC_FAMILY, "Droid Sans");
-#endif
-	pattern1.add(FC_WEIGHT, FC_WEIGHT_REGULAR);
+	//Fc::Pattern pattern1 = Fc::Pattern::name_parse((const FcChar8*)"Source Code Pro:style=Bold");
 
-	//pattern1.print();
+#ifdef __APPLE__
+	pattern1.add_string(FC_FAMILY, (const FcChar8*)"sans-serif");
+#else
+    pattern1.add_string(FC_FAMILY, (const FcChar8*)"Droid Sans");
+#endif
+	pattern1.add_integer(FC_WEIGHT, FC_WEIGHT_REGULAR);
+
+	pattern1.print();
 
 	Fc::Config::substitute(0, pattern1, FcMatchPattern);
 	pattern1.default_substitute();
@@ -56,6 +59,8 @@ TEST_F(FcConfigTest1, Pattern1)
 	//pattern1.destroy();
 	match1.destroy();
 	pattern2.destroy();
+
+	//config.destroy();
 
 	FcFini();
 
