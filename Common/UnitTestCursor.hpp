@@ -7,16 +7,16 @@
 
 #include <GLFW/glfw3.h>
 
-#include <BlendInt/Gui/CursorType.hpp>
+#include <BlendInt/Gui/AbstractCursorTheme.hpp>
 
 namespace BI=BlendInt;
 
-class UnitTestCursor: public BI::CursorType
+class UnitTestCursor: public BI::AbstractCursorTheme
 {
 public:
 
 	UnitTestCursor (GLFWwindow* window)
-	: BI::CursorType(),
+	: BI::AbstractCursorTheme(),
 	window_(window),
 	arrow_(nullptr),
 	cross_(nullptr),

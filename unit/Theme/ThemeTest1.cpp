@@ -1,6 +1,8 @@
 #include "ThemeTest1.hpp"
-#include <BlendInt/Core/Object.hpp>
-#include <BlendInt/Gui/Context.hpp>
+#include <Common/Window.hpp>
+
+#include <BlendInt/Stock/Icons.hpp>
+#include <Common/UnitTestContext.hpp>
 
 #include <iostream>
 
@@ -22,18 +24,17 @@ ThemeTest1::~ThemeTest1()
 
 TEST_F(ThemeTest1, Save1)
 {
-	Init ();
-	GLFWwindow* window = CreateWindow("Theme - Save1", 640, 480);
+    Init();
+    GLFWwindow* win = CreateWindow("Save theme test", 640, 480);
 
-	// TODO: add test code here
-	Context* context = Manage (new Context);
-    Interface::instance->SetCurrentContext(context);
+    UnitTestContext* context = Manage (new UnitTestContext);
+	DBG_SET_NAME(context, "Context");
+	SetContext(context);
+	context->Resize(640, 480);
 
-	Context::theme->Save("theme.xml");
 
-	RunLoop(window);
-
-	Terminate();
+    RunLoop(win);
+    Terminate();
 
 	ASSERT_TRUE(true);
 }
@@ -45,18 +46,17 @@ TEST_F(ThemeTest1, Save1)
  */
 TEST_F(ThemeTest1, Load1)
 {
-	Init ();
-	GLFWwindow* window = CreateWindow("Theme - Load1", 640, 480);
+    Init();
+    GLFWwindow* win = CreateWindow("Load theme test", 640, 480);
 
-	// TODO: add test code here
-	Context* context = Manage (new Context);
-    Interface::instance->SetCurrentContext(context);
+    UnitTestContext* context = Manage (new UnitTestContext);
+	DBG_SET_NAME(context, "Context");
+	SetContext(context);
+	context->Resize(640, 480);
 
-	Context::theme->Load("theme.xml");
 
-	RunLoop(window);
-
-	Terminate();
+    RunLoop(win);
+    Terminate();
 
 	ASSERT_TRUE(true);
 }

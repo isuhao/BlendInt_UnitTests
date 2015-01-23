@@ -1,6 +1,7 @@
 # CMake file for BlendInt project
 #
 
+#file(GLOB test_HEADERS "*.hpp")
 file(GLOB test_SRC "*.cpp")
 
 add_executable(testTheme ${test_SRC})
