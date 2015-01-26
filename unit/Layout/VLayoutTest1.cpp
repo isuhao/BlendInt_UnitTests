@@ -8,7 +8,7 @@
 #include "VLayoutTest1.hpp"
 #include <BlendInt/Interface.hpp>
 #include <BlendInt/Gui/VLayout.hpp>
-#include <BlendInt/Gui/HLayout.hpp>
+#include <BlendInt/Gui/LinearLayout.hpp>
 #include <BlendInt/Gui/Widget.hpp>
 
 using namespace BlendInt;
@@ -45,7 +45,7 @@ TEST_F(VLayoutTest1, Add1)
 	Widget* widget2 = Manage(new Widget);
 	Widget* widget3 = Manage(new Widget);
 
-	HLayout* hlayout = Manage(new HLayout);
+	LinearLayout* hlayout = Manage(new LinearLayout);
 	hlayout->Append(widget2);
 	hlayout->Append(widget3);
 

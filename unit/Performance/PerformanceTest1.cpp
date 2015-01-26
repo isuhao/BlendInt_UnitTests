@@ -1,7 +1,7 @@
 #include "PerformanceTest1.hpp"
 #include <BlendInt/Gui/Button.hpp>
 #include <BlendInt/Gui/Label.hpp>
-#include <BlendInt/Gui/HLayout.hpp>
+#include <BlendInt/Gui/LinearLayout.hpp>
 #include <BlendInt/Gui/VLayout.hpp>
 #include <BlendInt/Gui/Frame.hpp>
 #include <BlendInt/Gui/ToolBox.hpp>
@@ -48,7 +48,7 @@ TEST_F(PerformanceTest1, Layout1)
     //int y_pos = 5;
     for(int i = 0; i < max_y; i++)
     {
-    	HLayout* layout = Manage(new HLayout);
+    	LinearLayout* layout = Manage(new LinearLayout);
 
         for(int j = 0; j < max_x; j++)
         {
@@ -99,7 +99,7 @@ TEST_F(PerformanceTest1, Layout2)
 
     for(int i = 0; i < max_y; i++)
     {
-    	HLayout* layout = Manage(new HLayout);
+    	LinearLayout* layout = Manage(new LinearLayout);
 
         for(int j = 0; j < max_x; j++)
         {
@@ -151,7 +151,7 @@ TEST_F(PerformanceTest1, Layout3)
     VLayout* layout1 = Manage(new VLayout);
     for(int i = 0; i < max_y; i++)
     {
-    	HLayout* layout = Manage(new HLayout);
+    	LinearLayout* layout = Manage(new LinearLayout);
 
         for(int j = 0; j < max_x; j++)
         {
@@ -169,7 +169,7 @@ TEST_F(PerformanceTest1, Layout3)
     VLayout* layout2 = Manage(new VLayout);
     for(int i = 0; i < max_y; i++)
     {
-    	HLayout* layout = Manage(new HLayout);
+    	LinearLayout* layout = Manage(new LinearLayout);
 
         for(int j = 0; j < max_x; j++)
         {
@@ -187,7 +187,7 @@ TEST_F(PerformanceTest1, Layout3)
     VLayout* layout3 = Manage(new VLayout);
     for(int i = 0; i < max_y; i++)
     {
-    	HLayout* layout = Manage(new HLayout);
+    	LinearLayout* layout = Manage(new LinearLayout);
 
         for(int j = 0; j < max_x; j++)
         {
@@ -202,7 +202,7 @@ TEST_F(PerformanceTest1, Layout3)
     frame3->Setup(layout3);
     frame3->Resize(frame3->GetPreferredSize());
 
-    HLayout* mainlayout = Manage(new HLayout);
+    LinearLayout* mainlayout = Manage(new LinearLayout);
 
     mainlayout->Append(layout1);
     mainlayout->Append(layout2);

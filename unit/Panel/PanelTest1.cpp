@@ -4,7 +4,7 @@
 #include <BlendInt/Gui/Dialog.hpp>
 #include <BlendInt/Gui/Button.hpp>
 #include <BlendInt/Gui/VLayout.hpp>
-#include <BlendInt/Gui/HLayout.hpp>
+#include <BlendInt/Gui/LinearLayout.hpp>
 
 using namespace BlendInt;
 
@@ -50,7 +50,7 @@ TEST_F(PanelTest1, Foo1)
 	Button* btn1 = Manage(new Button("Button1"));
 	Button* btn2 = Manage(new Button("Button2"));
 
-	HLayout* layout = Manage(new HLayout);
+	LinearLayout* layout = Manage(new LinearLayout);
 	layout->AddWidget(btn1);
 	layout->AddWidget(btn2);
 

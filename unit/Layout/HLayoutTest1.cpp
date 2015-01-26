@@ -1,7 +1,7 @@
 #include "HLayoutTest1.hpp"
 
 #include <BlendInt/Interface.hpp>
-#include <BlendInt/Gui/HLayout.hpp>
+#include <BlendInt/Gui/LinearLayout.hpp>
 #include <BlendInt/Gui/VLayout.hpp>
 #include <BlendInt/Gui/Widget.hpp>
 
@@ -22,7 +22,7 @@ TEST_F(HLayoutTest1, Mix1)
 #endif
 	Interface::instance->SetCurrentContext(context);
 
-	HLayout* hlayout = Manage(new HLayout);
+	LinearLayout* hlayout = Manage(new LinearLayout);
 	hlayout->SetPosition(100, 100);
 
 	Widget* widget1 = Manage(new Widget);

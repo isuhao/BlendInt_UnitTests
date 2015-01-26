@@ -1,6 +1,6 @@
 #include "HorizontalLayoutTest1.hpp"
 #include <Common/UnitTestContext.hpp>
-#include <BlendInt/Gui/HLayout.hpp>
+#include <BlendInt/Gui/LinearLayout.hpp>
 #include <BlendInt/Gui/Button.hpp>
 #include <BlendInt/Gui/Dialog.hpp>
 
@@ -31,7 +31,7 @@ TEST_F(HLayoutTest1, Add1)
 	SetContext(context);
 	context->Resize(1280, 800);
 
-	HLayout* hlayout = new HLayout;
+	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 
 	Button* widget1 = new Button;
@@ -53,7 +53,7 @@ TEST_F(HLayoutTest1, Add1)
 }
 
 /**
- * Test behavior if HLayout geometry is locked
+ * Test behavior if LinearLayout geometry is locked
  *
  * Expected result: the 2 widgets should fill the layout
  *
@@ -68,7 +68,7 @@ TEST_F(HLayoutTest1, Add2)
 	SetContext(context);
 	context->Resize(1280, 800);
 
-	HLayout* hlayout = new HLayout;
+	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 	hlayout->Resize(400, 200);
 
@@ -93,7 +93,7 @@ TEST_F(HLayoutTest1, Add2)
 }
 
 /**
- * Test behavior if HLayout geometry is locked and 1 expandable + 1 fixed size
+ * Test behavior if LinearLayout geometry is locked and 1 expandable + 1 fixed size
  *
  * Expected result: the 2 widgets should fill the layout
  *
@@ -108,7 +108,7 @@ TEST_F(HLayoutTest1, Add3)
 	SetContext(context);
 	context->Resize(1280, 800);
 
-	HLayout* hlayout = new HLayout;
+	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 	hlayout->Resize(400, 200);
 
@@ -146,7 +146,7 @@ TEST_F(HLayoutTest1, Add4)
 	SetContext(context);
 	context->Resize(1280, 800);
 
-	HLayout* hlayout = new HLayout;
+	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 	hlayout->Resize(400, 200);
 
@@ -188,7 +188,7 @@ TEST_F(HLayoutTest1, Add5)
 	SetContext(context);
 	context->Resize(1280, 800);
 
-	HLayout* hlayout = new HLayout;
+	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 	hlayout->Resize(600, 200);
 
@@ -240,7 +240,7 @@ TEST_F(HLayoutTest1, Add6)
 	SetContext(context);
 	context->Resize(1280, 800);
 
-	HLayout* hlayout = new HLayout;
+	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 	hlayout->Resize(50, 200);
 
@@ -286,7 +286,7 @@ TEST_F(HLayoutTest1, Add7)
 	SetContext(context);
 	context->Resize(1280, 800);
 
-	HLayout* hlayout = new HLayout;
+	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 
 	Button* widget1 = new Button;
@@ -323,7 +323,7 @@ TEST_F(HLayoutTest1, Add7)
 /**
  * Test resize
  *
- * Expected result: the children in the HLayout resize too according to the layout size
+ * Expected result: the children in the LinearLayout resize too according to the layout size
  */
 TEST_F(HLayoutTest1, Resize1)
 {
@@ -336,7 +336,7 @@ TEST_F(HLayoutTest1, Resize1)
 
 	// add test code here
 
-	HLayout* hlayout = new HLayout;
+	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 
 	Button* widget1 = new Button;
@@ -364,7 +364,7 @@ TEST_F(HLayoutTest1, Resize1)
 /**
  * Test resize, no child is expandable
  *
- * Expected result: the children in the HLayout resize too according to the layout size
+ * Expected result: the children in the LinearLayout resize too according to the layout size
  */
 TEST_F(HLayoutTest1, Resize2)
 {
@@ -377,7 +377,7 @@ TEST_F(HLayoutTest1, Resize2)
 
 	// add test code here
 
-	HLayout* hlayout = new HLayout;
+	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 
 	Button* widget1 = new Button;
@@ -405,7 +405,7 @@ TEST_F(HLayoutTest1, Resize2)
 /**
  * Test resize to small size
  *
- * Expected result: the children in the HLayout resize too according to the layout size
+ * Expected result: the children in the LinearLayout resize too according to the layout size
  */
 TEST_F(HLayoutTest1, Resize3)
 {
@@ -418,7 +418,7 @@ TEST_F(HLayoutTest1, Resize3)
 
 	// add test code here
 
-	HLayout* hlayout = new HLayout;
+	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 
 	Button* widget1 = new Button;
@@ -452,7 +452,7 @@ TEST_F(HLayoutTest1, Resize3)
 /**
  * Test SetMargin
  *
- * Expected result: the children in the HLayout resize too according to the new margin
+ * Expected result: the children in the LinearLayout resize too according to the new margin
  */
 TEST_F(HLayoutTest1, SetMargin1)
 {
@@ -465,7 +465,7 @@ TEST_F(HLayoutTest1, SetMargin1)
 
 	// add test code here
 
-	HLayout* hlayout = new HLayout;
+	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 
 	Button* widget1 = new Button;
@@ -497,7 +497,7 @@ TEST_F(HLayoutTest1, SetMargin1)
 /**
  * Test SetSpace
  *
- * Expected result: the children in the HLayout resize too according to the new space
+ * Expected result: the children in the LinearLayout resize too according to the new space
  */
 TEST_F(HLayoutTest1, SetSpace1)
 {
@@ -510,7 +510,7 @@ TEST_F(HLayoutTest1, SetSpace1)
 
 	// add test code here
 
-	HLayout* hlayout = new HLayout;
+	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 
 	Button* widget1 = new Button;

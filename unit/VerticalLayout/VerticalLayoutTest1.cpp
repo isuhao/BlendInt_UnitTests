@@ -50,7 +50,7 @@ TEST_F(VLayoutTest1, Add1)
 }
 
 /**
- * Test behavior if HLayout geometry is locked
+ * Test behavior if LinearLayout geometry is locked
  *
  * Expected result: the 2 widgets should fill the layout
  *
@@ -85,7 +85,7 @@ TEST_F(VLayoutTest1, Add2)
 }
 
 /**
- * Test behavior if HLayout geometry is locked and 1 expandable + 1 fixed size
+ * Test behavior if LinearLayout geometry is locked and 1 expandable + 1 fixed size
  *
  * Expected result: the 2 widgets should fill the layout
  *
@@ -295,7 +295,7 @@ TEST_F(VLayoutTest1, Add7)
 /**
  * Test resize
  *
- * Expected result: the children in the HLayout resize too according to the layout size
+ * Expected result: the children in the LinearLayout resize too according to the layout size
  */
 TEST_F(VLayoutTest1, Resize1)
 {
@@ -332,7 +332,7 @@ TEST_F(VLayoutTest1, Resize1)
 /**
  * Test resize, no child is expandable
  *
- * Expected result: the children in the HLayout resize too according to the layout size
+ * Expected result: the children in the LinearLayout resize too according to the layout size
  */
 TEST_F(VLayoutTest1, Resize2)
 {
@@ -369,7 +369,7 @@ TEST_F(VLayoutTest1, Resize2)
 /**
  * Test resize to small size
  *
- * Expected result: the children in the HLayout resize too according to the layout size
+ * Expected result: the children in the LinearLayout resize too according to the layout size
  */
 TEST_F(VLayoutTest1, Resize3)
 {
@@ -412,7 +412,7 @@ TEST_F(VLayoutTest1, Resize3)
 /**
  * Test SetMargin
  *
- * Expected result: the children in the HLayout resize too according to the new margin
+ * Expected result: the children in the LinearLayout resize too according to the new margin
  */
 TEST_F(VLayoutTest1, SetMargin1)
 {
@@ -453,7 +453,7 @@ TEST_F(VLayoutTest1, SetMargin1)
 /**
  * Test SetSpace
  *
- * Expected result: the children in the HLayout resize too according to the new space
+ * Expected result: the children in the LinearLayout resize too according to the new space
  */
 TEST_F(VLayoutTest1, SetSpace1)
 {
