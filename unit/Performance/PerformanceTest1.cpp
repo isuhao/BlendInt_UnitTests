@@ -2,7 +2,6 @@
 #include <BlendInt/Gui/Button.hpp>
 #include <BlendInt/Gui/Label.hpp>
 #include <BlendInt/Gui/LinearLayout.hpp>
-#include <BlendInt/Gui/VLayout.hpp>
 #include <BlendInt/Gui/Frame.hpp>
 #include <BlendInt/Gui/ToolBox.hpp>
 #include <Common/Window.hpp>
@@ -39,7 +38,7 @@ TEST_F(PerformanceTest1, Layout1)
 	Dialog* dlg = Manage(new Dialog);
 	dlg->Resize(800, 720);
 
-    VLayout* layout1 = Manage(new VLayout);
+    LinearLayout* layout1 = Manage(new LinearLayout(Vertical));
 
     int max_x = 20;
     int max_y = 20;
@@ -90,7 +89,7 @@ TEST_F(PerformanceTest1, Layout2)
 	SetContext(context);
 	context->Resize(1280, 800);
 
-    VLayout* layout2 = Manage(new VLayout);
+    LinearLayout* layout2 = Manage(new LinearLayout(Vertical));
 
     Dialog* frame2 = Manage(new Dialog);
 
@@ -148,7 +147,7 @@ TEST_F(PerformanceTest1, Layout3)
     int max_x = 10;
     int max_y = 10;
 
-    VLayout* layout1 = Manage(new VLayout);
+    LinearLayout* layout1 = Manage(new LinearLayout(Vertical));
     for(int i = 0; i < max_y; i++)
     {
     	LinearLayout* layout = Manage(new LinearLayout);
@@ -166,7 +165,7 @@ TEST_F(PerformanceTest1, Layout3)
     frame1->Setup(layout1);
     frame1->Resize(frame1->GetPreferredSize());
 
-    VLayout* layout2 = Manage(new VLayout);
+    LinearLayout* layout2 = Manage(new LinearLayout(Vertical));
     for(int i = 0; i < max_y; i++)
     {
     	LinearLayout* layout = Manage(new LinearLayout);
@@ -184,7 +183,7 @@ TEST_F(PerformanceTest1, Layout3)
     frame2->Setup(layout2);
     frame2->Resize(frame2->GetPreferredSize());
 
-    VLayout* layout3 = Manage(new VLayout);
+    LinearLayout* layout3 = Manage(new LinearLayout(Vertical));
     for(int i = 0; i < max_y; i++)
     {
     	LinearLayout* layout = Manage(new LinearLayout);

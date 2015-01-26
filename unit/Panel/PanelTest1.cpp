@@ -3,7 +3,6 @@
 #include <Common/UnitTestContext.hpp>
 #include <BlendInt/Gui/Dialog.hpp>
 #include <BlendInt/Gui/Button.hpp>
-#include <BlendInt/Gui/VLayout.hpp>
 #include <BlendInt/Gui/LinearLayout.hpp>
 
 using namespace BlendInt;
