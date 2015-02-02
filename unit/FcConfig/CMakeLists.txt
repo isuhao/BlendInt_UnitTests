@@ -7,4 +7,4 @@ file(GLOB test_SRC "*.cpp")
 add_executable(testFcConfig ${test_HEADERS} ${test_SRC})
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
-target_link_libraries(testFcConfig BlendInt Common gtest ${LIBS})
+target_link_libraries(testFcConfig BlendInt gtest ${LIBS})

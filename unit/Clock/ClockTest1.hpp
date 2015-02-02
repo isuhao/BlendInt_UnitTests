@@ -2,7 +2,6 @@
 #define _CLOCKTEST1_HPP_
 
 #include <gtest/gtest.h>
-#include <Common/Window.hpp>
 
 class ClockTest1: public testing::Test
 {
