@@ -28,7 +28,7 @@ TEST_F(ClockTest1, Foo1)
 
 		Window win(640, 480, "Clock Test");
 
-		Dialog* dialog = Manage(new Dialog);
+		Dialog* dialog = Manage(new Dialog("Clock Test"));
 		dialog->MoveTo(100, 100);
 
 		Clock* clock = Manage(new Clock);

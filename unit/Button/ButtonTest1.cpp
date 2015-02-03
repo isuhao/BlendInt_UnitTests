@@ -27,7 +27,7 @@ TEST_F(ButtonTest1, Foo1)
 
 		Window win(640, 480, "ButtonTest1");
 
-		Dialog* dlg = new Dialog;
+		Dialog* dlg = new Dialog("ButtonTest1");
 		win.AddFrame(dlg);
 
 	    Button* bt1 = Manage(new Button(AbstractWindow::icons->icon_16x16(0), "Hello World!"));
@@ -57,7 +57,7 @@ TEST_F(ButtonTest1, SetIcon1)
 
 		Window win(640, 480, "ButtonTest1");
 
-		Dialog* dlg = new Dialog;
+		Dialog* dlg = new Dialog("ButtonTest1");
 		win.AddFrame(dlg);
 
 		Button* bt1 = Manage(new Button(AbstractWindow::icons->icon_16x16(0), "Hello World!"));
@@ -117,7 +117,7 @@ TEST_F(ButtonTest1, PreferSizing1)
 
 		Window win(640, 480, "UI Editor");
 
-		Dialog* frame = Manage(new Dialog);
+		Dialog* frame = Manage(new Dialog("ButtonTest1"));
 		frame->Resize(640, 480);
 
 		win.AddFrame(frame);
@@ -185,7 +185,7 @@ TEST_F(ButtonTest1, PreferSizing2) {
 
 		Window win(640, 480, "UI Editor");
 
-		Dialog* frame = Manage(new Dialog);
+		Dialog* frame = Manage(new Dialog("ButtonTest1"));
 		frame->Resize(640, 480);
 
 		win.AddFrame(frame);
