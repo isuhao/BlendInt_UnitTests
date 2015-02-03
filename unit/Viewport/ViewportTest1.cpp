@@ -1,5 +1,5 @@
 #include "ViewportTest1.hpp"
-#include <BlendInt/Gui/Context.hpp>
+#include <BlendInt/Gui/Window.hpp>
 #include <BlendInt/Gui/Viewport.hpp>
 
 using namespace BlendInt;

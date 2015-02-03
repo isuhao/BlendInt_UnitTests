@@ -1,7 +1,7 @@
 #include "FrameTest1.hpp"
 #include <BlendInt/Gui/Frame.hpp>
 #include <BlendInt/Gui/Button.hpp>
-#include <BlendInt/Gui/Context.hpp>
+#include <BlendInt/Gui/Window.hpp>
 
 using namespace BlendInt;
 

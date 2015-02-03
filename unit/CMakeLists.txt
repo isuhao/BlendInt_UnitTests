@@ -4,7 +4,7 @@
 add_subdirectory(Object)
 
 add_subdirectory(Bezier)
-#add_subdirectory(Button)
+add_subdirectory(Button)
 #add_subdirectory(Dialog)
 #add_subdirectory(NumericalSlider)
 #add_subdirectory(Menu)
@@ -18,7 +18,7 @@ add_subdirectory(Bezier)
 #add_subdirectory(TextEntry)
 
 #add_subdirectory(NodeView)
-#add_subdirectory(FileSystemModel)
+add_subdirectory(FileSystemModel)
 #add_subdirectory(FileBrowser)
 
 #add_subdirectory(Panel)

@@ -3,7 +3,7 @@
  */
 
 #include <gtest/gtest.h>
-#include <BlendInt/Core/Types.hpp>
+#include <BlendInt/Gui/Window.hpp>
 
 int main (int argc, char* argv[])
 {

@@ -1,6 +1,6 @@
 #include "NumericalSliderTest1.hpp"
 #include <BlendInt/Gui/NumericalSlider.hpp>
-#include <BlendInt/Gui/Context.hpp>
+#include <BlendInt/Gui/Window.hpp>
 #include <BlendInt/Gui/Dialog.hpp>
 
 using namespace BlendInt;

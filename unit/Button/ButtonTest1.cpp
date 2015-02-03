@@ -113,58 +113,64 @@ TEST_F(ButtonTest1, SetIcon1)
  */
 TEST_F(ButtonTest1, PreferSizing1)
 {
-    Init();
-    GLFWwindow* win = CreateWindow("Button Test - Foo1", 640, 480);
+	if (Window::Initialize()) {
 
-	Context* context = Manage (new Context);
-	SetContext(context);
-	context->Resize(640, 480);
+		Window win(640, 480, "UI Editor");
 
-	Dialog* frame = Manage(new Dialog);
-	frame->Resize(640, 480);
+		Dialog* frame = Manage(new Dialog);
+		frame->Resize(640, 480);
 
-	context->AddFrame(frame);
+		win.AddFrame(frame);
 
-    Button* bt1 = Manage(new Button(AbstractWindow::icons->icon_16x16(0), "Hello World!"));
-    DBG_SET_NAME(bt1, "Button1");
-    //bt1->SetIcon(AbstractWindow::icons->icon_16x16(0));
-    bt1->MoveTo(200, 200);
+		Button* bt1 = Manage(
+		        new Button(AbstractWindow::icons->icon_16x16(0),
+		                "Hello World!"));
+		DBG_SET_NAME(bt1, "Button1");
+		//bt1->SetIcon(AbstractWindow::icons->icon_16x16(0));
+		bt1->MoveTo(200, 200);
 
-    Size prefer = bt1->GetPreferredSize();
+		Size prefer = bt1->GetPreferredSize();
 
-    DBG_PRINT_MSG("Preferred size: %d, %d", prefer.width(), prefer.height());
+		DBG_PRINT_MSG("Preferred size: %d, %d", prefer.width(),
+		        prefer.height());
 
-    bt1->Resize(bt1->GetPreferredSize());
+		bt1->Resize(bt1->GetPreferredSize());
 
-    frame->AddWidget(bt1);
+		frame->AddWidget(bt1);
 
-    Button* bt2 = Manage(new Button("Hello World!"));
-    DBG_SET_NAME(bt2, "Button2");
-    //bt1->SetIcon(AbstractWindow::icons->icon_16x16(0));
-    bt2->MoveTo(400, 200);
+		Button* bt2 = Manage(new Button("Hello World!"));
+		DBG_SET_NAME(bt2, "Button2");
+		//bt1->SetIcon(AbstractWindow::icons->icon_16x16(0));
+		bt2->MoveTo(400, 200);
 
-    bt2->Resize(bt2->GetPreferredSize());
+		bt2->Resize(bt2->GetPreferredSize());
 
-    frame->AddWidget(bt2);
+		frame->AddWidget(bt2);
 
-    Button* bt3 = Manage(new Button(AbstractWindow::icons->icon_16x16(0), "Hello World!"));
-    DBG_SET_NAME(bt3, "Button3");
-    bt3->MoveTo(200, 100);
-    bt3->Resize(bt3->GetPreferredSize());
-    bt3->SetRoundType(RoundNone);
+		Button* bt3 = Manage(
+		        new Button(AbstractWindow::icons->icon_16x16(0),
+		                "Hello World!"));
+		DBG_SET_NAME(bt3, "Button3");
+		bt3->MoveTo(200, 100);
+		bt3->Resize(bt3->GetPreferredSize());
+		bt3->SetRoundType(RoundNone);
 
-    frame->AddWidget(bt3);
+		frame->AddWidget(bt3);
 
-    Button* bt4 = Manage(new Button(AbstractWindow::icons->icon_16x16(0), "Hello World!"));
-    DBG_SET_NAME(bt4, "Button4");
-    bt4->MoveTo(400, 100);
-    bt4->Resize(bt4->GetPreferredSize());
-    bt4->SetRoundRadius(10.f);
+		Button* bt4 = Manage(
+		        new Button(AbstractWindow::icons->icon_16x16(0),
+		                "Hello World!"));
+		DBG_SET_NAME(bt4, "Button4");
+		bt4->MoveTo(400, 100);
+		bt4->Resize(bt4->GetPreferredSize());
+		bt4->SetRoundRadius(10.f);
 
-    frame->AddWidget(bt4);
+		frame->AddWidget(bt4);
 
-    RunLoop(win);
-    Terminate();
+		win.Exec();
+		Window::Terminate();
+
+	}
 
 	ASSERT_TRUE(true);
 }
@@ -174,48 +180,50 @@ TEST_F(ButtonTest1, PreferSizing1)
  *
  * Expected result:
  */
-TEST_F(ButtonTest1, PreferSizing2)
-{
-    Init();
-    GLFWwindow* win = CreateWindow("Button Test - Foo1", 640, 480);
+TEST_F(ButtonTest1, PreferSizing2) {
+	if (Window::Initialize()) {
 
-	Context* context = Manage (new Context);
-	SetContext(context);
-	context->Resize(640, 480);
+		Window win(640, 480, "UI Editor");
 
-	Dialog* frame = Manage(new Dialog);
-	frame->Resize(640, 480);
+		Dialog* frame = Manage(new Dialog);
+		frame->Resize(640, 480);
 
-	context->AddFrame(frame);
+		win.AddFrame(frame);
 
-    Button* bt1 = Manage(new Button(AbstractWindow::icons->icon_16x16(0), String()));
-    DBG_SET_NAME(bt1, "Button1");
-    //bt1->SetIcon(AbstractWindow::icons->icon_16x16(0));
-    bt1->MoveTo(200, 200);
+		Button* bt1 = Manage(
+		        new Button(AbstractWindow::icons->icon_16x16(0), String()));
+		DBG_SET_NAME(bt1, "Button1");
+		//bt1->SetIcon(AbstractWindow::icons->icon_16x16(0));
+		bt1->MoveTo(200, 200);
 
-    Size prefer = bt1->GetPreferredSize();
+		Size prefer = bt1->GetPreferredSize();
 
-    DBG_PRINT_MSG("Preferred size: %d, %d", prefer.width(), prefer.height());
+		DBG_PRINT_MSG("Preferred size: %d, %d", prefer.width(),
+		        prefer.height());
 
-    bt1->Resize(bt1->GetPreferredSize());
+		bt1->Resize(bt1->GetPreferredSize());
 
-    frame->AddWidget(bt1);
+		frame->AddWidget(bt1);
 
-    Button* bt2 = Manage(new Button(AbstractWindow::icons->icon_16x16(0), String()));
-    DBG_SET_NAME(bt2, "Button2");
-    bt2->MoveTo(300, 200);
-    bt2->SetRoundType(RoundNone);
+		Button* bt2 = Manage(
+		        new Button(AbstractWindow::icons->icon_16x16(0), String()));
+		DBG_SET_NAME(bt2, "Button2");
+		bt2->MoveTo(300, 200);
+		bt2->SetRoundType(RoundNone);
 
-    Size prefer2 = bt2->GetPreferredSize();
+		Size prefer2 = bt2->GetPreferredSize();
 
-    DBG_PRINT_MSG("Preferred size: %d, %d", prefer2.width(), prefer2.height());
+		DBG_PRINT_MSG("Preferred size: %d, %d", prefer2.width(),
+		        prefer2.height());
 
-    bt2->Resize(bt2->GetPreferredSize());
+		bt2->Resize(bt2->GetPreferredSize());
 
-    frame->AddWidget(bt2);
+		frame->AddWidget(bt2);
 
-    RunLoop(win);
-    Terminate();
+		win.Exec();
+		Window::Terminate();
+
+	}
 
 	ASSERT_TRUE(true);
 }

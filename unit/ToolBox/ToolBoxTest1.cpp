@@ -1,7 +1,7 @@
 #include "ToolBoxTest1.hpp"
 #include <BlendInt/Gui/ToolBox.hpp>
 #include <BlendInt/Gui/Button.hpp>
-#include <BlendInt/Gui/Context.hpp>
+#include <BlendInt/Gui/Window.hpp>
 #include <Common/UnitTestContext.hpp>
 
 using namespace BlendInt;

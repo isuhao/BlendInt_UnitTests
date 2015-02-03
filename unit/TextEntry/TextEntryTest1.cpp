@@ -2,7 +2,7 @@
 #include <BlendInt/Gui/TextEntry.hpp>
 #include <BlendInt/Gui/Label.hpp>
 #include <BlendInt/Gui/Dialog.hpp>
-#include <BlendInt/Gui/Context.hpp>
+#include <BlendInt/Gui/Window.hpp>
 
 using namespace BlendInt;
 
