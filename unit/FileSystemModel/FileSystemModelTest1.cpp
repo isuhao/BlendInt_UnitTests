@@ -516,7 +516,7 @@ TEST_F(FileSystemModelTest1, GetIndex1)
 	ModelIndex index = model.GetIndex(0, 0, root);
 
 	while(index.IsValid()) {
-		DBG_PRINT_MSG("%s", ConvertFromString(*index.GetData()).c_str());
+		//DBG_PRINT_MSG("%s", ConvertFromString(*index.GetData()).c_str());
 		index = index.GetDownIndex();
 	}
 
@@ -543,7 +543,7 @@ TEST_F(FileSystemModelTest1, GetIndex2)
 	ModelIndex index = model.GetIndex(3, 0, root);
 
 	while(index.IsValid()) {
-		DBG_PRINT_MSG("%s", ConvertFromString(*index.GetData()).c_str());
+		//DBG_PRINT_MSG("%s", ConvertFromString(*index.GetData()).c_str());
 		index = index.GetRightIndex();
 	}
 
