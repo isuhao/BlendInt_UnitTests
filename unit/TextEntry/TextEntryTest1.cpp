@@ -24,26 +24,22 @@ TextEntryTest1::~TextEntryTest1()
  */
 TEST_F(TextEntryTest1, Foo1)
 {
-	Init ();
-	GLFWwindow* window = CreateWindow("TextEntry - Foo1", 640, 480);
+    if(Window::Initialize()) {
+        
+        Window win(640, 480, "ButtonTest1");
 
-	Context* context = Manage (new Context);
-	SetContext(context);
-	context->Resize(640, 480);
+        Dialog* dialog = Manage(new Dialog("TextEntry Test"));
 
-	Dialog* dialog = Manage(new Dialog);
+        TextEntry* lineedit = Manage(new TextEntry);
+        lineedit->SetText("Hello World!");
 
-    TextEntry* lineedit = Manage(new TextEntry);
- 	lineedit->MoveTo(100, 100);
-    
-    lineedit->SetText("Hello World!");
+        dialog->AddWidget(lineedit);
 
-    dialog->AddWidget(lineedit);
+        win.AddFrame(dialog);
 
-    context->AddFrame(dialog);
-
-	RunLoop(window);
-	Terminate();
+        win.Exec();
+        Window::Terminate();
+    }
 
 	ASSERT_TRUE(true);
 }

@@ -15,7 +15,7 @@ add_subdirectory(Button)
 #add_subdirectory(ToolBox)
 #add_subdirectory(Frame)
 #add_subdirectory(ToolBar)
-#add_subdirectory(TextEntry)
+add_subdirectory(TextEntry)
 
 #add_subdirectory(NodeView)
 add_subdirectory(FileSystemModel)
