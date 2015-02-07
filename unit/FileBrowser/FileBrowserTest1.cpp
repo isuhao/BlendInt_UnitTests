@@ -33,7 +33,7 @@ TEST_F(FileBrowserTest1, Foo1)
 
 	FileBrowser* fb = Manage(new FileBrowser);
 	fb->MoveTo(50, 50);
-	fb->Load(getenv("HOME"));
+	fb->Open(getenv("HOME"));
 
 	Dialog* dialog = Manage(new Dialog);
 	dialog->Resize(500, 400);
