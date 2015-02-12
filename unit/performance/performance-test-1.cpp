@@ -1,12 +1,12 @@
-#include "PerformanceTest1.hpp"
+#include "performance-test-1.hpp"
+
 #include <gui/button.hpp>
 #include <gui/label.hpp>
 #include <gui/linear-layout.hpp>
 #include <gui/frame.hpp>
 #include <gui/toolbox.hpp>
-#include <Common/Window.hpp>
-#include <Common/UnitTestContext.hpp>
 #include <gui/dialog.hpp>
+#include <gui/window.hpp>
 
 using namespace BlendInt;
 
@@ -26,50 +26,44 @@ PerformanceTest1::~PerformanceTest1()
  */
 TEST_F(PerformanceTest1, Layout1)
 {
-    Init();
-    GLFWwindow* win = CreateWindow("Button Test - Foo1", 1280, 800);
+	if(Window::Initialize()) {
 
-	// TODO: add test code here
-    UnitTestContext* context = Manage (new UnitTestContext);
-	DBG_SET_NAME(context, "Context");
-	SetContext(context);
-	context->Resize(1280, 800);
+		Window win(1280, 800, "Clock Test");
 
-	Dialog* dlg = Manage(new Dialog);
-	dlg->Resize(800, 720);
+		Dialog* dlg = Manage(new Dialog("Performance Test 1"));
+		dlg->Resize(800, 720);
 
-    LinearLayout* layout1 = Manage(new LinearLayout(Vertical));
+		int max_x = 20;
+		int max_y = 20;
 
-    int max_x = 20;
-    int max_y = 20;
+		//int x_pos = 50;
+		//int y_pos = 5;
+		for(int i = 0; i < max_y; i++)
+		{
+			LinearLayout* layout = Manage(new LinearLayout);
 
-    //int x_pos = 50;
-    //int y_pos = 5;
-    for(int i = 0; i < max_y; i++)
-    {
-    	LinearLayout* layout = Manage(new LinearLayout);
+			for(int j = 0; j < max_x; j++)
+			{
+				Button* btn = Manage(new Button);
+				//btn[j]->SetPreferredSize(25, btn[j]->size().height());
+				layout->AddWidget(btn);
+			}
 
-        for(int j = 0; j < max_x; j++)
-        {
-        	Button* btn = Manage(new Button);
-            //btn[j]->SetPreferredSize(25, btn[j]->size().height());
-        	layout->AddWidget(btn);
-        }
+			//layout[i]->MoveTo(x_pos, y_pos);
+			//layout[i]->Resize(layout[i]->GetPreferredSize());
 
-        //layout[i]->MoveTo(x_pos, y_pos);
-        //layout[i]->Resize(layout[i]->GetPreferredSize());
+			//y_pos += 40;
 
-        //y_pos += 40;
+			dlg->AddWidget(layout);
+		}
 
-        layout1->AddWidget(layout);
-    }
-    layout1->Resize(layout1->GetPreferredSize());
+		dlg->Resize(dlg->GetPreferredSize());
 
-    dlg->SetLayout(layout1);
-    context->AddFrame(dlg);
+		win.AddFrame(dlg);
 
-    RunLoop(win);
-    Terminate();
+		win.Exec();
+		Window::Terminate();
+	}
 
     ASSERT_TRUE(true);
 }
@@ -78,6 +72,7 @@ TEST_F(PerformanceTest1, Layout1)
 /**
  * Test layout performance
  */
+/*
 TEST_F(PerformanceTest1, Layout2)
 {
     Init();
@@ -120,6 +115,7 @@ TEST_F(PerformanceTest1, Layout2)
 
     ASSERT_TRUE(true);
 }
+*/
 
 /**
  * Test layout performance

@@ -1,11 +1,20 @@
 # CMake file for BlendInt project
 #
 
+# core test
 add_subdirectory(object)
 
+# font test
+add_subdirectory(fcconfig)
+
+# gui test
+add_subdirectory(dialog)
 add_subdirectory(bezier)
 add_subdirectory(button)
-#add_subdirectory(Dialog)
+
+# performance test
+add_subdirectory(performance)
+
 #add_subdirectory(NumericalSlider)
 #add_subdirectory(Menu)
 #add_subdirectory(FileButton)
@@ -37,7 +46,6 @@ add_subdirectory(clock)
 
 #add_subdirectory(Freetype)
 
-#add_subdirectory(Performance)
 
 #if(ENABLE_OPENCV)
 #	add_subdirectory(CVVideoViewport)
@@ -83,4 +91,3 @@ add_subdirectory(clock)
 #add_subdirectory(HBlock)
 
 #add_subdirectory(Block)
-add_subdirectory(fcconfig)

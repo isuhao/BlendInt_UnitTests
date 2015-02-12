@@ -1,4 +1,4 @@
-#include "clocktest1.hpp"
+#include "clock-test-1.hpp"
 
 #include <gui/clock.hpp>
 #include <gui/window.hpp>
@@ -35,6 +35,7 @@ TEST_F(ClockTest1, Foo1)
 		clock->Resize(200, 200);
 		clock->MoveTo(25, 25);
 		dialog->AddWidget(clock);
+		dialog->Resize(dialog->GetPreferredSize());
 
 		win.AddFrame(dialog);
 

@@ -1,7 +1,7 @@
 #include "ThemeTest1.hpp"
 #include <Common/Window.hpp>
 
-#include <blendint/stock/icons.hpp>
+#include <stock/icons.hpp>
 #include <Common/UnitTestContext.hpp>
 
 #include <iostream>

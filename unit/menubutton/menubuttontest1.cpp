@@ -1,6 +1,6 @@
 #include "MenuButtonTest1.hpp"
 #include <gui/menu-button.hpp>
-#include <blendint/stock/icons.hpp>
+#include <stock/icons.hpp>
 #include <gui/dialog.hpp>
 
 using namespace BlendInt;

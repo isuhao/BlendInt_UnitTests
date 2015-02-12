@@ -2,7 +2,6 @@
 #define _PERFORMANCETEST1_HPP_
 
 #include <gtest/gtest.h>
-#include <core/object.hpp>
 
 class PerformanceTest1: public testing::Test
 {

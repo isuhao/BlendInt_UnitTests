@@ -4,7 +4,7 @@
 #include <gui/tool-button.hpp>
 #include <gui/button.hpp>
 
-#include <blendint/stock/icons.hpp>
+#include <stock/icons.hpp>
 
 using namespace BlendInt;
 using Shaders::Icons;

@@ -2,7 +2,6 @@
 #define _DIALOGTEST1_HPP_
 
 #include <gtest/gtest.h>
-#include <Common/Window.hpp>
 
 class DialogTest1: public testing::Test
 {

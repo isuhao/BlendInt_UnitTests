@@ -1,4 +1,4 @@
-#include "buttontest1.hpp"
+#include "button-test-1.hpp"
 #include <gui/button.hpp>
 #include <gui/dialog.hpp>
 #include <gui/window.hpp>
@@ -39,7 +39,6 @@ TEST_F(ButtonTest1, Foo1)
 	    dlg->AddWidget(bt1);
 
 		win.Exec();
-
 		Window::Terminate();
 	}
 
@@ -99,7 +98,6 @@ TEST_F(ButtonTest1, SetIcon1)
 		dlg->AddWidget(bt4);
 
 		win.Exec();
-
 		Window::Terminate();
 	}
 
@@ -169,7 +167,6 @@ TEST_F(ButtonTest1, PreferSizing1)
 
 		win.Exec();
 		Window::Terminate();
-
 	}
 
 	ASSERT_TRUE(true);
@@ -222,7 +219,6 @@ TEST_F(ButtonTest1, PreferSizing2) {
 
 		win.Exec();
 		Window::Terminate();
-
 	}
 
 	ASSERT_TRUE(true);
