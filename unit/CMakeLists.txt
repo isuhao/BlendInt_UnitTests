@@ -1,10 +1,10 @@
 # CMake file for BlendInt project
 #
 
-add_subdirectory(Object)
+add_subdirectory(object)
 
-add_subdirectory(Bezier)
-add_subdirectory(Button)
+add_subdirectory(bezier)
+add_subdirectory(button)
 #add_subdirectory(Dialog)
 #add_subdirectory(NumericalSlider)
 #add_subdirectory(Menu)
@@ -15,14 +15,14 @@ add_subdirectory(Button)
 #add_subdirectory(ToolBox)
 #add_subdirectory(Frame)
 #add_subdirectory(ToolBar)
-add_subdirectory(TextEntry)
+add_subdirectory(textentry)
 
 #add_subdirectory(NodeView)
-add_subdirectory(FileSystemModel)
+add_subdirectory(filesystemmodel)
 #add_subdirectory(FileBrowser)
 
 #add_subdirectory(Panel)
-add_subdirectory(Clock)
+add_subdirectory(clock)
 #add_subdirectory(ComboBox)
 
 #add_subdirectory(PopupFrame)
@@ -83,4 +83,4 @@ add_subdirectory(Clock)
 #add_subdirectory(HBlock)
 
 #add_subdirectory(Block)
-add_subdirectory(FcConfig)
+add_subdirectory(fcconfig)
