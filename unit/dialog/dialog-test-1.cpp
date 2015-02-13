@@ -27,7 +27,7 @@ TEST_F(DialogTest1, Foo1)
 
 		Window win(640, 480, "DialogTest1");
 
-		Dialog* dlg = new Dialog("Test Dialog with title and buttons", Dialog::DialogButtonOK | Dialog::DialogButtonApply);
+		Dialog* dlg = new Dialog("Test Dialog with title and buttons", 0, Dialog::DialogButtonOK | Dialog::DialogButtonApply);
 
 		dlg->Resize(dlg->GetPreferredSize());
 		dlg->MoveTo((win.size().width() - dlg->size().width()) / 2,
