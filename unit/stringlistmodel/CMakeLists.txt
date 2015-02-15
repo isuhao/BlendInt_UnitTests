@@ -6,4 +6,4 @@ file(GLOB test_SRC "*.cpp")
 add_executable(testStringListModel ${test_SRC})
 
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
-target_link_libraries(testStringListModel BlendInt Common gtest ${LIBS})
+target_link_libraries(testStringListModel BlendInt gtest ${LIBS})

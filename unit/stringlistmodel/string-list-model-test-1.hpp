@@ -2,8 +2,6 @@
 #define _STRINGLISTMODELTEST1_HPP_
 
 #include <gtest/gtest.h>
-#include <Common/Window.hpp>
-#include <core/object.hpp>
 
 class StringListModelTest1: public testing::Test
 {

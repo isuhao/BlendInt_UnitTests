@@ -8,6 +8,9 @@ add_subdirectory(object)
 add_subdirectory(fcconfig)
 
 # gui test
+
+add_subdirectory(stringlistmodel)
+
 add_subdirectory(dialog)
 add_subdirectory(bezier)
 add_subdirectory(button)
@@ -27,7 +30,7 @@ add_subdirectory(performance)
 add_subdirectory(textentry)
 
 #add_subdirectory(NodeView)
-add_subdirectory(filesystemmodel)
+#add_subdirectory(filesystemmodel)
 #add_subdirectory(FileBrowser)
 
 #add_subdirectory(Panel)
@@ -83,7 +86,6 @@ add_subdirectory(clock)
 #add_subdirectory(Expander)
 #add_subdirectory(TextureAtlas)
 #add_subdirectory(ListModel)
-#add_subdirectory(StringListModel)
 #add_subdirectory(ListView)
 #add_subdirectory(CVImageView)
 #add_subdirectory(Section)
@@ -91,3 +93,4 @@ add_subdirectory(clock)
 #add_subdirectory(HBlock)
 
 #add_subdirectory(Block)
+
