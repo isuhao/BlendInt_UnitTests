@@ -1,5 +1,5 @@
 /*
- * Unit test for Widget
+ * Unit test for AbstractRoundWidget
  */
 
 #include <gtest/gtest.h>

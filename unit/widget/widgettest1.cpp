@@ -31,7 +31,7 @@ TEST_F(WidgetTest1, Pointer1)
     Context* context = Manage (new Context);
     Interface::instance->SetCurrentContext(context);
 
-    Widget* widget1 = new Widget;
+    AbstractRoundWidget* widget1 = new AbstractRoundWidget;
     DBG_SET_NAME(widget1, "Widget1");
 
     delete widget1;
@@ -62,7 +62,7 @@ TEST_F(WidgetTest1, Pointer2)
     Layout* container = Manage(new Layout);
     DBG_SET_NAME(container, "Layout");
 
-    Widget* widget1 = Manage(new Widget);
+    AbstractRoundWidget* widget1 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget1, "Widget1");
 
     container->PushBackSubWidget(widget1);
@@ -100,9 +100,9 @@ TEST_F(WidgetTest1, PushBack1)
 
     Layout* container = Manage(new Layout);
     DBG_SET_NAME(container, "Layout");
-    Widget* widget1 = Manage(new Widget);
+    AbstractRoundWidget* widget1 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget1, "Widget1");
-    Widget* widget2 = Manage(new Widget);
+    AbstractRoundWidget* widget2 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget2, "Widget2");
 
     container->PushBackSubWidget(widget1);
@@ -143,9 +143,9 @@ TEST_F(WidgetTest1, PushBack2)
 
     Layout* container1 = Manage(new Layout);
     DBG_SET_NAME(container1, "Container1");
-    Widget* widget1 = Manage(new Widget);
+    AbstractRoundWidget* widget1 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget1, "Widget1");
-    Widget* widget2 = Manage(new Widget);
+    AbstractRoundWidget* widget2 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget2, "Widget2");
 
     container1->PushBackSubWidget(widget1);
@@ -192,9 +192,9 @@ TEST_F(WidgetTest1, PushBack3)
 
     Layout* container1 = Manage(new Layout);
     DBG_SET_NAME(container1, "Container1");
-    Widget* widget1 = Manage(new Widget);
+    AbstractRoundWidget* widget1 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget1, "Widget1");
-    Widget* widget2 = Manage(new Widget);
+    AbstractRoundWidget* widget2 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget2, "Widget2");
 
     container1->PushBackSubWidget(widget1);
@@ -240,9 +240,9 @@ TEST_F(WidgetTest1, Insert1)
 
     Layout* container = Manage(new Layout);
     DBG_SET_NAME(container, "Layout");
-    Widget* widget1 = Manage(new Widget);
+    AbstractRoundWidget* widget1 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget1, "Widget1");
-    Widget* widget2 = Manage(new Widget);
+    AbstractRoundWidget* widget2 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget2, "Widget2");
 
     container->InsertSubWidget(0, widget1);
@@ -281,9 +281,9 @@ TEST_F(WidgetTest1, Insert2)
 
     Layout* container = Manage(new Layout);
     DBG_SET_NAME(container, "Layout");
-    Widget* widget1 = Manage(new Widget);
+    AbstractRoundWidget* widget1 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget1, "Widget1");
-    Widget* widget2 = Manage(new Widget);
+    AbstractRoundWidget* widget2 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget2, "Widget2");
 
     container->InsertSubWidget(0, widget1);
@@ -322,9 +322,9 @@ TEST_F(WidgetTest1, Insert3)
 
     Layout* container = Manage(new Layout);
     DBG_SET_NAME(container, "Layout");
-    Widget* widget1 = Manage(new Widget);
+    AbstractRoundWidget* widget1 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget1, "Widget1");
-    Widget* widget2 = Manage(new Widget);
+    AbstractRoundWidget* widget2 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget2, "Widget2");
 
     container->InsertSubWidget(5, widget1);
@@ -370,9 +370,9 @@ TEST_F(WidgetTest1, PushFront1)
 
     Layout* container = Manage(new Layout);
     DBG_SET_NAME(container, "Layout");
-    Widget* widget1 = Manage(new Widget);
+    AbstractRoundWidget* widget1 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget1, "Widget1");
-    Widget* widget2 = Manage(new Widget);
+    AbstractRoundWidget* widget2 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget2, "Widget2");
 
     container->PushFrontSubWidget(widget1);
@@ -411,9 +411,9 @@ TEST_F(WidgetTest1, PushFront2)
 
     Layout* container1 = Manage(new Layout);
     DBG_SET_NAME(container1, "Container1");
-    Widget* widget1 = Manage(new Widget);
+    AbstractRoundWidget* widget1 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget1, "Widget1");
-    Widget* widget2 = Manage(new Widget);
+    AbstractRoundWidget* widget2 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget2, "Widget2");
 
     container1->PushFrontSubWidget(widget1);
@@ -466,11 +466,11 @@ TEST_F(WidgetTest1, Remove1)
 
     Layout* container = Manage(new Layout);
     DBG_SET_NAME(container, "Layout");
-    Widget* widget1 = Manage(new Widget);
+    AbstractRoundWidget* widget1 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget1, "Widget1");
-    Widget* widget2 = Manage(new Widget);
+    AbstractRoundWidget* widget2 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget2, "Widget2");
-    Widget* widget3 = Manage(new Widget);
+    AbstractRoundWidget* widget3 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget3, "Widget3");
 
     container->PushBackSubWidget(widget1);
@@ -521,11 +521,11 @@ TEST_F(WidgetTest1, GetWidgetAt1)
 
     Layout* container = Manage(new Layout);
     DBG_SET_NAME(container, "Layout");
-    Widget* widget1 = Manage(new Widget);
+    AbstractRoundWidget* widget1 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget1, "Widget1");
-    Widget* widget2 = Manage(new Widget);
+    AbstractRoundWidget* widget2 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget2, "Widget2");
-    Widget* widget3 = Manage(new Widget);
+    AbstractRoundWidget* widget3 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget3, "Widget3");
 
     container->PushBackSubWidget(widget1);
@@ -597,11 +597,11 @@ TEST_F(WidgetTest1, MoveToFirst1)
 
     Layout* container = Manage(new Layout);
     DBG_SET_NAME(container, "Layout");
-    Widget* widget1 = Manage(new Widget);
+    AbstractRoundWidget* widget1 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget1, "Widget1");
-    Widget* widget2 = Manage(new Widget);
+    AbstractRoundWidget* widget2 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget2, "Widget2");
-    Widget* widget3 = Manage(new Widget);
+    AbstractRoundWidget* widget3 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget3, "Widget3");
 
     container->PushBackSubWidget(widget1);
@@ -678,11 +678,11 @@ TEST_F(WidgetTest1, MoveToLast1)
 
     Layout* container = Manage(new Layout);
     DBG_SET_NAME(container, "Layout");
-    Widget* widget1 = Manage(new Widget);
+    AbstractRoundWidget* widget1 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget1, "Widget1");
-    Widget* widget2 = Manage(new Widget);
+    AbstractRoundWidget* widget2 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget2, "Widget2");
-    Widget* widget3 = Manage(new Widget);
+    AbstractRoundWidget* widget3 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget3, "Widget3");
 
     container->PushBackSubWidget(widget1);
@@ -759,11 +759,11 @@ TEST_F(WidgetTest1, MoveForward1)
 
     Layout* container = Manage(new Layout);
     DBG_SET_NAME(container, "Layout");
-    Widget* widget1 = Manage(new Widget);
+    AbstractRoundWidget* widget1 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget1, "Widget1");
-    Widget* widget2 = Manage(new Widget);
+    AbstractRoundWidget* widget2 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget2, "Widget2");
-    Widget* widget3 = Manage(new Widget);
+    AbstractRoundWidget* widget3 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget3, "Widget3");
 
     container->PushBackSubWidget(widget1);
@@ -840,11 +840,11 @@ TEST_F(WidgetTest1, MoveBackward1)
 
     Layout* container = Manage(new Layout);
     DBG_SET_NAME(container, "Layout");
-    Widget* widget1 = Manage(new Widget);
+    AbstractRoundWidget* widget1 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget1, "Widget1");
-    Widget* widget2 = Manage(new Widget);
+    AbstractRoundWidget* widget2 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget2, "Widget2");
-    Widget* widget3 = Manage(new Widget);
+    AbstractRoundWidget* widget3 = Manage(new AbstractRoundWidget);
     DBG_SET_NAME(widget3, "Widget3");
 
     container->PushBackSubWidget(widget1);

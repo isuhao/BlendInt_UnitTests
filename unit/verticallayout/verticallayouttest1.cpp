@@ -32,8 +32,8 @@ TEST_F(VLayoutTest1, Add1)
 	VLayout* vlayout = new VLayout;
 	vlayout->SetPosition(100, 100);
 
-	Widget* widget1 = new Widget;
-	Widget* widget2 = new Widget;
+	AbstractRoundWidget* widget1 = new AbstractRoundWidget;
+	AbstractRoundWidget* widget2 = new AbstractRoundWidget;
 
 	vlayout->Append(Manage(widget1));
 	vlayout->Append(Manage(widget2));
@@ -67,8 +67,8 @@ TEST_F(VLayoutTest1, Add2)
 	vlayout->SetPosition(100, 100);
 	vlayout->Resize(200, 400);
 
-	Widget* widget1 = new Widget;
-	Widget* widget2 = new Widget;
+	AbstractRoundWidget* widget1 = new AbstractRoundWidget;
+	AbstractRoundWidget* widget2 = new AbstractRoundWidget;
 
 	vlayout->Append(Manage(widget1));
 	vlayout->Append(Manage(widget2));
@@ -103,8 +103,8 @@ TEST_F(VLayoutTest1, Add3)
 	vlayout->SetPosition(100, 100);
 	vlayout->Resize(200, 400);
 
-	Widget* widget1 = new Widget;
-	Widget* widget2 = new Widget;
+	AbstractRoundWidget* widget1 = new AbstractRoundWidget;
+	AbstractRoundWidget* widget2 = new AbstractRoundWidget;
 
 	vlayout->Append(Manage(widget1));
 	vlayout->Append(Manage(widget2));
@@ -137,10 +137,10 @@ TEST_F(VLayoutTest1, Add4)
 	vlayout->SetPosition(100, 100);
 	vlayout->Resize(200, 400);
 
-	Widget* widget1 = new Widget;
+	AbstractRoundWidget* widget1 = new AbstractRoundWidget;
     //widget1->SetPreferredSize(widget1->preferred_size().width(), 40);
     //widget1->SetMaximalSize(widget1->maximal_size().width(), 80);
-	Widget* widget2 = new Widget;
+	AbstractRoundWidget* widget2 = new AbstractRoundWidget;
     //widget2->SetPreferredSize(widget2->preferred_size().width(), 40);
     //widget2->SetMaximalSize(widget2->maximal_size().width(), 80);
 
@@ -175,16 +175,16 @@ TEST_F(VLayoutTest1, Add5)
 	vlayout->SetPosition(100, 100);
 	vlayout->Resize(200, 600);
 
-	Widget* widget1 = new Widget;
+	AbstractRoundWidget* widget1 = new AbstractRoundWidget;
     //widget1->SetPreferredSize(widget1->preferred_size().width(), 40);
     //widget1->SetMaximalSize(widget1->preferred_size().width(), 80);
-	Widget* widget2 = new Widget;
+	AbstractRoundWidget* widget2 = new AbstractRoundWidget;
     //widget2->SetPreferredSize(widget1->preferred_size().width(), 40);
     //widget2->SetMaximalSize(widget1->preferred_size().width(), 80);
-	Widget* widget3 = new Widget;
+	AbstractRoundWidget* widget3 = new AbstractRoundWidget;
     //widget3->SetPreferredSize(widget1->preferred_size().width(), 40);
     //widget3->SetMaximalSize(widget1->preferred_size().width(), 60);
-	Widget* widget4 = new Widget;
+	AbstractRoundWidget* widget4 = new AbstractRoundWidget;
 	//widget4->SetExpandY(true);
     //widget4->SetPreferredSize(widget1->preferred_size().width(), 40);
     //widget4->SetMaximalSize(widget1->preferred_size().width(), 70);
@@ -223,14 +223,14 @@ TEST_F(VLayoutTest1, Add6)
 	vlayout->SetPosition(100, 100);
 	vlayout->Resize(100, 50);
 
-	Widget* widget1 = new Widget;
+	AbstractRoundWidget* widget1 = new AbstractRoundWidget;
     //widget1->SetPreferredSize(widget1->preferred_size().height(), 40);
     //widget1->SetMaximalSize(widget1->maximal_size().height(), 80);
-	Widget* widget2 = new Widget;
+	AbstractRoundWidget* widget2 = new AbstractRoundWidget;
     //widget2->SetMinimalSize(widget2->minimal_size().height(), 10);
-	Widget* widget3 = new Widget;
+	AbstractRoundWidget* widget3 = new AbstractRoundWidget;
     //widget3->SetMinimalSize(widget3->minimal_size().height(), 20);
-	Widget* widget4 = new Widget;
+	AbstractRoundWidget* widget4 = new AbstractRoundWidget;
 	
     vlayout->Append(Manage(widget1));
 	vlayout->Append(Manage(widget2));
@@ -264,14 +264,14 @@ TEST_F(VLayoutTest1, Add7)
 	VLayout* vlayout = new VLayout;
 	vlayout->SetPosition(100, 100);
 
-	Widget* widget1 = new Widget;
+	AbstractRoundWidget* widget1 = new AbstractRoundWidget;
 	//widget1->SetExpandX(true);
 	//widget1->SetMinimalSize(10, widget1->minimal_size().height());
-	Widget* widget2 = new Widget;
+	AbstractRoundWidget* widget2 = new AbstractRoundWidget;
     //widget2->SetMinimalSize(30, widget2->minimal_size().height());
-	Widget* widget3 = new Widget;
+	AbstractRoundWidget* widget3 = new AbstractRoundWidget;
     //widget3->SetMinimalSize(20, widget3->minimal_size().height());
-	Widget* widget4 = new Widget;
+	AbstractRoundWidget* widget4 = new AbstractRoundWidget;
 
 	vlayout->Append(Manage(widget1));
 	vlayout->Append(Manage(widget2));
@@ -310,8 +310,8 @@ TEST_F(VLayoutTest1, Resize1)
 	VLayout* vlayout = new VLayout;
 	vlayout->SetPosition(100, 100);
 
-	Widget* widget1 = new Widget;
-	Widget* widget2 = new Widget;
+	AbstractRoundWidget* widget1 = new AbstractRoundWidget;
+	AbstractRoundWidget* widget2 = new AbstractRoundWidget;
 
 	vlayout->Append(Manage(widget1));
 	vlayout->Append(Manage(widget2));
@@ -347,8 +347,8 @@ TEST_F(VLayoutTest1, Resize2)
 	VLayout* vlayout = new VLayout;
 	vlayout->SetPosition(100, 100);
 
-	Widget* widget1 = new Widget;
-	Widget* widget2 = new Widget;
+	AbstractRoundWidget* widget1 = new AbstractRoundWidget;
+	AbstractRoundWidget* widget2 = new AbstractRoundWidget;
 
 	vlayout->Append(Manage(widget1));
 	vlayout->Append(Manage(widget2));
@@ -384,12 +384,12 @@ TEST_F(VLayoutTest1, Resize3)
 	VLayout* vlayout = new VLayout;
 	vlayout->SetPosition(100, 100);
 
-	Widget* widget1 = new Widget;
-	Widget* widget2 = new Widget;
+	AbstractRoundWidget* widget1 = new AbstractRoundWidget;
+	AbstractRoundWidget* widget2 = new AbstractRoundWidget;
     //widget2->SetMinimalSize(30, widget2->minimal_size().height());
-	Widget* widget3 = new Widget;
+	AbstractRoundWidget* widget3 = new AbstractRoundWidget;
     //widget3->SetMinimalSize(20, widget3->minimal_size().height());
-	Widget* widget4 = new Widget;
+	AbstractRoundWidget* widget4 = new AbstractRoundWidget;
 
 	vlayout->Append(Manage(widget1));
 	vlayout->Append(Manage(widget2));
@@ -427,9 +427,9 @@ TEST_F(VLayoutTest1, SetMargin1)
 	VLayout* vlayout = new VLayout;
 	vlayout->SetPosition(100, 100);
 
-	Widget* widget1 = new Widget;
+	AbstractRoundWidget* widget1 = new AbstractRoundWidget;
     widget1->Resize(100, 80);
-	Widget* widget2 = new Widget;
+	AbstractRoundWidget* widget2 = new AbstractRoundWidget;
     widget2->Resize(100, 80);
 
 	vlayout->Append(Manage(widget1));
@@ -468,9 +468,9 @@ TEST_F(VLayoutTest1, SetSpace1)
 	VLayout* vlayout = new VLayout;
 	vlayout->SetPosition(100, 100);
 
-	Widget* widget1 = new Widget;
+	AbstractRoundWidget* widget1 = new AbstractRoundWidget;
     widget1->Resize(100, 80);
-	Widget* widget2 = new Widget;
+	AbstractRoundWidget* widget2 = new AbstractRoundWidget;
     widget2->Resize(100, 80);
 
 	vlayout->Append(Manage(widget1));

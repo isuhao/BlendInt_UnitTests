@@ -32,10 +32,10 @@ TEST_F(ContextTest1, AddSubWidget01)
     Interface::instance->SetCurrentContext(context);
 
     // TODO: add test code here
-    Widget* w1 = new Widget;
+    AbstractRoundWidget* w1 = new AbstractRoundWidget;
     w1->MoveTo(200, 200);
 
-    Widget* w2 = new Widget;
+    AbstractRoundWidget* w2 = new AbstractRoundWidget;
     w2->MoveTo(400, 200);
 
     context->Append(w1);
@@ -68,10 +68,10 @@ TEST_F(ContextTest1, AddSubWidget02)
     Interface::instance->SetCurrentContext(context);
 
     // TODO: add test code here
-    Widget* w1 = new Widget;
+    AbstractRoundWidget* w1 = new AbstractRoundWidget;
     w1->MoveTo(200, 200);
 
-    Widget* w2 = new Widget;
+    AbstractRoundWidget* w2 = new AbstractRoundWidget;
     w2->MoveTo(400, 200);
 
     Panel* f1 = new Panel;
@@ -113,10 +113,10 @@ TEST_F(ContextTest1, AddSubWidget03)
     Interface::instance->SetCurrentContext(context);
 
     // TODO: add test code here
-    Widget* w1 = new Widget;
+    AbstractRoundWidget* w1 = new AbstractRoundWidget;
     w1->MoveTo(200, 200);
 
-    Widget* w2 = new Widget;
+    AbstractRoundWidget* w2 = new AbstractRoundWidget;
     w2->MoveTo(400, 200);
 
     Panel* f1 = new Panel;
@@ -162,7 +162,7 @@ TEST_F(ContextTest1, DestructorInContainer01)
 	Interface::instance->SetCurrentContext(context);
 
 	// TODO: add test code here
-	Widget* w1 = new Widget;
+	AbstractRoundWidget* w1 = new AbstractRoundWidget;
 	w1->MoveTo(200, 200);
 
 	Panel* f1 = new Panel;
@@ -205,7 +205,7 @@ TEST_F(ContextTest1, DestructorInContainer02)
 	Interface::instance->SetCurrentContext(context);
 
 	// TODO: add test code here
-	Widget* w1 = Manage(new Widget);
+	AbstractRoundWidget* w1 = Manage(new AbstractRoundWidget);
 	w1->MoveTo(100, 100);
 	context->Append(w1);
 
@@ -244,11 +244,11 @@ TEST_F(ContextTest1, Layer1)
 	Interface::instance->SetCurrentContext(context);
 
     // TODO: add test code here
-    Widget* w1 = Manage(new Widget);
+    AbstractRoundWidget* w1 = Manage(new AbstractRoundWidget);
     w1->MoveTo(200, 200);
     context->Append(w1);
         
-    Widget* w2 = Manage(new Widget);
+    AbstractRoundWidget* w2 = Manage(new AbstractRoundWidget);
     w2->MoveTo(400, 200);
     context->Append(w2);
 
@@ -276,15 +276,15 @@ TEST_F(ContextTest1, Layer2)
 	Interface::instance->SetCurrentContext(context);
 
     // TODO: add test code here
-    Widget* w1 = new Widget;
+    AbstractRoundWidget* w1 = new AbstractRoundWidget;
     w1->MoveTo(200, 200);
     context->Append(w1);
 
-    Widget* w2 = new Widget;
+    AbstractRoundWidget* w2 = new AbstractRoundWidget;
     w2->MoveTo(400, 200);
     context->Append(w2);
 
-    Widget* w3 = new Widget;
+    AbstractRoundWidget* w3 = new AbstractRoundWidget;
     context->Append(w3);
 
     delete w3; w3 = 0;
@@ -315,19 +315,19 @@ TEST_F(ContextTest1, Layer3)
 	Context* context = Manage (new Context);
 	Interface::instance->SetCurrentContext(context);
 
-	Widget* w1 = Manage(new Widget);
+	AbstractRoundWidget* w1 = Manage(new AbstractRoundWidget);
 	w1->MoveTo(100, 100);
 	context->Append(w1);
 
-	Widget* w2 = Manage(new Widget);
+	AbstractRoundWidget* w2 = Manage(new AbstractRoundWidget);
 	w2->MoveTo(150, 150);
 	context->Append(w2);
 
-	Widget* w3 = Manage(new Widget);
+	AbstractRoundWidget* w3 = Manage(new AbstractRoundWidget);
 	w3->MoveTo(200, 200);
 	context->Append(w3);
 
-	Widget* w4 = Manage(new Widget);
+	AbstractRoundWidget* w4 = Manage(new AbstractRoundWidget);
 	w4->MoveTo(250, 250);
 	context->Append(w4);
 
@@ -335,11 +335,11 @@ TEST_F(ContextTest1, Layer3)
 	delete w3;
 	delete w2;
 
-	Widget* w5 = Manage(new Widget);
+	AbstractRoundWidget* w5 = Manage(new AbstractRoundWidget);
 	w5->MoveTo(300, 300);
 	context->Append(w5);
 
-	Widget* w6 = Manage(new Widget);
+	AbstractRoundWidget* w6 = Manage(new AbstractRoundWidget);
 	w6->MoveTo(350, 350);
 	context->Append(w6);
 

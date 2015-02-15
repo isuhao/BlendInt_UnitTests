@@ -13,7 +13,7 @@
 using namespace BlendInt;
 
 /*
-class AnimatingWidget: public Widget
+class AnimatingWidget: public AbstractRoundWidget
 {
 public:
 	AnimatingWidget();
@@ -33,7 +33,7 @@ private:
 };
 
 AnimatingWidget::AnimatingWidget ()
-	: Widget(), m_angle(0.0), m_timer(0)
+	: AbstractRoundWidget(), m_angle(0.0), m_timer(0)
 {
 	m_timer = new Timer;
 

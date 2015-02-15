@@ -7,7 +7,7 @@
 
 namespace BI = BlendInt;
 
-class TexAtlasViewer: public BI::Widget
+class TexAtlasViewer: public BI::AbstractRoundWidget
 {
 public:
 

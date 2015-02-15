@@ -32,7 +32,7 @@ TEST_F(FileSystemModelTest1, InsertRows1)
 	model.Print();
 #endif
 
-	ASSERT_TRUE(model.GetRows(root) == 5);
+	ASSERT_TRUE(model.GetRowCount(root) == 5);
 }
 
 /**
@@ -58,7 +58,7 @@ TEST_F(FileSystemModelTest1, InsertRows2)
 	model.Print();
 #endif
 
-	ASSERT_TRUE(model.GetRows(root) == 7);
+	ASSERT_TRUE(model.GetRowCount(root) == 7);
 }
 
 /**
@@ -84,7 +84,7 @@ TEST_F(FileSystemModelTest1, InsertRows3)
 	model.Print();
 #endif
 
-	ASSERT_TRUE(model.GetRows(root) == 7);
+	ASSERT_TRUE(model.GetRowCount(root) == 7);
 }
 
 /**
@@ -110,7 +110,7 @@ TEST_F(FileSystemModelTest1, InsertRows4)
 	model.Print();
 #endif
 
-	ASSERT_TRUE(model.GetRows(root) == 7);
+	ASSERT_TRUE(model.GetRowCount(root) == 7);
 }
 
 /**
@@ -136,7 +136,7 @@ TEST_F(FileSystemModelTest1, InsertRows5)
 	model.Print();
 #endif
 
-	ASSERT_TRUE(model.GetRows(root) == 10);
+	ASSERT_TRUE(model.GetRowCount(root) == 10);
 }
 
 /**
@@ -162,7 +162,7 @@ TEST_F(FileSystemModelTest1, InsertColumns1)
 	model.Print();
 #endif
 
-	ASSERT_TRUE(model.GetColumns(root) == 7);
+	ASSERT_TRUE(model.GetColumnCount(root) == 7);
 }
 
 /**
@@ -188,7 +188,7 @@ TEST_F(FileSystemModelTest1, InsertColumns2)
 	model.Print();
 #endif
 
-	ASSERT_TRUE(model.GetColumns(root) == 7);
+	ASSERT_TRUE(model.GetColumnCount(root) == 7);
 }
 
 /**
@@ -214,7 +214,7 @@ TEST_F(FileSystemModelTest1, InsertColumns3)
 	model.Print();
 #endif
 
-	ASSERT_TRUE(model.GetColumns(root) == 7);
+	ASSERT_TRUE(model.GetColumnCount(root) == 7);
 }
 
 /**
@@ -240,7 +240,7 @@ TEST_F(FileSystemModelTest1, RemoveRows1)
 	model.Print();
 #endif
 
-	ASSERT_TRUE(model.GetRows(root) == 3);
+	ASSERT_TRUE(model.GetRowCount(root) == 3);
 }
 
 /**
@@ -266,7 +266,7 @@ TEST_F(FileSystemModelTest1, RemoveRows2)
 	model.Print();
 #endif
 
-	ASSERT_TRUE(model.GetRows(root) == 1);
+	ASSERT_TRUE(model.GetRowCount(root) == 1);
 }
 
 /**
@@ -292,7 +292,7 @@ TEST_F(FileSystemModelTest1, RemoveRows3)
 	model.Print();
 #endif
 
-	ASSERT_TRUE(model.GetRows(root) == 3);
+	ASSERT_TRUE(model.GetRowCount(root) == 3);
 }
 
 /**
@@ -318,7 +318,7 @@ TEST_F(FileSystemModelTest1, RemoveRows4)
 	model.Print();
 #endif
 
-	ASSERT_TRUE(model.GetRows(root) == 5);
+	ASSERT_TRUE(model.GetRowCount(root) == 5);
 }
 
 /**
@@ -343,7 +343,7 @@ TEST_F(FileSystemModelTest1, RemoveColumns1)
 	model.Print();
 #endif
 
-	ASSERT_TRUE(model.GetColumns(root) == 4);
+	ASSERT_TRUE(model.GetColumnCount(root) == 4);
 }
 
 /**
@@ -368,7 +368,7 @@ TEST_F(FileSystemModelTest1, RemoveColumns2)
 	model.Print();
 #endif
 
-	ASSERT_TRUE(model.GetColumns(root) == 4);
+	ASSERT_TRUE(model.GetColumnCount(root) == 4);
 }
 
 /**
@@ -393,7 +393,7 @@ TEST_F(FileSystemModelTest1, RemoveColumns3)
 	model.Print();
 #endif
 
-	ASSERT_TRUE(model.GetColumns(root) == 4);
+	ASSERT_TRUE(model.GetColumnCount(root) == 4);
 }
 
 /**
@@ -418,9 +418,9 @@ TEST_F(FileSystemModelTest1, RemoveColumns4)
 	model.Print();
 #endif
 
-	DBG_PRINT_MSG("columns: %d", model.GetColumns(root));
+	DBG_PRINT_MSG("columns: %d", model.GetColumnCount(root));
 
-	ASSERT_TRUE(model.GetColumns(root) == 1);
+	ASSERT_TRUE(model.GetColumnCount(root) == 1);
 }
 
 /**
@@ -445,7 +445,7 @@ TEST_F(FileSystemModelTest1, RemoveColumns5)
 	model.Print();
 #endif
 
-	ASSERT_TRUE((model.GetColumns(root) == 0) && (model.GetRows(root) == 0));
+	ASSERT_TRUE((model.GetColumnCount(root) == 0) && (model.GetRowCount(root) == 0));
 }
 
 /**
@@ -470,7 +470,7 @@ TEST_F(FileSystemModelTest1, RemoveColumns6)
 	model.Print();
 #endif
 
-	ASSERT_TRUE((model.GetColumns(root) == 0) && (model.GetRows(root) == 0));
+	ASSERT_TRUE((model.GetColumnCount(root) == 0) && (model.GetRowCount(root) == 0));
 }
 
 /**
@@ -493,7 +493,7 @@ TEST_F(FileSystemModelTest1, Load1)
 	model.Print();
 #endif
 
-	ASSERT_TRUE(model.GetColumns(root) == 5);
+	ASSERT_TRUE(model.GetColumnCount(root) == 5);
 }
 
 /**
@@ -520,7 +520,7 @@ TEST_F(FileSystemModelTest1, GetIndex1)
 		index = index.GetDownIndex();
 	}
 
-	ASSERT_TRUE(model.GetColumns(root) == 5);
+	ASSERT_TRUE(model.GetColumnCount(root) == 5);
 }
 
 /**
@@ -547,5 +547,5 @@ TEST_F(FileSystemModelTest1, GetIndex2)
 		index = index.GetRightIndex();
 	}
 
-	ASSERT_TRUE(model.GetColumns(root) == 5);
+	ASSERT_TRUE(model.GetColumnCount(root) == 5);
 }

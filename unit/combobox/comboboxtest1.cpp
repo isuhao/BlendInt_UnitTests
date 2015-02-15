@@ -1,5 +1,5 @@
 #include "ComboBoxTest1.hpp"
-#include <gui/combobox.hpp>
+#include <gui/combo-box.hpp>
 #include <gui/filesystem-model.hpp>
 #include <Common/UnitTestContext.hpp>
 #include <gui/dialog.hpp>

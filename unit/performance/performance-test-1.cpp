@@ -263,12 +263,12 @@ TEST_F(PerformanceTest1, Performance2)
 	// TODO: add test code here
 
     int max = 800;
-    Widget* label[max];
+    AbstractRoundWidget* label[max];
     int x_pos = 0;
     int y_pos = 0;
     for(int i = 0, j = 1; i < max; i++, j++)
     {
-        label[i] = new Widget;
+        label[i] = new AbstractRoundWidget;
         label[i]->MoveTo(x_pos, y_pos);
         label[i]->Resize(48, 24);
         label[i]->Register();

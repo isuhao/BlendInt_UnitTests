@@ -41,9 +41,9 @@ TEST_F(VLayoutTest1, Add1)
 
 	vlayout->SetPosition(100, 100);
 
-	Widget* widget1 = Manage(new Widget);
-	Widget* widget2 = Manage(new Widget);
-	Widget* widget3 = Manage(new Widget);
+	AbstractRoundWidget* widget1 = Manage(new AbstractRoundWidget);
+	AbstractRoundWidget* widget2 = Manage(new AbstractRoundWidget);
+	AbstractRoundWidget* widget3 = Manage(new AbstractRoundWidget);
 
 	LinearLayout* hlayout = Manage(new LinearLayout);
 	hlayout->Append(widget2);
