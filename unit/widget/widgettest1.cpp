@@ -1,5 +1,5 @@
 #include "WidgetTest1.hpp"
-#include <gui/widget.hpp>
+#include <gui/abstract-round-widget.hpp>
 #include <Common/Window.hpp>
 
 using namespace BlendInt;

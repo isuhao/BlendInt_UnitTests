@@ -1,7 +1,7 @@
 #ifndef _TEXATLAS_VIEWER_HPP_
 #define _TEXATLAS_VIEWER_HPP_
 
-#include <gui/widget.hpp>
+#include <gui/abstract-round-widget.hpp>
 #include <BlendInt/OpenGL/TextureAtlas2D.hpp>
 #include <opengl/glsl-program.hpp>
 

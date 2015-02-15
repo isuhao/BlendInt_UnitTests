@@ -3,7 +3,7 @@
 #include <BlendInt/Interface.hpp>
 #include <gui/linear-layout.hpp>
 #include <BlendInt/Gui/VLayout.hpp>
-#include <gui/widget.hpp>
+#include <gui/abstract-round-widget.hpp>
 
 #include <boost/smart_ptr.hpp>
 

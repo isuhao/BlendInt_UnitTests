@@ -1,5 +1,5 @@
 #include "FrameTest1.hpp"
-#include <gui/frame.hpp>
+#include <gui/abstract-round-frame.hpp>
 #include <gui/button.hpp>
 #include <gui/window.hpp>
 

@@ -3,7 +3,7 @@
 #include <gui/button.hpp>
 #include <gui/label.hpp>
 #include <gui/linear-layout.hpp>
-#include <gui/frame.hpp>
+#include <gui/abstract-round-frame.hpp>
 #include <gui/toolbox.hpp>
 #include <gui/dialog.hpp>
 #include <gui/window.hpp>
