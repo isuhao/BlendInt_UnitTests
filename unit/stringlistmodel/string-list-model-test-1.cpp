@@ -22,7 +22,7 @@ StringListModelTest1::~StringListModelTest1()
  */
 TEST_F(StringListModelTest1, Insert1)
 {
-	bool result = true;
+	bool result = false;
 
 	if(Window::Initialize()) {
 
@@ -32,14 +32,22 @@ TEST_F(StringListModelTest1, Insert1)
 			StringListModel model;
 			ModelIndex index = model.GetRootIndex();
 
+			String str("String");
+			char buf[16];
 			for(int i = 0; i < 10; i++) {
-				model.AddString("String");
+				sprintf(buf, "String %d", i);
+				str = buf;
+				model.AddString(str);
 			}
 			// model.InsertRows(0, 5, index);
 			// model.InsertRows(8, 5, index);
 
+			model.InsertString(1, "Insert this text");
+#ifdef DEBUG
 			model.Print();
-			result = model.GetRowCount() == 10;
+#endif
+
+			result = model.GetRowCount() == 11;
 		}
 
 		win.Exec();

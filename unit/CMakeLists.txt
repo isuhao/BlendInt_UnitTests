@@ -9,6 +9,8 @@ add_subdirectory(fcconfig)
 
 # gui test
 
+add_subdirectory(window)
+
 add_subdirectory(stringlistmodel)
 
 add_subdirectory(dialog)
@@ -64,7 +66,6 @@ add_subdirectory(clock)
 #add_subdirectory(Widget)
 #add_subdirectory(Context)
 #add_subdirectory(Texture2D)
-#add_subdirectory(Window)
 #add_subdirectory(ToggleButton)
 #add_subdirectory(GLRenderbuffer)
 #add_subdirectory(AbstractForm)
