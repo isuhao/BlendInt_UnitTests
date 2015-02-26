@@ -4,7 +4,7 @@
 #include <gui/frame-splitter.hpp>
 #include <gui/viewport.hpp>
 
-#include <gui/toolbox.hpp>
+#include <gui/frame.hpp>
 #include <gui/button.hpp>
 
 using namespace BlendInt;
@@ -45,7 +45,7 @@ TEST_F(FrameSplitterTest1, AddFrame1)
 
 	Viewport* f1 = Manage(new Viewport);
 	DBG_SET_NAME(f1, "Frame1");
-	ToolBox* f2 = Manage(new ToolBox);
+	Frame* f2 = Manage(new Frame);
 	DBG_SET_NAME(f2, "Frame2");
 	f2->Resize(240, 100);
 
@@ -57,7 +57,7 @@ TEST_F(FrameSplitterTest1, AddFrame1)
 	//Viewport* f3 = Manage(new Viewport);
 	//DBG_SET_NAME(f3, "Frame3");
 
-//	ToolBox* f3 = Manage(new ToolBox(Horizontal));
+//	Frame* f3 = Manage(new Frame(Horizontal));
 //	DBG_SET_NAME(f3, "Frame3");
 //
 //	Button* btn1 = Manage(new Button("Hello"));
@@ -114,7 +114,7 @@ TEST_F(FrameSplitterTest1, GetFrame1)
 
 	Viewport* f1 = Manage(new Viewport);
 	DBG_SET_NAME(f1, "Frame1");
-	ToolBox* f2 = Manage(new ToolBox);
+	Frame* f2 = Manage(new Frame);
 	DBG_SET_NAME(f2, "Frame2");
 	f2->Resize(240, 100);
 
@@ -159,7 +159,7 @@ TEST_F(FrameSplitterTest1, InsertFrame1)
 
 	Viewport* f1 = Manage(new Viewport);
 	DBG_SET_NAME(f1, "Frame1");
-	ToolBox* f2 = Manage(new ToolBox);
+	Frame* f2 = Manage(new Frame);
 	DBG_SET_NAME(f2, "Frame2");
 	f2->Resize(240, 100);
 

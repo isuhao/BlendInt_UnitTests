@@ -1,5 +1,5 @@
 /*
- * Unit test for ToolBox
+ * Unit test for Frame
  */
 
 #include <gtest/gtest.h>

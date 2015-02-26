@@ -1,5 +1,5 @@
 #include "ToolBoxTest1.hpp"
-#include <gui/toolbox.hpp>
+#include <gui/frame.hpp>
 #include <gui/button.hpp>
 #include <gui/window.hpp>
 #include <Common/UnitTestContext.hpp>
@@ -26,7 +26,7 @@ TEST_F(ToolBoxTest1, Foo1)
 {
 	Init ();
 
-    GLFWwindow* win = CreateWindow("ToolBox - Foo1", 1280, 800);
+    GLFWwindow* win = CreateWindow("Frame - Foo1", 1280, 800);
 
     // TODO: add test code here
     UnitTestContext* context = Manage (new UnitTestContext);
@@ -34,11 +34,11 @@ TEST_F(ToolBoxTest1, Foo1)
 	SetContext(context);
 	context->Resize(1280, 800);
 
-    ToolBox* tb1 = Manage(new ToolBox(Vertical));
+    Frame* tb1 = Manage(new Frame(Vertical));
     DBG_SET_NAME(tb1, "ToolBox1");
     tb1->MoveTo(200, 200);
 
-//    ToolBox* tb2 = Manage(new ToolBox(Vertical));
+//    Frame* tb2 = Manage(new Frame(Vertical));
 //    tb2->SetPosition(700, 100);
 
     context->AddFrame(tb1);
