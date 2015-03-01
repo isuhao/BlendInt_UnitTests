@@ -27,8 +27,10 @@ ListModel::~ListModel ()
 {
 }
 
-void ListModel::Test(int column, int count)
+bool ListModel::TestModel1(int column, int count)
 {
+    bool result = false;
+    
 	ModelIndex root = GetRootIndex();
 
 	if(InsertColumns(column, count, root)) {
@@ -53,9 +55,54 @@ void ListModel::Test(int column, int count)
 
 		DBG_PRINT_MSG("rows: %d, columns: %d", rows, columns);
 
+        RemoveColumns(column, count);
+        
+        result = true;
+        
 	} else {
 		DBG_PRINT_MSG("%s", "fail to add columns");
 	}
+    
+    return result;
+}
+
+bool ListModel::TestModel2(int row, int count)
+{
+    bool result = false;
+    
+    ModelIndex root = GetRootIndex();
+    
+    if(InsertRows(row, count, root)) {
+        
+        ModelIndex index = root.GetChildIndex();
+        
+        int columns = 0;
+        int rows = 0;
+        
+        ModelIndex i = index;
+        
+        while(i.valid()) {
+            rows++;
+            i = i.GetDownIndex();
+        }
+        
+        i = index;
+        while(i.valid()) {
+            columns++;
+            i = i.GetRightIndex();
+        }
+        
+        DBG_PRINT_MSG("rows: %d, columns: %d", rows, columns);
+        
+        RemoveRows(row, count);
+
+        result = true;
+        
+    } else {
+        DBG_PRINT_MSG("%s", "fail to add columns");
+    }
+    
+    return result;
 }
 
 int ListModel::GetRowCount (const BI::ModelIndex& parent) const
@@ -81,7 +128,12 @@ TEST_F(ListModelTest1, Model1)
 
         {
         	ListModel model;
-        	model.Test(0, 2);
+        	model.TestModel1(0, 2);
+        }
+        
+        {
+            ListModel model;
+            model.TestModel2(0, 2);
         }
 
         win.Exec();

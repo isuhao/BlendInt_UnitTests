@@ -35,7 +35,9 @@ public:
 
 	// A test function:
 
-	void Test (int column, int count);
+	bool TestModel1 (int column, int count);
+    
+    bool TestModel2 (int row, int count);
 
 	virtual int GetRowCount (const BI::ModelIndex& parent = BI::ModelIndex()) const;
 
