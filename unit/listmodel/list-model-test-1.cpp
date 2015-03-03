@@ -27,82 +27,46 @@ ListModel::~ListModel ()
 {
 }
 
-bool ListModel::TestModel1(int column, int count)
+Size ListModel::CheckRowColumnCount () const
 {
-    bool result = false;
-    
 	ModelIndex root = GetRootIndex();
+	ModelIndex index = root.GetChildIndex();
 
-	if(InsertColumns(column, count, root)) {
+	int column_count = 0;
+	int row_count = 0;
+	int last_column_count = 0;
 
-		ModelIndex index = root.GetChildIndex();
+	ModelIndex i = index;
+	ModelIndex j;
 
-		int columns = 0;
-		int rows = 0;
+	while(i.valid()) {
 
-		ModelIndex i = index;
-
-		while(i.valid()) {
-			rows++;
-			i = i.GetDownIndex();
+		if(row_count == 0) {
+			assert(!i.GetUpIndex().valid());
 		}
 
-		i = index;
-		while(i.valid()) {
-			columns++;
-			i = i.GetRightIndex();
+		j = i;
+		column_count = 0;
+		while(j.valid()) {
+			column_count++;
+			j = j.GetRightIndex();
 		}
 
-		DBG_PRINT_MSG("rows: %d, columns: %d", rows, columns);
+		// DBG_PRINT_MSG("last columns: %d, colum count: %d", last_column_count, column_count);
 
-        RemoveColumns(column, count);
-        
-        result = true;
-        
-	} else {
-		DBG_PRINT_MSG("%s", "fail to add columns");
+		if(row_count != 0) {
+			assert(column_count == last_column_count);
+		}
+
+		last_column_count = column_count;
+
+		row_count++;
+		i = i.GetDownIndex();
 	}
-    
-    return result;
-}
 
-bool ListModel::TestModel2(int row, int count)
-{
-    bool result = false;
-    
-    ModelIndex root = GetRootIndex();
-    
-    if(InsertRows(row, count, root)) {
-        
-        ModelIndex index = root.GetChildIndex();
-        
-        int columns = 0;
-        int rows = 0;
-        
-        ModelIndex i = index;
-        
-        while(i.valid()) {
-            rows++;
-            i = i.GetDownIndex();
-        }
-        
-        i = index;
-        while(i.valid()) {
-            columns++;
-            i = i.GetRightIndex();
-        }
-        
-        DBG_PRINT_MSG("rows: %d, columns: %d", rows, columns);
-        
-        RemoveRows(row, count);
+	// DBG_PRINT_MSG("columns: %d, rows: %d", column_count, row_count);
 
-        result = true;
-        
-    } else {
-        DBG_PRINT_MSG("%s", "fail to add columns");
-    }
-    
-    return result;
+	return Size(column_count, row_count);
 }
 
 int ListModel::GetRowCount (const BI::ModelIndex& parent) const
@@ -128,12 +92,87 @@ TEST_F(ListModelTest1, Model1)
 
         {
         	ListModel model;
-        	model.TestModel1(0, 2);
+        	ModelIndex root = model.GetRootIndex();
+        	model.InsertColumns(0, 4, root);
+
+        	Size result = model.CheckRowColumnCount();
+           	ASSERT_TRUE((result.width() == 4) && (result.height() == 1));
+
+        	model.InsertRows(0, 3, root);
+        	result = model.CheckRowColumnCount();
+
+           	ASSERT_TRUE((result.width() == 4) && (result.height() == 4));
         }
-        
+
         {
-            ListModel model;
-            model.TestModel2(0, 2);
+        	ListModel model;
+        	ModelIndex root = model.GetRootIndex();
+        	Size result;
+
+        	model.InsertRows(0, 2, root);
+        	result = model.CheckRowColumnCount();
+           	ASSERT_TRUE((result.width() == 1) && (result.height() == 2));
+
+        	model.InsertRows(4, 2, root);	// append
+        	result = model.CheckRowColumnCount();
+           	ASSERT_TRUE((result.width() == 1) && (result.height() == 4));
+
+        	model.InsertRows(0, 2, root);	// insert 0
+        	result = model.CheckRowColumnCount();
+           	ASSERT_TRUE((result.width() == 1) && (result.height() == 6));
+
+        	model.InsertRows(1, 2, root);	// insert 1
+        	result = model.CheckRowColumnCount();
+           	ASSERT_TRUE((result.width() == 1) && (result.height() == 8));
+
+        	model.InsertColumns(0, 2, root);	// insert 0 column
+        	result = model.CheckRowColumnCount();
+           	ASSERT_TRUE((result.width() == 3) && (result.height() == 8));
+
+        	model.InsertColumns(1, 2, root);	// insert 0 column
+        	result = model.CheckRowColumnCount();
+           	ASSERT_TRUE((result.width() == 5) && (result.height() == 8));
+
+        	model.InsertColumns(6, 2, root);	// append
+        	result = model.CheckRowColumnCount();
+           	ASSERT_TRUE((result.width() == 7) && (result.height() == 8));
+
+           	// test remove rows:
+
+           	model.RemoveRows(0, 2, root);
+           	result = model.CheckRowColumnCount();
+           	ASSERT_TRUE((result.width() == 7) && (result.height() == 6));
+
+           	model.RemoveRows(2, 2, root);
+           	result = model.CheckRowColumnCount();
+           	ASSERT_TRUE((result.width() == 7) && (result.height() == 4));
+
+           	model.RemoveRows(3, 1, root);
+           	result = model.CheckRowColumnCount();
+           	ASSERT_TRUE((result.width() == 7) && (result.height() == 3));
+
+           	// test remove columns:
+
+           	model.RemoveColumns(0, 2, root);
+           	result = model.CheckRowColumnCount();
+           	ASSERT_TRUE((result.width() == 5) && (result.height() == 3));
+
+           	model.RemoveColumns(2, 2, root);
+           	result = model.CheckRowColumnCount();
+           	ASSERT_TRUE((result.width() == 3) && (result.height() == 3));
+
+           	model.RemoveColumns(2, 1, root);
+           	result = model.CheckRowColumnCount();
+           	ASSERT_TRUE((result.width() == 2) && (result.height() == 3));
+
+           	model.RemoveColumns(0, 4, root);
+           	result = model.CheckRowColumnCount();
+           	ASSERT_TRUE((result.width() == 0) && (result.height() == 0));
+
+        	model.InsertColumns(0, 2, root);	// insert 0 column
+        	result = model.CheckRowColumnCount();
+           	ASSERT_TRUE((result.width() == 2) && (result.height() == 1));
+
         }
 
         win.Exec();

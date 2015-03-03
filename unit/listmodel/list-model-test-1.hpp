@@ -35,13 +35,11 @@ public:
 
 	// A test function:
 
-	bool TestModel1 (int column, int count);
-    
-    bool TestModel2 (int row, int count);
-
 	virtual int GetRowCount (const BI::ModelIndex& parent = BI::ModelIndex()) const;
 
 	virtual int GetColumnCount (const BI::ModelIndex& parent = BI::ModelIndex()) const;
+
+	BI::Size CheckRowColumnCount () const;
 
 private:
 
