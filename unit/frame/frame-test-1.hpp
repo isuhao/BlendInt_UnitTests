@@ -2,7 +2,6 @@
 #define _FRAMETEST1_HPP_
 
 #include <gtest/gtest.h>
-#include <Common/Window.hpp>
 
 class FrameTest1: public testing::Test
 {
