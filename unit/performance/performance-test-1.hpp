@@ -6,18 +6,18 @@
 class PerformanceTest1: public testing::Test
 {
 public:
-	PerformanceTest1 ();
-	virtual ~PerformanceTest1 ();
+  PerformanceTest1 ();
+  virtual ~PerformanceTest1 ();
 
 protected:
 
-	virtual void SetUp ()
-	{
-	}
+  virtual void SetUp ()
+  {
+  }
 
-	virtual void TearDown ()
-	{
-	}
+  virtual void TearDown ()
+  {
+  }
 };
 
 #endif  // _PERFORMANCETEST1_HPP_
