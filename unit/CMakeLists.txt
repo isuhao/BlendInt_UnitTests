@@ -3,6 +3,7 @@
 
 # core test
 add_subdirectory(object)
+add_subdirectory(color)
 
 # font test
 add_subdirectory(fcconfig)
