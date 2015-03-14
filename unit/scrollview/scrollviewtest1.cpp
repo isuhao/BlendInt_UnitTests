@@ -79,9 +79,9 @@ TEST_F(ScrollViewTest1, Foo1)
 //	ToolButton* btn = Manage (new ToolButton);
 //	btn->Resize(400, 400);
 //
-//	scrollview1->SetViewport (btn);
+//	scrollview1->SetMainFrame (btn);
 //
-//	scrollview2->SetViewport(scrollview1);
+//	scrollview2->SetMainFrame(scrollview1);
 //
 //	btn->move(50, 10);
 //

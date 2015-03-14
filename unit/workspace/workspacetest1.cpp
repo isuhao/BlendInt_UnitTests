@@ -70,10 +70,10 @@ TEST_F(WorkspaceTest1, Foo1)
 
 	Viewport* view = Manage(new Viewport);
 
-	workspace->SetLeftSideBar(left);
-	workspace->SetViewport(view);
-	workspace->SetRightSideBar(right);
-	workspace->SetHeader(header);
+	workspace->SetLeftFrame(left);
+	workspace->SetMainFrame(view);
+	workspace->SetRightFrame(right);
+	workspace->SetHeaderFrame(header);
 
 	context->AddFrame(workspace);
 

@@ -1,11 +1,12 @@
-#include "FrameSplitterTest1.hpp"
-
-#include <Common/UnitTestContext.hpp>
 #include <gui/frame-splitter.hpp>
-#include <gui/viewport.hpp>
+#include <gui/model-viewport.hpp>
 
 #include <gui/frame.hpp>
 #include <gui/button.hpp>
+#include <gui/linear-layout.hpp>
+#include <gui/window.hpp>
+
+#include "frame-splitter-test-1.hpp"
 
 using namespace BlendInt;
 
@@ -142,34 +143,29 @@ TEST_F(FrameSplitterTest1, GetFrame1)
  */
 TEST_F(FrameSplitterTest1, InsertFrame1)
 {
-	Init ();
+  if(Window::Initialize()) {
 
-    GLFWwindow* win = CreateWindow("FrameSplitter - Foo1", 1280, 800);
+    Window win(1280, 800, "InsertFrame1");
 
-    // TODO: add test code here
-    UnitTestContext* context = Manage (new UnitTestContext);
-	DBG_SET_NAME(context, "Context");
-	SetContext(context);
-	context->Resize(1280, 800);
+    FrameSplitter* fs = Manage(new FrameSplitter(Horizontal));
+    DBG_SET_NAME(fs, "FrameSplitter");
+    fs->MoveTo(20, 20);
+    fs->Resize(1240, 760);
 
-	FrameSplitter* fs = Manage(new FrameSplitter(Horizontal));
-	DBG_SET_NAME(fs, "FrameSplitter");
-	fs->MoveTo(20, 20);
-	fs->Resize(1240, 760);
+    ModelViewport* f1 = Manage(new ModelViewport);
+    DBG_SET_NAME(f1, "Frame1");
+    ModelViewport* f2 = Manage(new ModelViewport);
+    DBG_SET_NAME(f2, "Frame2");
+    f2->Resize(240, 100);
 
-	Viewport* f1 = Manage(new Viewport);
-	DBG_SET_NAME(f1, "Frame1");
-	Frame* f2 = Manage(new Frame);
-	DBG_SET_NAME(f2, "Frame2");
-	f2->Resize(240, 100);
+    fs->InsertFrame(0, f1);
+    fs->InsertFrame(0, f2);
 
-	fs->InsertFrame(0, f1);
-	fs->InsertFrame(0, f2);
+    win.AddFrame(fs);
 
-	context->AddFrame(fs);
+    win.Exec();
+    Window::Terminate();
+  }
 
-    RunLoop(win);
-    Terminate();
-
-	ASSERT_TRUE(true);
+  ASSERT_TRUE(true);
 }
