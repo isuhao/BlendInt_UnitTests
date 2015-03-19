@@ -22,6 +22,8 @@ add_subdirectory(button)
 add_subdirectory(toolbutton)
 add_subdirectory(framesplitter)
 
+add_subdirectory(listview)
+
 # performance test
 add_subdirectory(performance)
 
@@ -89,7 +91,6 @@ add_subdirectory(clock)
 #add_subdirectory(Theme)
 #add_subdirectory(Expander)
 #add_subdirectory(TextureAtlas)
-#add_subdirectory(ListView)
 #add_subdirectory(CVImageView)
 #add_subdirectory(Section)
 #add_subdirectory(HBlock)

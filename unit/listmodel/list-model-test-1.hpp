@@ -8,18 +8,18 @@
 class ListModelTest1: public testing::Test
 {
 public:
-	ListModelTest1 ();
-	virtual ~ListModelTest1 ();
+  ListModelTest1 ();
+  virtual ~ListModelTest1 ();
 
 protected:
 
-	virtual void SetUp ()
-	{
-	}
+  virtual void SetUp ()
+  {
+  }
 
-	virtual void TearDown ()
-	{
-	}
+  virtual void TearDown ()
+  {
+  }
 };
 
 namespace BI = BlendInt;
@@ -29,23 +29,25 @@ class ListModel: public BlendInt::AbstractListModel
 
 public:
 
-	ListModel();
+  ListModel ();
 
-	virtual ~ListModel();
+  virtual ~ListModel ();
 
-	// A test function:
+  // A test function:
 
-	virtual int GetRowCount (const BI::ModelIndex& parent = BI::ModelIndex()) const;
+  virtual int GetRowCount (const BI::ModelIndex& parent =
+      BI::ModelIndex()) const;
 
-	virtual int GetColumnCount (const BI::ModelIndex& parent = BI::ModelIndex()) const;
+  virtual int GetColumnCount (const BI::ModelIndex& parent =
+      BI::ModelIndex()) const;
 
-	BI::Size CheckRowColumnCount () const;
+  BI::Size CheckRowColumnCount () const;
 
 private:
 
-	int rows_;
+  int rows_;
 
-	int columns_;
+  int columns_;
 
 };
 

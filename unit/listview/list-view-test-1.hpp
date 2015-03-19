@@ -2,8 +2,6 @@
 #define _LISTVIEWTEST1_HPP_
 
 #include <gtest/gtest.h>
-#include <Common/Window.hpp>
-#include <core/object.hpp>
 
 class ListViewTest1: public testing::Test
 {
