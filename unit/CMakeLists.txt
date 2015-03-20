@@ -24,6 +24,7 @@ add_subdirectory(framesplitter)
 
 add_subdirectory(listview)
 add_subdirectory(combobox)
+add_subdirectory(splitter)
 
 # performance test
 add_subdirectory(performance)
@@ -87,7 +88,6 @@ add_subdirectory(clock)
 #add_subdirectory(TabButton)
 #add_subdirectory(ButtonGroup)
 #add_subdirectory(ColorWheel)
-#add_subdirectory(Splitter)
 #add_subdirectory(Theme)
 #add_subdirectory(Expander)
 #add_subdirectory(TextureAtlas)

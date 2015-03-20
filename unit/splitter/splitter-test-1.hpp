@@ -2,26 +2,24 @@
 #define _SPLITTERTEST1_HPP_
 
 #include <gtest/gtest.h>
-#include <Common/Window.hpp>
-#include <core/object.hpp>
 
 class SplitterTest1: public testing::Test
 {
 public:
-	SplitterTest1 ();
-	virtual ~SplitterTest1 ();
+  SplitterTest1 ();
+  virtual ~SplitterTest1 ();
 
 protected:
 
-	virtual void SetUp ()
-	{
+  virtual void SetUp ()
+  {
 
-	}
+  }
 
-	virtual void TearDown ()
-	{
+  virtual void TearDown ()
+  {
 
-	}
+  }
 };
 
 #endif  // _SPLITTERTEST1_HPP_
