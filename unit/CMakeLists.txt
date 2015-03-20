@@ -23,6 +23,7 @@ add_subdirectory(toolbutton)
 add_subdirectory(framesplitter)
 
 add_subdirectory(listview)
+add_subdirectory(combobox)
 
 # performance test
 add_subdirectory(performance)
@@ -42,7 +43,6 @@ add_subdirectory(textentry)
 
 #add_subdirectory(Panel)
 add_subdirectory(clock)
-#add_subdirectory(ComboBox)
 
 #add_subdirectory(PopupFrame)
 #add_subdirectory(ColorSelector)

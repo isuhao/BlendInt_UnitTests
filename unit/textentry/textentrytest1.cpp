@@ -6,13 +6,13 @@
 
 using namespace BlendInt;
 
-TextEntryTest1::TextEntryTest1()
-: testing::Test()
+TextEntryTest1::TextEntryTest1 ()
+    : testing::Test()
 {
 
 }
 
-TextEntryTest1::~TextEntryTest1()
+TextEntryTest1::~TextEntryTest1 ()
 {
 
 }
@@ -24,22 +24,22 @@ TextEntryTest1::~TextEntryTest1()
  */
 TEST_F(TextEntryTest1, Foo1)
 {
-    if(Window::Initialize()) {
-        
-        Window win(640, 480, "ButtonTest1");
+  if (Window::Initialize()) {
 
-        Dialog* dialog = Manage(new Dialog("TextEntry Test"));
+    Window win(640, 480, "ButtonTest1");
 
-        TextEntry* lineedit = Manage(new TextEntry);
-        lineedit->SetText("Hello World!");
+    Dialog* dialog = Manage(new Dialog("TextEntry Test"));
 
-        dialog->AddWidget(lineedit);
+    TextEntry* lineedit = Manage(new TextEntry);
+    lineedit->SetText("Hello World!");
 
-        win.AddFrame(dialog);
+    dialog->AddWidget(lineedit);
 
-        win.Exec();
-        Window::Terminate();
-    }
+    win.AddFrame(dialog);
 
-	ASSERT_TRUE(true);
+    win.Exec();
+    Window::Terminate();
+  }
+
+  ASSERT_TRUE(true);
 }
