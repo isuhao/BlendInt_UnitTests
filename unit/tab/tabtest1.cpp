@@ -1,7 +1,7 @@
 #include "TabTest1.hpp"
 #include <gui/tab.hpp>
 #include <gui/label.hpp>
-#include <gui/button.hpp>
+#include <gui/push-button.hpp>
 
 using namespace BlendInt;
 
@@ -38,7 +38,7 @@ TEST_F(TabTest1, Foo1)
     label->SetFont(Font("Doird Sans Mono", 24));
     label->SetBackgroundColor(Color(0x4F0F7F8F));
 
-    Button* btn = Manage (new Button);
+    PushButton* btn = Manage (new PushButton);
     btn->SetRoundType(RoundNone);
 
     tab->Add(String("Title1"), btn);

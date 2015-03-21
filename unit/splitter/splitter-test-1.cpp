@@ -1,5 +1,5 @@
 #include <gui/splitter.hpp>
-#include <gui/button.hpp>
+#include <gui/push-button.hpp>
 #include <gui/window.hpp>
 #include <gui/dialog.hpp>
 
@@ -35,9 +35,9 @@ TEST_F(SplitterTest1, Foo1)
     DBG_SET_NAME(splitter1, "Splitter 1");
     splitter1->Resize(450, 200);
 
-    Button* btn1 = Manage(new Button("Button1"));
-    Button* btn2 = Manage(new Button("Button2"));
-    Button* btn3 = Manage(new Button("Button3"));
+    PushButton* btn1 = Manage(new PushButton("Button1"));
+    PushButton* btn2 = Manage(new PushButton("Button2"));
+    PushButton* btn3 = Manage(new PushButton("Button3"));
 
     splitter1->AddWidget(btn1);
     splitter1->AddWidget(btn2);
@@ -53,9 +53,9 @@ TEST_F(SplitterTest1, Foo1)
     DBG_SET_NAME(splitter2, "Splitter 2");
     splitter2->Resize(450, 200);
 
-    Button* btn4 = Manage(new Button("Button4"));
-    Button* btn5 = Manage(new Button("Button5"));
-    Button* btn6 = Manage(new Button("Button6"));
+    PushButton* btn4 = Manage(new PushButton("Button4"));
+    PushButton* btn5 = Manage(new PushButton("Button5"));
+    PushButton* btn6 = Manage(new PushButton("Button6"));
 
     splitter2->AddWidget(btn4);
     splitter2->AddWidget(btn5);

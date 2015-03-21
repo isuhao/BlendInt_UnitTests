@@ -3,7 +3,7 @@
 #include <Common/UnitTestCursor.hpp>
 #include <gui/workspace.hpp>
 #include <gui/viewport.hpp>
-#include <gui/button.hpp>
+#include <gui/push-button.hpp>
 #include <gui/toggle-button.hpp>
 #include <gui/dialog.hpp>
 #include <BlendInt/Stock/Cursor.hpp>

@@ -2,7 +2,7 @@
 #include <Common/UnitTestContext.hpp>
 #include <gui/block.hpp>
 #include <gui/dialog.hpp>
-#include <gui/button.hpp>
+#include <gui/push-button.hpp>
 
 using namespace BlendInt;
 
@@ -34,9 +34,9 @@ TEST_F(BlockTest1, Foo1)
 	
     // TODO: add test code here
 
-	Button* btn1 = Manage(new Button("Hello1"));
-	Button* btn2 = Manage(new Button("Hello2"));
-	Button* btn3 = Manage(new Button("Hello3"));
+	PushButton* btn1 = Manage(new PushButton("Hello1"));
+	PushButton* btn2 = Manage(new PushButton("Hello2"));
+	PushButton* btn3 = Manage(new PushButton("Hello3"));
 
 	Block* block = Manage(new Block(Vertical));
 	block->AddWidget(btn1);

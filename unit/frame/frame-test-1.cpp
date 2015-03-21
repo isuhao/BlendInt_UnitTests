@@ -1,6 +1,6 @@
 #include <gui/frame.hpp>
 #include <gui/linear-layout.hpp>
-#include <gui/button.hpp>
+#include <gui/push-button.hpp>
 #include <gui/window.hpp>
 
 #include "frame-test-1.hpp"
@@ -35,7 +35,7 @@ TEST_F(FrameTest1, FocusTest1)
     Frame* frame1 = new Frame(layout1);
     DBG_SET_NAME(frame1, "Frame1");
 
-    Button* btn1 = new Button("Button1");
+    PushButton* btn1 = new PushButton("Button1");
     DBG_SET_NAME(btn1, "Button1");
 
     frame1->AddWidget(btn1);
@@ -47,7 +47,7 @@ TEST_F(FrameTest1, FocusTest1)
     Frame* frame2 = new Frame(layout2);
     DBG_SET_NAME(frame2, "Frame2");
 
-    Button* btn2 = new Button("Button2");
+    PushButton* btn2 = new PushButton("Button2");
     DBG_SET_NAME(btn2, "Button2");
 
     frame2->AddWidget(btn2);
@@ -83,11 +83,11 @@ TEST_F(FrameTest1, HoverTest1)
     Frame* frame = new Frame(layout);
     DBG_SET_NAME(frame, "Frame");
 
-    Button* btn1 = new Button("Button1");
+    PushButton* btn1 = new PushButton("Button1");
     DBG_SET_NAME(btn1, "Button1");
-    Button* btn2 = new Button("Button2");
+    PushButton* btn2 = new PushButton("Button2");
     DBG_SET_NAME(btn2, "Button2");
-    Button* btn3 = new Button("Button3");
+    PushButton* btn3 = new PushButton("Button3");
     DBG_SET_NAME(btn3, "Button3");
 
     frame->AddWidget(btn1);

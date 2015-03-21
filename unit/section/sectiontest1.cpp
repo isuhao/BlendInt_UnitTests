@@ -31,8 +31,8 @@ TEST_F(SectionTest1, Foo1)
     Interface::instance->SetCurrentContext(context);
     context->Resize(1280, 800);
 
-    Button* btn = Manage(new Button("Click Me"));
-    DBG_SET_NAME(btn, "Button");
+    PushButton* btn = Manage(new PushButton("Click Me"));
+    DBG_SET_NAME(btn, "PushButton");
     btn->SetPosition(160, 200);
 
     FileSelector* fs = Manage(new FileSelector);

@@ -6,7 +6,7 @@
 
 #include <core/timer.hpp>
 #include <gui/viewport3d.hpp>
-#include <gui/button.hpp>
+#include <gui/push-button.hpp>
 
 // The fixture for testing class Foo.
 

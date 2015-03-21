@@ -2,7 +2,7 @@
 #include <gui/model-viewport.hpp>
 
 #include <gui/frame.hpp>
-#include <gui/button.hpp>
+#include <gui/push-button.hpp>
 #include <gui/linear-layout.hpp>
 #include <gui/window.hpp>
 
@@ -61,10 +61,10 @@ TEST_F(FrameSplitterTest1, AddFrame1)
 //	Frame* f3 = Manage(new Frame(Horizontal));
 //	DBG_SET_NAME(f3, "Frame3");
 //
-//	Button* btn1 = Manage(new Button("Hello"));
+//	PushButton* btn1 = Manage(new PushButton("Hello"));
 //	DBG_SET_NAME(btn1, "Button1");
 //	f3->AddWidget(btn1);
-//	Button* btn2 = Manage(new Button("Hello"));
+//	PushButton* btn2 = Manage(new PushButton("Hello"));
 //	DBG_SET_NAME(btn2, "Button2");
 //	f3->AddWidget(btn2);
 //

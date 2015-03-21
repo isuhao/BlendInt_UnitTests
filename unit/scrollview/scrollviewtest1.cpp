@@ -1,6 +1,6 @@
 #include "ScrollViewTest1.hpp"
 #include <gui/scroll-view.hpp>
-#include <gui/button.hpp>
+#include <gui/push-button.hpp>
 
 using namespace BlendInt;
 
@@ -34,8 +34,8 @@ TEST_F(ScrollViewTest1, Foo1)
 	scrollview->SetPosition(50, 50);
 	scrollview->Resize(500, 400);
 	
-	Button* btn = Manage(new Button);
-	DBG_SET_NAME(btn, "Button");
+	PushButton* btn = Manage(new PushButton);
+	DBG_SET_NAME(btn, "PushButton");
 	btn->Resize(200, 200);
 	
 	scrollview->Setup(btn);

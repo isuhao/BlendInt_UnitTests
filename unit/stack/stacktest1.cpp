@@ -1,7 +1,7 @@
 #include "StackTest1.hpp"
 #include <gui/stack.hpp>
 #include <gui/label.hpp>
-#include <gui/button.hpp>
+#include <gui/push-button.hpp>
 
 using namespace BlendInt;
 
@@ -44,13 +44,13 @@ TEST_F(StackTest1, Foo1)
 //	label3->SetFont(Font("Droid Sans Mono", 24));
 //	label3->set_background_color(Color(0x00FF008F));
 
-	Button* label1 = Manage (new Button("Label1"));
+	PushButton* label1 = Manage (new PushButton("Label1"));
 	DBG_SET_NAME(label1, "Button1");
 	label1->SetFont(Font("Droid Sans Mono", 24));
-	Button* label2 = Manage (new Button("Label2"));
+	PushButton* label2 = Manage (new PushButton("Label2"));
 	DBG_SET_NAME(label2, "Button2");
 	label2->SetFont(Font("Droid Sans Mono", 24));
-	Button* label3 = Manage (new Button("Label3"));
+	PushButton* label3 = Manage (new PushButton("Label3"));
 	DBG_SET_NAME(label3, "Button3");
 	label3->SetFont(Font("Droid Sans Mono", 24));
 

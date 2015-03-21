@@ -5,7 +5,7 @@
 #include <Common/Window.hpp>
 
 #include <gui/viewport3d.hpp>
-#include <gui/button.hpp>
+#include <gui/push-button.hpp>
 
 //#include <gtest/gtest.h>
 
@@ -64,7 +64,7 @@ int main (int argc, char* argv[])
     view->Resize(600, 440);
     view->SetPosition(20, 20);
 
-    Button* button = new Button("OK");
+    PushButton* button = new PushButton("OK");
     button->SetPosition(1000, 400);
 
     context->Append(view);

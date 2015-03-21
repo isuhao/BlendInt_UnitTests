@@ -1,6 +1,6 @@
 #include "ToolBoxTest1.hpp"
 #include <gui/frame.hpp>
-#include <gui/button.hpp>
+#include <gui/push-button.hpp>
 #include <gui/window.hpp>
 #include <Common/UnitTestContext.hpp>
 
@@ -44,14 +44,14 @@ TEST_F(ToolBoxTest1, Foo1)
     context->AddFrame(tb1);
 //    context->AddFrame(tb2);
 
-    Button* btn1 = Manage(new Button("Hello, World!"));
+    PushButton* btn1 = Manage(new PushButton("Hello, World!"));
     DBG_SET_NAME(btn1, "Button1");
     btn1->Resize(200, 50);
-    //Button* btn2 = Manage(new Button("Hello2"));
-    //Button* btn3 = Manage(new Button("Hello3"));
-//    Button* btn4 = Manage(new Button("Hello4"));
-//    Button* btn5 = Manage(new Button("Hello5"));
-//    Button* btn6 = Manage(new Button("Hello6"));
+    //PushButton* btn2 = Manage(new PushButton("Hello2"));
+    //PushButton* btn3 = Manage(new PushButton("Hello3"));
+//    PushButton* btn4 = Manage(new PushButton("Hello4"));
+//    PushButton* btn5 = Manage(new PushButton("Hello5"));
+//    PushButton* btn6 = Manage(new PushButton("Hello6"));
 
     tb1->AddWidget(btn1);
     //tb1->AddWidget(btn2);

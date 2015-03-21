@@ -8,6 +8,9 @@ add_subdirectory(color)
 # font test
 add_subdirectory(fcconfig)
 
+# theme read/write test
+add_subdirectory(theme)
+
 # gui test
 
 add_subdirectory(window)
@@ -88,7 +91,6 @@ add_subdirectory(clock)
 #add_subdirectory(TabButton)
 #add_subdirectory(ButtonGroup)
 #add_subdirectory(ColorWheel)
-#add_subdirectory(Theme)
 #add_subdirectory(Expander)
 #add_subdirectory(TextureAtlas)
 #add_subdirectory(CVImageView)

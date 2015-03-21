@@ -2,7 +2,7 @@
 #include <gui/panel.hpp>
 #include <Common/UnitTestContext.hpp>
 #include <gui/dialog.hpp>
-#include <gui/button.hpp>
+#include <gui/push-button.hpp>
 #include <gui/linear-layout.hpp>
 
 using namespace BlendInt;
@@ -46,15 +46,15 @@ TEST_F(PanelTest1, Foo1)
 
 	dialog->AddWidget(p);
 
-	Button* btn1 = Manage(new Button("Button1"));
-	Button* btn2 = Manage(new Button("Button2"));
+	PushButton* btn1 = Manage(new PushButton("Button1"));
+	PushButton* btn2 = Manage(new PushButton("Button2"));
 
 	LinearLayout* layout = Manage(new LinearLayout);
 	layout->AddWidget(btn1);
 	layout->AddWidget(btn2);
 
 	Panel* panel2 = Manage(new Panel);
-	Button* btn3 = Manage(new Button("Button3"));
+	PushButton* btn3 = Manage(new PushButton("Button3"));
 	btn3->MoveTo(20, 20);
 	panel2->AddWidget(btn3);
 

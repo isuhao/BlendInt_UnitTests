@@ -1,5 +1,5 @@
 /*
- * Unit test for Button
+ * Unit test for PushButton
  */
 
 #include <gtest/gtest.h>

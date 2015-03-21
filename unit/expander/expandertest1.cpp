@@ -1,6 +1,6 @@
 #include "ExpanderTest1.hpp"
 #include <gui/expander.hpp>
-#include <gui/button.hpp>
+#include <gui/push-button.hpp>
 
 using namespace BlendInt;
 
@@ -35,7 +35,7 @@ TEST_F(ExpanderTest1, Foo1)
 
 	context->Append(expander);
 
-	Button* btn1 = Manage(new Button("Click me"));
+	PushButton* btn1 = Manage(new PushButton("Click me"));
 
 	expander->Setup(btn1);
 

@@ -1,7 +1,7 @@
 #include "HorizontalLayoutTest1.hpp"
 #include <Common/UnitTestContext.hpp>
 #include <gui/linear-layout.hpp>
-#include <gui/button.hpp>
+#include <gui/push-button.hpp>
 #include <gui/dialog.hpp>
 
 using namespace BlendInt;
@@ -34,8 +34,8 @@ TEST_F(HLayoutTest1, Add1)
 	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 
-	Button* widget1 = new Button;
-	Button* widget2 = new Button;
+	PushButton* widget1 = new PushButton;
+	PushButton* widget2 = new PushButton;
 
 	hlayout->AddWidget(Manage(widget1));
 	hlayout->AddWidget(Manage(widget2));
@@ -72,8 +72,8 @@ TEST_F(HLayoutTest1, Add2)
 	hlayout->MoveTo(100, 100);
 	hlayout->Resize(400, 200);
 
-	Button* widget1 = new Button;
-	Button* widget2 = new Button;
+	PushButton* widget1 = new PushButton;
+	PushButton* widget2 = new PushButton;
 
 	hlayout->AddWidget(Manage(widget1));
 	hlayout->AddWidget(Manage(widget2));
@@ -112,8 +112,8 @@ TEST_F(HLayoutTest1, Add3)
 	hlayout->MoveTo(100, 100);
 	hlayout->Resize(400, 200);
 
-	Button* widget1 = new Button;
-	Button* widget2 = new Button;
+	PushButton* widget1 = new PushButton;
+	PushButton* widget2 = new PushButton;
 
 	hlayout->AddWidget(Manage(widget1));
 	hlayout->AddWidget(Manage(widget2));
@@ -150,10 +150,10 @@ TEST_F(HLayoutTest1, Add4)
 	hlayout->MoveTo(100, 100);
 	hlayout->Resize(400, 200);
 
-	Button* widget1 = new Button;
+	PushButton* widget1 = new PushButton;
     //widget1->SetPreferredSize(40, widget1->preferred_size().height());
     //widget1->SetMaximalSize(80, widget1->maximal_size().height());
-	Button* widget2 = new Button;
+	PushButton* widget2 = new PushButton;
     //widget2->SetPreferredSize(40, widget2->preferred_size().height());
     //widget2->SetMaximalSize(80, widget2->maximal_size().height());
 
@@ -192,16 +192,16 @@ TEST_F(HLayoutTest1, Add5)
 	hlayout->MoveTo(100, 100);
 	hlayout->Resize(600, 200);
 
-	Button* widget1 = new Button;
+	PushButton* widget1 = new PushButton;
     //widget1->SetPreferredSize(40, widget1->preferred_size().height());
     //widget1->SetMaximalSize(80, widget1->maximal_size().height());
-	Button* widget2 = new Button;
+	PushButton* widget2 = new PushButton;
     //widget2->SetPreferredSize(40, widget2->preferred_size().height());
     //widget2->SetMaximalSize(80, widget2->maximal_size().height());
-	Button* widget3 = new Button;
+	PushButton* widget3 = new PushButton;
     //widget3->SetPreferredSize(40, widget3->preferred_size().height());
     //widget3->SetMaximalSize(60, widget3->maximal_size().height());
-	Button* widget4 = new Button;
+	PushButton* widget4 = new PushButton;
 	//widget4->SetExpandX(true);
     //widget4->SetPreferredSize(40, widget4->preferred_size().height());
     //widget4->SetMaximalSize(70, widget4->maximal_size().height());
@@ -244,14 +244,14 @@ TEST_F(HLayoutTest1, Add6)
 	hlayout->MoveTo(100, 100);
 	hlayout->Resize(50, 200);
 
-	Button* widget1 = new Button;
+	PushButton* widget1 = new PushButton;
     //widget1->SetPreferredSize(40, widget1->preferred_size().height());
     //widget1->SetMaximalSize(80, widget1->maximal_size().height());
-	Button* widget2 = new Button;
+	PushButton* widget2 = new PushButton;
     //widget2->SetMinimalSize(10, widget2->minimal_size().height());
-	Button* widget3 = new Button;
+	PushButton* widget3 = new PushButton;
     //widget3->SetMinimalSize(20, widget3->minimal_size().height());
-	Button* widget4 = new Button;
+	PushButton* widget4 = new PushButton;
 	
     hlayout->AddWidget(Manage(widget1));
 	hlayout->AddWidget(Manage(widget2));
@@ -289,14 +289,14 @@ TEST_F(HLayoutTest1, Add7)
 	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 
-	Button* widget1 = new Button;
+	PushButton* widget1 = new PushButton;
 	//widget1->SetExpandX(true);
 	//widget1->SetMinimalSize(10, widget1->minimal_size().height());
-	Button* widget2 = new Button;
+	PushButton* widget2 = new PushButton;
     //widget2->SetMinimalSize(30, widget2->minimal_size().height());
-	Button* widget3 = new Button;
+	PushButton* widget3 = new PushButton;
     //widget3->SetMinimalSize(20, widget3->minimal_size().height());
-	Button* widget4 = new Button;
+	PushButton* widget4 = new PushButton;
 
 	hlayout->AddWidget(Manage(widget1));
 	hlayout->AddWidget(Manage(widget2));
@@ -339,8 +339,8 @@ TEST_F(HLayoutTest1, Resize1)
 	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 
-	Button* widget1 = new Button;
-	Button* widget2 = new Button;
+	PushButton* widget1 = new PushButton;
+	PushButton* widget2 = new PushButton;
 
 	hlayout->AddWidget(Manage(widget1));
 	hlayout->AddWidget(Manage(widget2));
@@ -380,8 +380,8 @@ TEST_F(HLayoutTest1, Resize2)
 	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 
-	Button* widget1 = new Button;
-	Button* widget2 = new Button;
+	PushButton* widget1 = new PushButton;
+	PushButton* widget2 = new PushButton;
 
 	hlayout->AddWidget(Manage(widget1));
 	hlayout->AddWidget(Manage(widget2));
@@ -421,12 +421,12 @@ TEST_F(HLayoutTest1, Resize3)
 	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 
-	Button* widget1 = new Button;
-	Button* widget2 = new Button;
+	PushButton* widget1 = new PushButton;
+	PushButton* widget2 = new PushButton;
     //widget2->SetMinimalSize(30, widget2->minimal_size().height());
-	Button* widget3 = new Button;
+	PushButton* widget3 = new PushButton;
     //widget3->SetMinimalSize(20, widget3->minimal_size().height());
-	Button* widget4 = new Button;
+	PushButton* widget4 = new PushButton;
 
 	hlayout->AddWidget(Manage(widget1));
 	hlayout->AddWidget(Manage(widget2));
@@ -468,9 +468,9 @@ TEST_F(HLayoutTest1, SetMargin1)
 	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 
-	Button* widget1 = new Button;
+	PushButton* widget1 = new PushButton;
     widget1->Resize(100, 80);
-	Button* widget2 = new Button;
+	PushButton* widget2 = new PushButton;
     widget2->Resize(100, 80);
 
 	hlayout->AddWidget(Manage(widget1));
@@ -513,9 +513,9 @@ TEST_F(HLayoutTest1, SetSpace1)
 	LinearLayout* hlayout = new LinearLayout;
 	hlayout->MoveTo(100, 100);
 
-	Button* widget1 = new Button;
+	PushButton* widget1 = new PushButton;
     widget1->Resize(100, 80);
-	Button* widget2 = new Button;
+	PushButton* widget2 = new PushButton;
     widget2->Resize(100, 80);
 
 	hlayout->AddWidget(Manage(widget1));

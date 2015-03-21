@@ -1,6 +1,6 @@
 #include "performance-test-1.hpp"
 
-#include <gui/button.hpp>
+#include <gui/push-button.hpp>
 #include <gui/label.hpp>
 #include <gui/linear-layout.hpp>
 #include <gui/abstract-round-frame.hpp>
@@ -47,7 +47,7 @@ TEST_F(PerformanceTest1, Panel1)
       panel = new Panel(layout);
 
       for (int j = 0; j < max_x; j++) {
-        Button* btn = Manage(new Button);
+        PushButton* btn = Manage(new PushButton);
         //btn[j]->SetPreferredSize(25, btn[j]->size().height());
         layout->AddWidget(btn);
       }
@@ -93,7 +93,7 @@ TEST_F(PerformanceTest1, Layout1)
       LinearLayout* layout = Manage(new LinearLayout);
 
       for (int j = 0; j < max_x; j++) {
-        Button* btn = Manage(new Button);
+        PushButton* btn = Manage(new PushButton);
         //btn[j]->SetPreferredSize(25, btn[j]->size().height());
         layout->AddWidget(btn);
       }
@@ -125,7 +125,7 @@ TEST_F(PerformanceTest1, Layout1)
  TEST_F(PerformanceTest1, Layout2)
  {
  Init();
- GLFWwindow* win = CreateWindow("Button Test - Foo1", 1280, 800);
+ GLFWwindow* win = CreateWindow("PushButton Test - Foo1", 1280, 800);
 
  // TODO: add test code here
  UnitTestContext* context = Manage (new UnitTestContext);
@@ -146,7 +146,7 @@ TEST_F(PerformanceTest1, Layout1)
 
  for(int j = 0; j < max_x; j++)
  {
- Button* btn = Manage(new Button);
+ PushButton* btn = Manage(new PushButton);
  //btn[j]->SetPreferredSize(25, btn[j]->size().height());
  layout->AddWidget(btn);
  }
@@ -173,7 +173,7 @@ TEST_F(PerformanceTest1, Layout1)
  TEST_F(PerformanceTest1, Layout3)
  {
  Init();
- GLFWwindow* win = CreateWindow("Button Test - Foo1", 1280, 800);
+ GLFWwindow* win = CreateWindow("PushButton Test - Foo1", 1280, 800);
 
  // TODO: add test code here
  UnitTestContext* context = Manage (new UnitTestContext);
@@ -199,7 +199,7 @@ TEST_F(PerformanceTest1, Layout1)
 
  for(int j = 0; j < max_x; j++)
  {
- Button* btn = Manage(new Button);
+ PushButton* btn = Manage(new PushButton);
  //btn[j]->SetPreferredSize(25, btn[j]->size().height());
  layout->Append(btn);
  }
@@ -217,7 +217,7 @@ TEST_F(PerformanceTest1, Layout1)
 
  for(int j = 0; j < max_x; j++)
  {
- Button* btn = Manage(new Button);
+ PushButton* btn = Manage(new PushButton);
  //btn[j]->SetPreferredSize(25, btn[j]->size().height());
  layout->Append(btn);
  }
@@ -235,7 +235,7 @@ TEST_F(PerformanceTest1, Layout1)
 
  for(int j = 0; j < max_x; j++)
  {
- Button* btn = Manage(new Button);
+ PushButton* btn = Manage(new PushButton);
  //btn[j]->SetPreferredSize(25, btn[j]->size().height());
  layout->Append(btn);
  }
@@ -278,12 +278,12 @@ TEST_F(PerformanceTest1, Layout1)
  // TODO: add test code here
 
  int max = 800;
- Button* btn[max];
+ PushButton* btn[max];
  int x_pos = 0;
  int y_pos = 0;
  for(int i = 0, j = 1; i < max; i++, j++)
  {
- btn[i] = new Button;
+ btn[i] = new PushButton;
  btn[i]->MoveTo(x_pos, y_pos);
  btn[i]->Resize(48, 24);
  btn[i]->Register();

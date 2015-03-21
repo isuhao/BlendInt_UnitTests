@@ -2,7 +2,7 @@
 #include <BlendInt/Gui/HBlockLayout.hpp>
 #include <BlendInt/Gui/VBlockLayout.hpp>
 #include <gui/tool-button.hpp>
-#include <gui/button.hpp>
+#include <gui/push-button.hpp>
 
 #include <stock/icons.hpp>
 
@@ -36,11 +36,11 @@ TEST_F(HBlockTest1, Foo1)
 	DBG_SET_NAME(context, "Context");
     Interface::instance->SetCurrentContext(context);
 
-	Button* btn1 = Manage(new Button(Icons::instance->icon_16x16(0)));
+	PushButton* btn1 = Manage(new PushButton(Icons::instance->icon_16x16(0)));
 	DBG_SET_NAME(btn1, "button 1");
-	Button* btn2 = Manage(new Button(Icons::instance->icon_16x16(0)));
+	PushButton* btn2 = Manage(new PushButton(Icons::instance->icon_16x16(0)));
 	DBG_SET_NAME(btn2, "button 2");
-	Button* btn3 = Manage(new Button(Icons::instance->icon_16x16(0)));
+	PushButton* btn3 = Manage(new PushButton(Icons::instance->icon_16x16(0)));
 	DBG_SET_NAME(btn3, "button 3");
 
 	HBlockLayout* hblock = Manage(new HBlockLayout);
