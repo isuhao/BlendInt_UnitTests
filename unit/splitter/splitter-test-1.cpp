@@ -39,9 +39,9 @@ TEST_F(SplitterTest1, Foo1)
     Button* btn2 = Manage(new Button("Button2"));
     Button* btn3 = Manage(new Button("Button3"));
 
-    splitter1->Append(btn1);
-    splitter1->Append(btn2);
-    splitter1->Append(btn3);
+    splitter1->AddWidget(btn1);
+    splitter1->AddWidget(btn2);
+    splitter1->AddWidget(btn3);
 
     dialog1->AddWidget(splitter1);
 
@@ -57,9 +57,9 @@ TEST_F(SplitterTest1, Foo1)
     Button* btn5 = Manage(new Button("Button5"));
     Button* btn6 = Manage(new Button("Button6"));
 
-    splitter2->Append(btn4);
-    splitter2->Append(btn5);
-    splitter2->Append(btn6);
+    splitter2->AddWidget(btn4);
+    splitter2->AddWidget(btn5);
+    splitter2->AddWidget(btn6);
 
     dialog2->AddWidget(splitter2);
 
