@@ -32,6 +32,38 @@ TEST_F(ComboBoxTest1, Foo1)
 
     ComboBox* combo = new ComboBox;
 
+    {
+      RefPtr<ComboListModel> model(new ComboListModel);
+      ModelIndex root = model->GetRootIndex();
+
+      model->InsertColumns(0, 2, root);
+      model->InsertRows(1, 1, root);
+      model->InsertRows(2, 1, root);
+
+      ModelIndex index = root.GetChildIndex(0, 0);
+      ModelIndex next;
+
+      model->SetIcon(index,
+                     AbstractWindow::icons()->icon_16x16(Icons::IMAGE_RGB));
+      next = index.GetRightIndex();
+      model->SetText(next, RefPtr<Text>(new Text("Combo List Row 0")));
+
+      index = index.GetDownIndex();
+      model->SetIcon(
+          index, AbstractWindow::icons()->icon_16x16(Icons::IMAGE_RGB_ALPHA));
+      next = index.GetRightIndex();
+      model->SetText(next, RefPtr<Text>(new Text("Combo List Row 1")));
+
+      index = index.GetDownIndex();
+      model->SetIcon(index,
+                     AbstractWindow::icons()->icon_16x16(Icons::IMAGE_DATA));
+      next = index.GetRightIndex();
+      model->SetText(next, RefPtr<Text>(new Text("Combo List Row 2")));
+
+      combo->SetModel(model);
+      combo->SetCurrentIndex(2);
+    }
+
     dialog->AddWidget(combo);
 
     win.AddFrame(dialog);
