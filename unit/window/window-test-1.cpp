@@ -90,24 +90,24 @@ TEST_F(WindowTest1, Create1)
 			win.AddFrame(dlg2);
 			win.AddFrame(dlg3);
 
-			for(AbstractView* p = win.first_subview(); p; p = p->next_view()) {
+			for(AbstractView* p = win.first(); p; p = p->next_view()) {
 				DBG_PRINT_MSG("sub view: %s", p->name().c_str());
 			}
-			DBG_PRINT_MSG("subs count: %d", win.subs_count());
+			DBG_PRINT_MSG("subs count: %d", win.subview_count());
 
 			win.SwapIndex(dlg1, dlg3);
 
-			for(AbstractView* p = win.first_subview(); p; p = p->next_view()) {
+			for(AbstractView* p = win.first(); p; p = p->next_view()) {
 				DBG_PRINT_MSG("sub view: %s", p->name().c_str());
 			}
-			DBG_PRINT_MSG("subs count: %d", win.subs_count());
+			DBG_PRINT_MSG("subs count: %d", win.subview_count());
 
 			win.SwapIndex(dlg1, dlg2);
 
-			for(AbstractView* p = win.first_subview(); p; p = p->next_view()) {
+			for(AbstractView* p = win.first(); p; p = p->next_view()) {
 				DBG_PRINT_MSG("sub view: %s", p->name().c_str());
 			}
-			DBG_PRINT_MSG("subs count: %d", win.subs_count());
+			DBG_PRINT_MSG("subs count: %d", win.subview_count());
 
 			Dialog* dlg4 = new Dialog("Dialog4");
 			DBG_SET_NAME(dlg4, "Dialog4");
@@ -119,11 +119,11 @@ TEST_F(WindowTest1, Create1)
 			win.InsertSiblingBefore(dlg3, dlg4);
 			win.InsertSiblingAfter(dlg2, dlg4);
 
-			DBG_PRINT_MSG("subs count: %d", win.subs_count());
-			for(AbstractView* p = win.first_subview(); p; p = p->next_view()) {
+			DBG_PRINT_MSG("subs count: %d", win.subview_count());
+			for(AbstractView* p = win.first(); p; p = p->next_view()) {
 				DBG_PRINT_MSG("sub view: %s", p->name().c_str());
 			}
-			for(AbstractView* p = win.last_subview(); p; p = p->previous_view()) {
+			for(AbstractView* p = win.last(); p; p = p->previous_view()) {
 				DBG_PRINT_MSG("sub view: %s", p->name().c_str());
 			}
 

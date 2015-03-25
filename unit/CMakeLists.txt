@@ -17,6 +17,7 @@ add_subdirectory(window)
 
 add_subdirectory(stringlistmodel)
 add_subdirectory(listmodel)
+add_subdirectory(listview)
 
 add_subdirectory(frame)
 add_subdirectory(dialog)
@@ -25,7 +26,8 @@ add_subdirectory(button)
 add_subdirectory(toolbutton)
 add_subdirectory(framesplitter)
 
-add_subdirectory(listview)
+add_subdirectory(slider)
+
 add_subdirectory(combobox)
 add_subdirectory(splitter)
 
@@ -85,7 +87,6 @@ add_subdirectory(clock)
 #add_subdirectory(ScrollView)
 #add_subdirectory(ScrollBar)
 #add_subdirectory(Image)
-#add_subdirectory(Slider)
 #add_subdirectory(ScrollArea)
 #add_subdirectory(Tab)
 #add_subdirectory(TabButton)
