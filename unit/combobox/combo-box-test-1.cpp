@@ -1,5 +1,6 @@
 #include <gui/combo-box.hpp>
-#include <gui/dialog.hpp>
+#include <gui/frame.hpp>
+#include <gui/linear-layout.hpp>
 #include <gui/window.hpp>
 
 #include "combo-box-test-1.hpp"
@@ -28,7 +29,7 @@ TEST_F(ComboBoxTest1, Foo1)
 
     Window win(640, 480, "ComboBox Test1");
 
-    Dialog* dialog = Manage(new Dialog("ComboBox Test"));
+    Frame* frame = Manage(new Frame(new LinearLayout(Vertical)));
 
     ComboBox* combo = new ComboBox;
 
@@ -64,9 +65,9 @@ TEST_F(ComboBoxTest1, Foo1)
       combo->SetCurrentIndex(2);
     }
 
-    dialog->AddWidget(combo);
+    frame->AddWidget(combo);
 
-    win.AddFrame(dialog);
+    win.AddFrame(frame);
 
     win.Exec();
     Window::Terminate();
