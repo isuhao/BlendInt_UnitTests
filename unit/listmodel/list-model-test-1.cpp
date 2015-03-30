@@ -25,6 +25,18 @@ ListModel::~ListModel ()
 {
 }
 
+int ListModel::GetPreferredColumnWidth (int index,
+                                        const BI::ModelIndex& parent) const
+{
+  return 0;
+}
+
+int ListModel::GetPreferredRowHeight (int index,
+                                      const BI::ModelIndex& parent) const
+{
+  return 0;
+}
+
 Size ListModel::CheckRowColumnCount () const
 {
   ModelIndex root = GetRootIndex();

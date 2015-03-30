@@ -41,6 +41,12 @@ public:
   virtual int GetColumnCount (const BI::ModelIndex& parent =
       BI::ModelIndex()) const;
 
+  virtual int GetPreferredColumnWidth (int index, const BI::ModelIndex& parent =
+                                           BI::ModelIndex()) const override;
+
+  virtual int GetPreferredRowHeight (int index, const BI::ModelIndex& parent =
+                                         BI::ModelIndex()) const override;
+
   BI::Size CheckRowColumnCount () const;
 
 private:
