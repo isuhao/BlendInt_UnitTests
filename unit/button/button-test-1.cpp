@@ -1,7 +1,7 @@
 #include "button-test-1.hpp"
-#include <gui/push-button.hpp>
-#include <gui/dialog.hpp>
-#include <gui/window.hpp>
+#include <blendint/gui/push-button.hpp>
+#include <blendint/gui/dialog.hpp>
+#include <blendint/gui/window.hpp>
 
 using namespace BlendInt;
 

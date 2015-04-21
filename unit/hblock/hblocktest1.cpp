@@ -1,10 +1,10 @@
 #include "HBlockTest1.hpp"
 #include <BlendInt/Gui/HBlockLayout.hpp>
 #include <BlendInt/Gui/VBlockLayout.hpp>
-#include <gui/tool-button.hpp>
-#include <gui/push-button.hpp>
+#include <blendint/gui/tool-button.hpp>
+#include <blendint/gui/push-button.hpp>
 
-#include <stock/icons.hpp>
+#include <blendint/stock/icons.hpp>
 
 using namespace BlendInt;
 using Shaders::Icons;

@@ -1,6 +1,6 @@
 #include "FileSelectorTest1.hpp"
-#include <gui/file-selector.hpp>
-#include <gui/dialog.hpp>
+#include <blendint/gui/file-selector.hpp>
+#include <blendint/gui/dialog.hpp>
 #include <Common/UnitTestContext.hpp>
 
 using namespace BlendInt;

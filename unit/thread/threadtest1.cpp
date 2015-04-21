@@ -1,6 +1,6 @@
 #include "ThreadTest1.hpp"
 #include <Common/UnitTestContext.hpp>
-#include <core/thread.hpp>
+#include <blendint/core/thread.hpp>
 
 using namespace BlendInt;
 

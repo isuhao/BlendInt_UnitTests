@@ -1,5 +1,5 @@
 #include "ImageTest1.hpp"
-#include <core/image.hpp>
+#include <blendint/core/image.hpp>
 
 using namespace BlendInt;
 

@@ -1,7 +1,7 @@
 #include "fcconfigtest1.hpp"
-#include <font/fc-pattern.hpp>
-#include <font/fc-objectset.hpp>
-#include <font/fc-config.hpp>
+#include <blendint/font/fc-pattern.hpp>
+#include <blendint/font/fc-objectset.hpp>
+#include <blendint/font/fc-config.hpp>
 
 using namespace BlendInt;
 

@@ -3,7 +3,7 @@
 
 #include <gtest/gtest.h>
 
-#include <gui/abstract-list-model.hpp>
+#include <blendint/gui/abstract-list-model.hpp>
 
 class ListModelTest1: public testing::Test
 {

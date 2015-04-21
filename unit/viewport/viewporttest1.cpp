@@ -1,6 +1,6 @@
 #include "ViewportTest1.hpp"
-#include <gui/window.hpp>
-#include <gui/viewport.hpp>
+#include <blendint/gui/window.hpp>
+#include <blendint/gui/viewport.hpp>
 
 using namespace BlendInt;
 

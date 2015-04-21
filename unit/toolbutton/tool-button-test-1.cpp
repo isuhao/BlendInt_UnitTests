@@ -1,7 +1,7 @@
-#include <gui/tool-button.hpp>
-#include <gui/window.hpp>
-#include <gui/dialog.hpp>
-#include <gui/linear-layout.hpp>
+#include <blendint/gui/tool-button.hpp>
+#include <blendint/gui/window.hpp>
+#include <blendint/gui/dialog.hpp>
+#include <blendint/gui/linear-layout.hpp>
 
 #include "tool-button-test-1.hpp"
 

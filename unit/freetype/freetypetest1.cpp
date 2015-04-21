@@ -1,6 +1,6 @@
 #include "FreetypeTest1.hpp"
-#include <font/ft-face.hpp>
-#include <gui/glyph.hpp>
+#include <blendint/font/ft-face.hpp>
+#include <blendint/gui/glyph.hpp>
 
 using namespace BlendInt;
 using namespace BlendInt::Ft;

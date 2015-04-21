@@ -1,5 +1,5 @@
 #include "ColorSelectorTest1.hpp"
-#include <gui/color-selector.hpp>
+#include <blendint/gui/color-selector.hpp>
 #include <Common/UnitTestContext.hpp>
 
 using namespace BlendInt;

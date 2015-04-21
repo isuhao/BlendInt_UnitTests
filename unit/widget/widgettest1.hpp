@@ -2,7 +2,7 @@
 #define _WIDGETTEST1_HPP_
 
 #include <gtest/gtest.h>
-#include <core/object.hpp>
+#include <blendint/core/object.hpp>
 
 #include <BlendInt/Gui/AbstractContainer.hpp>
 

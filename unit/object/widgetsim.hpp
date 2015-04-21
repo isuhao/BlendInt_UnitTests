@@ -1,8 +1,8 @@
 #ifndef _BLENDINT_WIDGET_SIM_HPP_
 #define _BLENDINT_WIDGET_SIM_HPP_
 
-#include <core/object.hpp>
-#include <core/refptr.hpp>
+#include <blendint/core/object.hpp>
+#include <blendint/core/refptr.hpp>
 
 #include <set>
 

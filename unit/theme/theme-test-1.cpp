@@ -1,5 +1,5 @@
-#include <gui/window.hpp>
-#include <stock/icons.hpp>
+#include <blendint/gui/window.hpp>
+#include <blendint/stock/icons.hpp>
 #include <iostream>
 #include <list>
 #include <set>

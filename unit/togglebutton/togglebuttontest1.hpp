@@ -2,7 +2,7 @@
 #define _TOGGLEBUTTONTEST1_HPP_
 
 #include <gtest/gtest.h>
-#include <core/object.hpp>
+#include <blendint/core/object.hpp>
 
 class ToggleButtonTest1: public testing::Test
 {

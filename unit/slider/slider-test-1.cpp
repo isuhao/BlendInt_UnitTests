@@ -1,6 +1,6 @@
-#include <gui/slider.hpp>
-#include <gui/dialog.hpp>
-#include <gui/window.hpp>
+#include <blendint/gui/slider.hpp>
+#include <blendint/gui/dialog.hpp>
+#include <blendint/gui/window.hpp>
 
 #include "slider-test-1.hpp"
 

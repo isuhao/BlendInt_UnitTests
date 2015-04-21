@@ -1,5 +1,5 @@
 #include "GLRenderbufferTest1.hpp"
-#include <opengl/gl-renderbuffer.hpp>
+#include <blendint/opengl/gl-renderbuffer.hpp>
 
 using namespace BlendInt;
 

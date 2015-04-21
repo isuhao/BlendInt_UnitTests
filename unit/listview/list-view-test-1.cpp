@@ -1,10 +1,10 @@
 #include "list-view-test-1.hpp"
-#include <gui/list-view.hpp>
-#include <gui/filesystem-model.hpp>
-#include <gui/window.hpp>
-#include <gui/dialog.hpp>
-#include <gui/linear-layout.hpp>
-#include <gui/string-list-model.hpp>
+#include <blendint/gui/list-view.hpp>
+#include <blendint/gui/filesystem-model.hpp>
+#include <blendint/gui/window.hpp>
+#include <blendint/gui/dialog.hpp>
+#include <blendint/gui/linear-layout.hpp>
+#include <blendint/gui/string-list-model.hpp>
 
 using namespace BlendInt;
 

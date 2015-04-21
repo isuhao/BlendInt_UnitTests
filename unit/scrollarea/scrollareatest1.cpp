@@ -1,5 +1,5 @@
 #include "ScrollAreaTest1.hpp"
-#include <gui/scroll-area.hpp>
+#include <blendint/gui/scroll-area.hpp>
 
 using namespace BlendInt;
 

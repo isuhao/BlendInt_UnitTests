@@ -1,10 +1,10 @@
-#include <gui/frame-splitter.hpp>
-#include <gui/model-viewport.hpp>
+#include <blendint/gui/frame-splitter.hpp>
+#include <blendint/gui/model-viewport.hpp>
 
-#include <gui/frame.hpp>
-#include <gui/push-button.hpp>
-#include <gui/linear-layout.hpp>
-#include <gui/window.hpp>
+#include <blendint/gui/frame.hpp>
+#include <blendint/gui/push-button.hpp>
+#include <blendint/gui/linear-layout.hpp>
+#include <blendint/gui/window.hpp>
 
 #include "frame-splitter-test-1.hpp"
 

@@ -1,7 +1,7 @@
-#include <gui/combo-box.hpp>
-#include <gui/frame.hpp>
-#include <gui/linear-layout.hpp>
-#include <gui/window.hpp>
+#include <blendint/gui/combo-box.hpp>
+#include <blendint/gui/frame.hpp>
+#include <blendint/gui/linear-layout.hpp>
+#include <blendint/gui/window.hpp>
 
 #include "combo-box-test-1.hpp"
 

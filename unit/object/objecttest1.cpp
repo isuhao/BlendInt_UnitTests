@@ -1,5 +1,5 @@
 #include "objecttest1.hpp"
-#include <core/object.hpp>
+#include <blendint/core/object.hpp>
 
 #include <iostream>
 

@@ -1,6 +1,6 @@
 #include "string-list-model-test-1.hpp"
-#include <gui/string-list-model.hpp>
-#include <gui/window.hpp>
+#include <blendint/gui/string-list-model.hpp>
+#include <blendint/gui/window.hpp>
 
 using namespace BlendInt;
 

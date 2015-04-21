@@ -1,6 +1,6 @@
 #include "FileBrowserTest1.hpp"
-#include <gui/file-browser.hpp>
-#include <gui/dialog.hpp>
+#include <blendint/gui/file-browser.hpp>
+#include <blendint/gui/dialog.hpp>
 
 using namespace BlendInt;
 

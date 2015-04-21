@@ -1,5 +1,5 @@
 #include "color-test-1.hpp"
-#include <core/color.hpp>
+#include <blendint/core/color.hpp>
 
 using namespace BlendInt;
 

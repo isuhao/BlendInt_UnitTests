@@ -1,7 +1,7 @@
 #include "StackTest1.hpp"
-#include <gui/stack.hpp>
-#include <gui/label.hpp>
-#include <gui/push-button.hpp>
+#include <blendint/gui/stack.hpp>
+#include <blendint/gui/label.hpp>
+#include <blendint/gui/push-button.hpp>
 
 using namespace BlendInt;
 

@@ -1,9 +1,9 @@
 #include "HLayoutTest1.hpp"
 
 #include <BlendInt/Interface.hpp>
-#include <gui/linear-layout.hpp>
+#include <blendint/gui/linear-layout.hpp>
 #include <BlendInt/Gui/VLayout.hpp>
-#include <gui/abstract-round-widget.hpp>
+#include <blendint/gui/abstract-round-widget.hpp>
 
 #include <boost/smart_ptr.hpp>
 

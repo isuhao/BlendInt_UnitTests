@@ -1,5 +1,5 @@
 #include "beziertest1.hpp"
-#include <gui/cubic-bezier-curve.hpp>
+#include <blendint/gui/cubic-bezier-curve.hpp>
 
 using namespace BlendInt;
 

@@ -1,13 +1,13 @@
 #include "performance-test-1.hpp"
 
-#include <gui/push-button.hpp>
-#include <gui/label.hpp>
-#include <gui/linear-layout.hpp>
-#include <gui/abstract-round-frame.hpp>
-#include <gui/frame.hpp>
-#include <gui/dialog.hpp>
-#include <gui/panel.hpp>
-#include <gui/window.hpp>
+#include <blendint/gui/push-button.hpp>
+#include <blendint/gui/label.hpp>
+#include <blendint/gui/linear-layout.hpp>
+#include <blendint/gui/abstract-round-frame.hpp>
+#include <blendint/gui/frame.hpp>
+#include <blendint/gui/dialog.hpp>
+#include <blendint/gui/panel.hpp>
+#include <blendint/gui/window.hpp>
 
 using namespace BlendInt;
 

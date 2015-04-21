@@ -1,5 +1,5 @@
 #include "ScrollBarTest1.hpp"
-#include <gui/scroll-bar.hpp>
+#include <blendint/gui/scroll-bar.hpp>
 
 using namespace BlendInt;
 

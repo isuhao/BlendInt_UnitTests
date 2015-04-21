@@ -1,8 +1,8 @@
 #include "BlockTest1.hpp"
 #include <Common/UnitTestContext.hpp>
-#include <gui/block.hpp>
-#include <gui/dialog.hpp>
-#include <gui/push-button.hpp>
+#include <blendint/gui/block.hpp>
+#include <blendint/gui/dialog.hpp>
+#include <blendint/gui/push-button.hpp>
 
 using namespace BlendInt;
 

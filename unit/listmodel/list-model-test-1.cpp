@@ -1,6 +1,6 @@
 #include "list-model-test-1.hpp"
-#include <gui/abstract-list-model.hpp>
-#include <gui/window.hpp>
+#include <blendint/gui/abstract-list-model.hpp>
+#include <blendint/gui/window.hpp>
 
 using namespace BlendInt;
 

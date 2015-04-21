@@ -6,7 +6,7 @@
 #include <glm/gtx/transform.hpp>
 
 #include <BlendInt/Gui/GlyphTexture.hpp>
-#include <core/freetype.hpp>
+#include <blendint/core/freetype.hpp>
 
 using namespace BlendInt;
 

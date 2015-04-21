@@ -1,6 +1,6 @@
 #include "ScrollViewTest1.hpp"
-#include <gui/scroll-view.hpp>
-#include <gui/push-button.hpp>
+#include <blendint/gui/scroll-view.hpp>
+#include <blendint/gui/push-button.hpp>
 
 using namespace BlendInt;
 

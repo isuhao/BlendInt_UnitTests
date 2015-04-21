@@ -1,9 +1,9 @@
 #include "PanelTest1.hpp"
-#include <gui/panel.hpp>
+#include <blendint/gui/panel.hpp>
 #include <Common/UnitTestContext.hpp>
-#include <gui/dialog.hpp>
-#include <gui/push-button.hpp>
-#include <gui/linear-layout.hpp>
+#include <blendint/gui/dialog.hpp>
+#include <blendint/gui/push-button.hpp>
+#include <blendint/gui/linear-layout.hpp>
 
 using namespace BlendInt;
 

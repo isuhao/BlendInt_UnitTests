@@ -1,5 +1,5 @@
 #include "filesystemmodeltest1.hpp"
-#include <gui/filesystem-model.hpp>
+#include <blendint/gui/filesystem-model.hpp>
 
 using namespace BlendInt;
 

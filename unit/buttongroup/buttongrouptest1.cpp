@@ -1,8 +1,8 @@
 #include "ButtonGroupTest1.hpp"
-#include <gui/button-group.hpp>
-#include <gui/tab-button.hpp>
-#include <gui/toggle-button.hpp>
-#include <gui/menu-button.hpp>
+#include <blendint/gui/button-group.hpp>
+#include <blendint/gui/tab-button.hpp>
+#include <blendint/gui/toggle-button.hpp>
+#include <blendint/gui/menu-button.hpp>
 #include <BlendInt/Gui/HBlockLayout.hpp>
 
 using namespace BlendInt;

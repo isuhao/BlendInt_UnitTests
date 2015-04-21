@@ -1,7 +1,7 @@
 #include "AbstractFormTest1.hpp"
 
-#include <core/color.hpp>
-#include <gui/abstract-form.hpp>
+#include <blendint/core/color.hpp>
+#include <blendint/gui/abstract-form.hpp>
 
 using namespace BlendInt;
 

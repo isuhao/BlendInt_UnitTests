@@ -1,6 +1,6 @@
 #include "TextureAtlasTest1.hpp"
 #include "TexAtlasViewer.hpp"
-#include <gui/font-cache.hpp>
+#include <blendint/gui/font-cache.hpp>
 
 using namespace BlendInt;
 

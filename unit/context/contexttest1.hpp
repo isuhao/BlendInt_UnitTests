@@ -3,7 +3,7 @@
 
 #include <gtest/gtest.h>
 
-#include <core/object.hpp>
+#include <blendint/core/object.hpp>
 
 class ContextTest1: public testing::Test
 {

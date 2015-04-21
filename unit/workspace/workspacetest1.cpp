@@ -1,13 +1,13 @@
 #include "WorkspaceTest1.hpp"
 #include <Common/UnitTestContext.hpp>
 #include <Common/UnitTestCursor.hpp>
-#include <gui/workspace.hpp>
-#include <gui/viewport.hpp>
-#include <gui/push-button.hpp>
-#include <gui/toggle-button.hpp>
-#include <gui/dialog.hpp>
+#include <blendint/gui/workspace.hpp>
+#include <blendint/gui/viewport.hpp>
+#include <blendint/gui/push-button.hpp>
+#include <blendint/gui/toggle-button.hpp>
+#include <blendint/gui/dialog.hpp>
 #include <BlendInt/Stock/Cursor.hpp>
-#include <gui/tool-button.hpp>
+#include <blendint/gui/tool-button.hpp>
 
 using namespace BlendInt;
 

@@ -1,7 +1,7 @@
 #include "ContextTest1.hpp"
 #include <Common/Window.hpp>
-#include <gui/abstract-round-widget.hpp>
-#include <gui/abstract-round-frame.hpp>
+#include <blendint/gui/abstract-round-widget.hpp>
+#include <blendint/gui/abstract-round-frame.hpp>
 #include <BlendInt/Interface.hpp>
 
 using namespace BlendInt;

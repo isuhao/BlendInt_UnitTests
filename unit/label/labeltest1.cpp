@@ -1,5 +1,5 @@
 #include "LabelTest1.hpp"
-#include <gui/label.hpp>
+#include <blendint/gui/label.hpp>
 
 using namespace BlendInt;
 

@@ -1,7 +1,7 @@
 #include "TimeRulerTest1.hpp"
 #include <Common/UnitTestContext.hpp>
-#include <gui/time-ruler.hpp>
-#include <gui/dialog.hpp>
+#include <blendint/gui/time-ruler.hpp>
+#include <blendint/gui/dialog.hpp>
 
 using namespace BlendInt;
 

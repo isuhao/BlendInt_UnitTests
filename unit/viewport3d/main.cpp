@@ -4,8 +4,8 @@
 
 #include <Common/Window.hpp>
 
-#include <gui/viewport3d.hpp>
-#include <gui/push-button.hpp>
+#include <blendint/gui/viewport3d.hpp>
+#include <blendint/gui/push-button.hpp>
 
 //#include <gtest/gtest.h>
 

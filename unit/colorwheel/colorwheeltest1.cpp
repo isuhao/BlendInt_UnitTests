@@ -1,5 +1,5 @@
 #include "ColorWheelTest1.hpp"
-#include <gui/color-wheel.hpp>
+#include <blendint/gui/color-wheel.hpp>
 
 using namespace BlendInt;
 

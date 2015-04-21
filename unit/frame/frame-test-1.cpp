@@ -1,7 +1,7 @@
-#include <gui/frame.hpp>
-#include <gui/linear-layout.hpp>
-#include <gui/push-button.hpp>
-#include <gui/window.hpp>
+#include <blendint/gui/frame.hpp>
+#include <blendint/gui/linear-layout.hpp>
+#include <blendint/gui/push-button.hpp>
+#include <blendint/gui/window.hpp>
 
 #include "frame-test-1.hpp"
 

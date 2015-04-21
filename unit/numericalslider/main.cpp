@@ -3,8 +3,8 @@
  */
 
 #include <gtest/gtest.h>
-#include <core/types.hpp>
-#include <gui/window.hpp>
+#include <blendint/core/types.hpp>
+#include <blendint/gui/window.hpp>
 
 int main (int argc, char* argv[])
 {

@@ -15,7 +15,7 @@
 
 #include "TexAtlasViewer.hpp"
 
-#include <core/freetype.hpp>
+#include <blendint/core/freetype.hpp>
 
 const char* TexAtlasViewer::vertex_shader =
 		"#version 330\n"

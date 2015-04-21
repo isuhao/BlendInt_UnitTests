@@ -1,5 +1,5 @@
 #include "StockIconTest1.hpp"
-#include <stock/icons.hpp>
+#include <blendint/stock/icons.hpp>
 
 using namespace BlendInt;
 

@@ -1,8 +1,8 @@
 #include "textentrytest1.hpp"
-#include <gui/textentry.hpp>
-#include <gui/label.hpp>
-#include <gui/dialog.hpp>
-#include <gui/window.hpp>
+#include <blendint/gui/textentry.hpp>
+#include <blendint/gui/label.hpp>
+#include <blendint/gui/dialog.hpp>
+#include <blendint/gui/window.hpp>
 
 using namespace BlendInt;
 

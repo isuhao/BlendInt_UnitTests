@@ -3,7 +3,7 @@
 
 #include <gtest/gtest.h>
 #include <Common/Window.hpp>
-#include <core/object.hpp>
+#include <blendint/core/object.hpp>
 
 class ImageViewTest1: public testing::Test
 {

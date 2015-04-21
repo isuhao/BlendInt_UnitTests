@@ -1,5 +1,5 @@
 #include "Texture2DTest1.hpp"
-#include <opengl/gl-texture2d.hpp>
+#include <blendint/opengl/gl-texture2d.hpp>
 
 using namespace BlendInt;
 

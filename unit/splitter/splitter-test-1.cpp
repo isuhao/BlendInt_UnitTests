@@ -1,7 +1,7 @@
-#include <gui/splitter.hpp>
-#include <gui/push-button.hpp>
-#include <gui/window.hpp>
-#include <gui/dialog.hpp>
+#include <blendint/gui/splitter.hpp>
+#include <blendint/gui/push-button.hpp>
+#include <blendint/gui/window.hpp>
+#include <blendint/gui/dialog.hpp>
 
 #include "splitter-test-1.hpp"
 

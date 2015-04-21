@@ -1,5 +1,5 @@
 #include "CVVideoViewportTest1.hpp"
-#include <gui/cvvideoviewport.hpp>
+#include <blendint/gui/cvvideoviewport.hpp>
 #include <Common/UnitTestContext.hpp>
 
 using namespace BlendInt;

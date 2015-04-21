@@ -1,6 +1,6 @@
 #include "ExpanderTest1.hpp"
-#include <gui/expander.hpp>
-#include <gui/push-button.hpp>
+#include <blendint/gui/expander.hpp>
+#include <blendint/gui/push-button.hpp>
 
 using namespace BlendInt;
 

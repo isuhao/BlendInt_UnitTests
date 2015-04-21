@@ -1,6 +1,6 @@
 #include "window-test-1.hpp"
-#include <gui/window.hpp>
-#include <gui/dialog.hpp>
+#include <blendint/gui/window.hpp>
+#include <blendint/gui/dialog.hpp>
 
 using namespace BlendInt;
 

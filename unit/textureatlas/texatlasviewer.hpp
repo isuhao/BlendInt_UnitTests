@@ -1,9 +1,9 @@
 #ifndef _TEXATLAS_VIEWER_HPP_
 #define _TEXATLAS_VIEWER_HPP_
 
-#include <gui/abstract-round-widget.hpp>
+#include <blendint/gui/abstract-round-widget.hpp>
 #include <BlendInt/OpenGL/TextureAtlas2D.hpp>
-#include <opengl/glsl-program.hpp>
+#include <blendint/opengl/glsl-program.hpp>
 
 namespace BI = BlendInt;
 

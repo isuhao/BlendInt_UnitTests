@@ -1,7 +1,7 @@
 #include "TabTest1.hpp"
-#include <gui/tab.hpp>
-#include <gui/label.hpp>
-#include <gui/push-button.hpp>
+#include <blendint/gui/tab.hpp>
+#include <blendint/gui/label.hpp>
+#include <blendint/gui/push-button.hpp>
 
 using namespace BlendInt;
 

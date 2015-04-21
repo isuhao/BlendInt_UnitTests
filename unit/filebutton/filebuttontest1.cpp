@@ -1,6 +1,6 @@
 #include "FileButtonTest1.hpp"
-#include <gui/filebutton.hpp>
-#include <gui/dialog.hpp>
+#include <blendint/gui/filebutton.hpp>
+#include <blendint/gui/dialog.hpp>
 
 using namespace BlendInt;
 
