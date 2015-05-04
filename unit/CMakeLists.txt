@@ -13,6 +13,8 @@ add_subdirectory(theme)
 
 # gui test
 
+add_subdirectory(managedptr)
+
 add_subdirectory(window)
 
 add_subdirectory(stringlistmodel)
