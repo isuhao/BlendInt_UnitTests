@@ -28,10 +28,10 @@ TEST_F(ClockTest1, Foo1)
 
 		Window win(640, 480, "Clock Test");
 
-		Dialog* dialog = Manage(new Dialog("Clock Test"));
+		Dialog* dialog = new Dialog("Clock Test");
 		dialog->MoveTo(100, 100);
 
-		Clock* clock = Manage(new Clock);
+		Clock* clock = new Clock;
 		clock->Resize(200, 200);
 		clock->MoveTo(25, 25);
 		dialog->AddWidget(clock);

@@ -31,7 +31,7 @@ TEST_F(PerformanceTest1, Panel1)
 
     Window win(1280, 800, "Clock Test");
 
-    Dialog* dlg = Manage(new Dialog("Panel Performance Test 1"));
+    Dialog* dlg = new Dialog("Panel Performance Test 1");
     dlg->Resize(800, 720);
 
     int max_x = 20;
@@ -43,11 +43,11 @@ TEST_F(PerformanceTest1, Panel1)
     //int y_pos = 5;
     for (int i = 0; i < max_y; i++) {
 
-      LinearLayout* layout = Manage(new LinearLayout);
+      LinearLayout* layout = new LinearLayout;
       panel = new Panel(layout);
 
       for (int j = 0; j < max_x; j++) {
-        PushButton* btn = Manage(new PushButton);
+        PushButton* btn = new PushButton;
         //btn[j]->SetPreferredSize(25, btn[j]->size().height());
         layout->AddWidget(btn);
       }

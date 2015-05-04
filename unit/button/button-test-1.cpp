@@ -30,7 +30,7 @@ TEST_F(ButtonTest1, Foo1)
 		Dialog* dlg = new Dialog("ButtonTest1");
 		win.AddFrame(dlg);
 
-	    PushButton* bt1 = Manage(new PushButton(AbstractWindow::icons()->icon_16x16(0), "Hello World!"));
+	    PushButton* bt1 = new PushButton(AbstractWindow::icons()->icon_16x16(0), "Hello World!");
 	    DBG_SET_NAME(bt1, "Button1");
 	    bt1->MoveTo(200, 200);
 	    bt1->SetText(String("Button1"));
@@ -59,7 +59,7 @@ TEST_F(ButtonTest1, SetIcon1)
 		Dialog* dlg = new Dialog("ButtonTest1");
 		win.AddFrame(dlg);
 
-		PushButton* bt1 = Manage(new PushButton(AbstractWindow::icons()->icon_16x16(0), "Hello World!"));
+		PushButton* bt1 = new PushButton(AbstractWindow::icons()->icon_16x16(0), "Hello World!");
 		DBG_SET_NAME(bt1, "Button1");
 		//bt1->SetIcon(AbstractWindow::icons()->icon_16x16(0));
 		bt1->MoveTo(200, 200);
@@ -72,7 +72,7 @@ TEST_F(ButtonTest1, SetIcon1)
 
 		dlg->AddWidget(bt1);
 
-		PushButton* bt2 = Manage(new PushButton("Hello World!"));
+		PushButton* bt2 = new PushButton("Hello World!");
 		DBG_SET_NAME(bt2, "Button2");
 		//bt1->SetIcon(AbstractWindow::icons()->icon_16x16(0));
 		bt2->MoveTo(400, 200);
@@ -81,7 +81,7 @@ TEST_F(ButtonTest1, SetIcon1)
 
 		dlg->AddWidget(bt2);
 
-		PushButton* bt3 = Manage(new PushButton(AbstractWindow::icons()->icon_16x16(0), "Hello World!"));
+		PushButton* bt3 = new PushButton(AbstractWindow::icons()->icon_16x16(0), "Hello World!");
 		DBG_SET_NAME(bt3, "Button3");
 		bt3->MoveTo(200, 100);
 		bt3->Resize(120, 40);
@@ -89,7 +89,7 @@ TEST_F(ButtonTest1, SetIcon1)
 
 		dlg->AddWidget(bt3);
 
-		PushButton* bt4 = Manage(new PushButton(AbstractWindow::icons()->icon_16x16(0), "Hello World!"));
+		PushButton* bt4 = new PushButton(AbstractWindow::icons()->icon_16x16(0), "Hello World!");
 		DBG_SET_NAME(bt4, "Button4");
 		bt4->MoveTo(400, 100);
 		bt4->Resize(120, 40);
@@ -115,14 +115,14 @@ TEST_F(ButtonTest1, PreferSizing1)
 
 		Window win(640, 480, "UI Editor");
 
-		Dialog* frame = Manage(new Dialog("ButtonTest1"));
+		Dialog* frame = new Dialog("ButtonTest1");
 		frame->Resize(640, 480);
 
 		win.AddFrame(frame);
 
-		PushButton* bt1 = Manage(
+		PushButton* bt1 =
 		        new PushButton(AbstractWindow::icons()->icon_16x16(0),
-		                "Hello World!"));
+		                "Hello World!");
 		DBG_SET_NAME(bt1, "Button1");
 		//bt1->SetIcon(AbstractWindow::icons()->icon_16x16(0));
 		bt1->MoveTo(200, 200);
@@ -136,7 +136,7 @@ TEST_F(ButtonTest1, PreferSizing1)
 
 		frame->AddWidget(bt1);
 
-		PushButton* bt2 = Manage(new PushButton("Hello World!"));
+		PushButton* bt2 = new PushButton("Hello World!");
 		DBG_SET_NAME(bt2, "Button2");
 		//bt1->SetIcon(AbstractWindow::icons()->icon_16x16(0));
 		bt2->MoveTo(400, 200);
@@ -145,9 +145,9 @@ TEST_F(ButtonTest1, PreferSizing1)
 
 		frame->AddWidget(bt2);
 
-		PushButton* bt3 = Manage(
+		PushButton* bt3 =
 		        new PushButton(AbstractWindow::icons()->icon_16x16(0),
-		                "Hello World!"));
+		                "Hello World!");
 		DBG_SET_NAME(bt3, "Button3");
 		bt3->MoveTo(200, 100);
 		bt3->Resize(bt3->GetPreferredSize());
@@ -155,9 +155,9 @@ TEST_F(ButtonTest1, PreferSizing1)
 
 		frame->AddWidget(bt3);
 
-		PushButton* bt4 = Manage(
+		PushButton* bt4 =
 		        new PushButton(AbstractWindow::icons()->icon_16x16(0),
-		                "Hello World!"));
+		                "Hello World!");
 		DBG_SET_NAME(bt4, "Button4");
 		bt4->MoveTo(400, 100);
 		bt4->Resize(bt4->GetPreferredSize());
@@ -182,13 +182,13 @@ TEST_F(ButtonTest1, PreferSizing2) {
 
 		Window win(640, 480, "UI Editor");
 
-		Dialog* frame = Manage(new Dialog("ButtonTest1"));
+		Dialog* frame = new Dialog("ButtonTest1");
 		frame->Resize(640, 480);
 
 		win.AddFrame(frame);
 
-		PushButton* bt1 = Manage(
-		        new PushButton(AbstractWindow::icons()->icon_16x16(0), String()));
+		PushButton* bt1 =
+		        new PushButton(AbstractWindow::icons()->icon_16x16(0), String());
 		DBG_SET_NAME(bt1, "Button1");
 		//bt1->SetIcon(AbstractWindow::icons()->icon_16x16(0));
 		bt1->MoveTo(200, 200);
@@ -202,8 +202,8 @@ TEST_F(ButtonTest1, PreferSizing2) {
 
 		frame->AddWidget(bt1);
 
-		PushButton* bt2 = Manage(
-		        new PushButton(AbstractWindow::icons()->icon_16x16(0), String()));
+		PushButton* bt2 =
+		        new PushButton(AbstractWindow::icons()->icon_16x16(0), String());
 		DBG_SET_NAME(bt2, "Button2");
 		bt2->MoveTo(300, 200);
 		bt2->SetRoundType(RoundNone);

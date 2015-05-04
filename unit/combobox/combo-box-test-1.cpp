@@ -29,7 +29,7 @@ TEST_F(ComboBoxTest1, Foo1)
 
     Window win(640, 480, "ComboBox Test1");
 
-    Frame* frame = Manage(new Frame(new LinearLayout(Vertical)));
+    Frame* frame = new Frame(new LinearLayout(Vertical));
 
     ComboBox* combo = new ComboBox;
 

@@ -29,15 +29,15 @@ TEST_F(SplitterTest1, AddWidget1)
 
     Window win(1280, 800, "Splitter Test1");
 
-    Dialog* dialog1 = Manage(new Dialog("Vertical Splitter AddWidget() Test"));
+    Dialog* dialog1 = new Dialog("Vertical Splitter AddWidget() Test");
 
-    Splitter* splitter1 = Manage(new Splitter(Vertical));
+    Splitter* splitter1 = new Splitter(Vertical);
     DBG_SET_NAME(splitter1, "Splitter 1");
     splitter1->Resize(450, 200);
 
-    PushButton* btn1 = Manage(new PushButton("Button1"));
-    PushButton* btn2 = Manage(new PushButton("Button2"));
-    PushButton* btn3 = Manage(new PushButton("Button3"));
+    PushButton* btn1 = new PushButton("Button1");
+    PushButton* btn2 = new PushButton("Button2");
+    PushButton* btn3 = new PushButton("Button3");
 
     splitter1->AddWidget(btn1);
     splitter1->AddWidget(btn2);
@@ -47,15 +47,15 @@ TEST_F(SplitterTest1, AddWidget1)
 
     win.AddFrame(dialog1);
 
-    Dialog* dialog2 = Manage(new Dialog("Horizontal Splitter Test"));
+    Dialog* dialog2 = new Dialog("Horizontal Splitter Test");
 
-    Splitter* splitter2 = Manage(new Splitter(Horizontal));
+    Splitter* splitter2 = new Splitter(Horizontal);
     DBG_SET_NAME(splitter2, "Splitter 2");
     splitter2->Resize(450, 200);
 
-    PushButton* btn4 = Manage(new PushButton("Button4"));
-    PushButton* btn5 = Manage(new PushButton("Button5"));
-    PushButton* btn6 = Manage(new PushButton("Button6"));
+    PushButton* btn4 = new PushButton("Button4");
+    PushButton* btn5 = new PushButton("Button5");
+    PushButton* btn6 = new PushButton("Button6");
 
     splitter2->AddWidget(btn4);
     splitter2->AddWidget(btn5);
@@ -87,15 +87,15 @@ TEST_F(SplitterTest1, InsertWidget1)
 
     Window win(1280, 800, "Splitter Test1");
 
-    Dialog* dialog1 = Manage(new Dialog("Vertical Splitter InsertWidget() Test"));
+    Dialog* dialog1 = new Dialog("Vertical Splitter InsertWidget() Test");
 
-    Splitter* splitter1 = Manage(new Splitter(Vertical));
+    Splitter* splitter1 = new Splitter(Vertical);
     DBG_SET_NAME(splitter1, "Splitter 1");
     splitter1->Resize(450, 200);
 
-    PushButton* btn1 = Manage(new PushButton("Button1"));
-    PushButton* btn2 = Manage(new PushButton("Button2"));
-    PushButton* btn3 = Manage(new PushButton("Button3"));
+    PushButton* btn1 = new PushButton("Button1");
+    PushButton* btn2 = new PushButton("Button2");
+    PushButton* btn3 = new PushButton("Button3");
 
     splitter1->AddWidget(btn1);
     splitter1->AddWidget(btn2);
@@ -105,15 +105,15 @@ TEST_F(SplitterTest1, InsertWidget1)
 
     win.AddFrame(dialog1);
 
-    Dialog* dialog2 = Manage(new Dialog("Horizontal Splitter Test"));
+    Dialog* dialog2 = new Dialog("Horizontal Splitter Test");
 
-    Splitter* splitter2 = Manage(new Splitter(Horizontal));
+    Splitter* splitter2 = new Splitter(Horizontal);
     DBG_SET_NAME(splitter2, "Splitter 2");
     splitter2->Resize(450, 200);
 
-    PushButton* btn4 = Manage(new PushButton("Button4"));
-    PushButton* btn5 = Manage(new PushButton("Button5"));
-    PushButton* btn6 = Manage(new PushButton("Button6"));
+    PushButton* btn4 = new PushButton("Button4");
+    PushButton* btn5 = new PushButton("Button5");
+    PushButton* btn6 = new PushButton("Button6");
 
     splitter2->AddWidget(btn4);
     splitter2->AddWidget(btn5);

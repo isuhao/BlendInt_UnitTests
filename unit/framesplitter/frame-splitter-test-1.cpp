@@ -147,14 +147,14 @@ TEST_F(FrameSplitterTest1, InsertFrame1)
 
     Window win(1280, 800, "InsertFrame1");
 
-    FrameSplitter* fs = Manage(new FrameSplitter(Horizontal));
+    FrameSplitter* fs = new FrameSplitter(Horizontal);
     DBG_SET_NAME(fs, "FrameSplitter");
     fs->MoveTo(20, 20);
     fs->Resize(1240, 760);
 
-    ModelViewport* f1 = Manage(new ModelViewport);
+    ModelViewport* f1 = new ModelViewport;
     DBG_SET_NAME(f1, "Frame1");
-    ModelViewport* f2 = Manage(new ModelViewport);
+    ModelViewport* f2 = new ModelViewport;
     DBG_SET_NAME(f2, "Frame2");
     f2->Resize(240, 100);
 

@@ -28,7 +28,7 @@ TEST_F(SliderTest1, Foo1)
 
     Window win(640, 480, "Slider Test 1");
 
-    Dialog* dialog = Manage(new Dialog("Slider Test 1"));
+    Dialog* dialog = new Dialog("Slider Test 1");
 
     Slider* sl = new Slider;
     dialog->AddWidget(sl);
