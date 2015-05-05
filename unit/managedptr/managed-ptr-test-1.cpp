@@ -45,7 +45,7 @@ TEST_F(ManagedPtrTest1, reference_count)
     win.AddFrame(dlg3);
 
     // use managedptr:
-    for(ManagedPtr p(win.GetFirstSubView()); p; p = win.GetNextSubView(p.get()))
+    for(ManagedPtr p = win.GetFirstSubView(); p; ++p)
     {
       DBG_PRINT_MSG("reference count: %d", p->reference_count());
     }
@@ -53,6 +53,11 @@ TEST_F(ManagedPtrTest1, reference_count)
     for(AbstractView* p = win.GetFirstSubView(); p; p = win.GetNextSubView(p))
     {
       DBG_PRINT_MSG("reference count: %d", p->reference_count());
+    }
+
+    for(ManagedPtr p = win.GetLastSubView(); p; --p)
+    {
+      DBG_PRINT_MSG("reference_count: %d", p->reference_count());
     }
     
     win.Exec();
