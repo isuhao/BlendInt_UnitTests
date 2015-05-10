@@ -2,6 +2,7 @@
 #include <blendint/gui/frame.hpp>
 #include <blendint/gui/linear-layout.hpp>
 #include <blendint/gui/window.hpp>
+#include <blendint/gui/push-button.hpp>
 
 #include "combo-box-test-1.hpp"
 
@@ -29,10 +30,11 @@ TEST_F(ComboBoxTest1, Foo1)
 
     Window win(640, 480, "ComboBox Test1");
 
-    Frame* frame = new Frame(new LinearLayout(Vertical));
+    Frame* frame1 = new Frame(new LinearLayout(Vertical));
 
-    ComboBox* combo = new ComboBox;
+    ComboBox* combo1 = new ComboBox;
 
+    /*
     {
       RefPtr<ComboListModel> model(new ComboListModel);
       ModelIndex root = model->GetRootIndex();
@@ -64,11 +66,18 @@ TEST_F(ComboBoxTest1, Foo1)
       combo->SetModel(model);
       combo->SetCurrentIndex(2);
     }
+    */
 
-    frame->AddWidget(combo);
+    frame1->AddWidget(combo1);
+    frame1->MoveTo(20, 20);
+    win.AddFrame(frame1);
 
-    win.AddFrame(frame);
-
+    Frame* frame2 = new Frame(new LinearLayout(Vertical));
+    PushButton* btn = new PushButton("PushButton");
+    frame2->AddWidget(btn);
+    frame2->MoveTo(320, 40);
+    win.AddFrame(frame2);
+    
     win.Exec();
     Window::Terminate();
   }
