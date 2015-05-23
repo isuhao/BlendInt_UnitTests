@@ -24,7 +24,7 @@ TEST_F(ThemeTest1, Save1)
   if(Window::Initialize()) {
     Window win(640, 480, "Theme Save Test");
 
-    win.theme()->Save("test.xml");
+    theme()->Save("test.xml");
 
     win.Exec();
     Window::Terminate();
@@ -43,7 +43,7 @@ TEST_F(ThemeTest1, Load1)
   if(Window::Initialize()) {
     Window win(640, 480, "Theme Load Test");
 
-    win.theme()->Load("test.xml");
+    theme()->Load("test.xml");
 
     win.Exec();
     Window::Terminate();

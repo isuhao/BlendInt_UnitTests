@@ -47,19 +47,19 @@ TEST_F(ComboBoxTest1, Foo1)
       ModelIndex next;
 
       model->SetIcon(index,
-                     AbstractWindow::icons()->icon_16x16(Icons::IMAGE_RGB));
+                     icons()->icon_16x16(Icons::IMAGE_RGB));
       next = index.GetRightIndex();
       model->SetText(next, RefPtr<Text>(new Text("Combo List Row 0")));
 
       index = index.GetDownIndex();
       model->SetIcon(
-          index, AbstractWindow::icons()->icon_16x16(Icons::IMAGE_RGB_ALPHA));
+          index, icons()->icon_16x16(Icons::IMAGE_RGB_ALPHA));
       next = index.GetRightIndex();
       model->SetText(next, RefPtr<Text>(new Text("Combo List Row 1")));
 
       index = index.GetDownIndex();
       model->SetIcon(index,
-                     AbstractWindow::icons()->icon_16x16(Icons::IMAGE_DATA));
+                     icons()->icon_16x16(Icons::IMAGE_DATA));
       next = index.GetRightIndex();
       model->SetText(next, RefPtr<Text>(new Text("Combo List Row 2")));
 
