@@ -30,6 +30,7 @@ add_subdirectory(framesplitter)
 
 add_subdirectory(slider)
 
+add_subdirectory(label)
 add_subdirectory(combobox)
 add_subdirectory(splitter)
 
@@ -84,7 +85,7 @@ add_subdirectory(clock)
 #add_subdirectory(AbstractForm)
 #add_subdirectory(ImageView)
 #add_subdirectory(TextureFont)
-#add_subdirectory(Label)
+
 #add_subdirectory(MenuBar)
 #add_subdirectory(ScrollView)
 #add_subdirectory(ScrollBar)
