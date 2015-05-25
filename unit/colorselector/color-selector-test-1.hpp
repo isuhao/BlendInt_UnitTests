@@ -2,24 +2,23 @@
 #define _COLORSELECTORTEST1_HPP_
 
 #include <gtest/gtest.h>
-#include <Common/Window.hpp>
 
 class ColorSelectorTest1: public testing::Test
 {
-public:
-	ColorSelectorTest1 ();
-	virtual ~ColorSelectorTest1 ();
+ public:
+  ColorSelectorTest1 ();
+  virtual ~ColorSelectorTest1 ();
 
-protected:
+ protected:
 
-	virtual void SetUp ()
-	{
-	}
+  virtual void SetUp ()
+  {
+  }
 
-	virtual void TearDown ()
-	{
+  virtual void TearDown ()
+  {
 
-	}
+  }
 };
 
 #endif  // _COLORSELECTORTEST1_HPP_
