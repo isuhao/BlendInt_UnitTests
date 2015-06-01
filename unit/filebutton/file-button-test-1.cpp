@@ -1,17 +1,17 @@
-#include "dialog-test-1.hpp"
-
+#include "file-button-test-1.hpp"
+#include <blendint/gui/filebutton.hpp>
 #include <blendint/gui/dialog.hpp>
 #include <blendint/gui/window.hpp>
 
 using namespace BlendInt;
 
-DialogTest1::DialogTest1 ()
+FileButtonTest1::FileButtonTest1()
     : testing::Test()
 {
   // TODO: add constructor code
 }
 
-DialogTest1::~DialogTest1 ()
+FileButtonTest1::~FileButtonTest1()
 {
   // TODO: add destructor code
 }
@@ -21,15 +21,13 @@ DialogTest1::~DialogTest1 ()
  *
  * Expected result: 
  */
-TEST_F(DialogTest1, Foo1)
+TEST_F(FileButtonTest1, Foo1)
 {
   if (Window::Initialize()) {
 
-    Window win(640, 480, "DialogTest1");
+    Window win(640, 480, "FileButton Test1");
 
-    Dialog* dlg = new Dialog(
-        "Test Dialog with title and buttons", 0,
-        Dialog::DialogButtonOK | Dialog::DialogButtonApply);
+    Dialog* dlg = new Dialog("Test Dialog with title and buttons");
 
     dlg->Resize(dlg->GetPreferredSize());
     dlg->MoveTo((win.size().width() - dlg->size().width()) / 2,
@@ -37,12 +35,9 @@ TEST_F(DialogTest1, Foo1)
 
     win.AddFrame(dlg);
 
-    Dialog* dlg2 = new Dialog(
-        "Test Dialog2 with title and buttons", 0,
-        Dialog::DialogButtonOK | Dialog::DialogButtonApply);
-
-    dlg2->Resize(dlg2->GetPreferredSize());
-    win.AddFrame(dlg2);
+    FileButton* btn = new FileButton;
+    btn->MoveTo(100, 100);
+    dlg->AddWidget(btn);
     
     win.Exec();
     Window::Terminate();

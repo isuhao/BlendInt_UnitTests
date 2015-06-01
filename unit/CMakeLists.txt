@@ -25,6 +25,7 @@ add_subdirectory(frame)
 add_subdirectory(dialog)
 add_subdirectory(bezier)
 add_subdirectory(button)
+add_subdirectory(filebutton)
 add_subdirectory(toolbutton)
 add_subdirectory(framesplitter)
 

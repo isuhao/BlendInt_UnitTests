@@ -5,21 +5,21 @@
 
 class WindowTest1: public testing::Test
 {
-public:
-	WindowTest1 ();
-	virtual ~WindowTest1 ();
+ public:
+  WindowTest1 ();
+  virtual ~WindowTest1 ();
 
-protected:
+ protected:
 
-	virtual void SetUp ()
-	{
+  virtual void SetUp ()
+  {
 
-	}
+  }
 
-	virtual void TearDown ()
-	{
+  virtual void TearDown ()
+  {
 
-	}
+  }
 };
 
 #endif  // _WINDOWTEST1_HPP_

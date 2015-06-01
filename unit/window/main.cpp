@@ -3,7 +3,6 @@
  */
 
 #include <gtest/gtest.h>
-#include <blendint/gui/window.hpp>
 
 int main (int argc, char* argv[])
 {
