@@ -6,14 +6,14 @@
 using namespace BlendInt;
 
 ButtonTest1::ButtonTest1()
-: testing::Test()
+    : testing::Test()
 {
-	// TODO: add constructor code
+  // TODO: add constructor code
 }
 
 ButtonTest1::~ButtonTest1()
 {
-	// TODO: add destructor code
+  // TODO: add destructor code
 }
 
 /**
@@ -23,26 +23,26 @@ ButtonTest1::~ButtonTest1()
  */
 TEST_F(ButtonTest1, Foo1)
 {
-	if(Window::Initialize()) {
+  if(Window::Initialize()) {
 
-		Window win(640, 480, "ButtonTest1");
+    Window win(640, 480, "ButtonTest1");
 
-		Dialog* dlg = new Dialog("ButtonTest1");
-		win.AddFrame(dlg);
+    Dialog* dlg = new Dialog("ButtonTest1");
+    win.AddFrame(dlg);
 
-	    PushButton* bt1 = new PushButton(icons()->icon_16x16(0), "Hello World!");
-	    DBG_SET_NAME(bt1, "Button1");
-	    bt1->MoveTo(200, 200);
-	    bt1->SetText(String("Button1"));
-	    bt1->Resize(bt1->GetPreferredSize());
+    PushButton* bt1 = new PushButton(icons()->pixel_icon(0), "Hello World!");
+    DBG_SET_NAME(bt1, "Button1");
+    bt1->MoveTo(200, 200);
+    bt1->SetText(String("Button1"));
+    bt1->Resize(bt1->GetPreferredSize());
 
-	    dlg->AddWidget(bt1);
+    dlg->AddWidget(bt1);
 
-		win.Exec();
-		Window::Terminate();
-	}
+    win.Exec();
+    Window::Terminate();
+  }
 
-	ASSERT_TRUE(true);
+  ASSERT_TRUE(true);
 }
 
 /**
@@ -52,56 +52,56 @@ TEST_F(ButtonTest1, Foo1)
  */
 TEST_F(ButtonTest1, SetIcon1)
 {
-	if(Window::Initialize()) {
+  if(Window::Initialize()) {
 
-		Window win(640, 480, "ButtonTest1");
+    Window win(640, 480, "ButtonTest1");
 
-		Dialog* dlg = new Dialog("ButtonTest1");
-		win.AddFrame(dlg);
+    Dialog* dlg = new Dialog("ButtonTest1");
+    win.AddFrame(dlg);
 
-		PushButton* bt1 = new PushButton(icons()->icon_16x16(0), "Hello World!");
-		DBG_SET_NAME(bt1, "Button1");
-		//bt1->SetIcon(icons()->icon_16x16(0));
-		bt1->MoveTo(200, 200);
+    PushButton* bt1 = new PushButton(icons()->pixel_icon(0), "Hello World!");
+    DBG_SET_NAME(bt1, "Button1");
+    //bt1->SetIcon(icons()->pixel_icon(0));
+    bt1->MoveTo(200, 200);
 
-		Size prefer = bt1->GetPreferredSize();
+    Size prefer = bt1->GetPreferredSize();
 
-		DBG_PRINT_MSG("Preferred size: %d, %d", prefer.width(), prefer.height());
+    DBG_PRINT_MSG("Preferred size: %d, %d", prefer.width(), prefer.height());
 
-		bt1->Resize(120, 40);
+    bt1->Resize(120, 40);
 
-		dlg->AddWidget(bt1);
+    dlg->AddWidget(bt1);
 
-		PushButton* bt2 = new PushButton("Hello World!");
-		DBG_SET_NAME(bt2, "Button2");
-		//bt1->SetIcon(icons()->icon_16x16(0));
-		bt2->MoveTo(400, 200);
+    PushButton* bt2 = new PushButton("Hello World!");
+    DBG_SET_NAME(bt2, "Button2");
+    //bt1->SetIcon(icons()->pixel_icon(0));
+    bt2->MoveTo(400, 200);
 
-		bt2->Resize(120, 40);
+    bt2->Resize(120, 40);
 
-		dlg->AddWidget(bt2);
+    dlg->AddWidget(bt2);
 
-		PushButton* bt3 = new PushButton(icons()->icon_16x16(0), "Hello World!");
-		DBG_SET_NAME(bt3, "Button3");
-		bt3->MoveTo(200, 100);
-		bt3->Resize(120, 40);
-		bt3->SetRoundType(RoundNone);
+    PushButton* bt3 = new PushButton(icons()->pixel_icon(0), "Hello World!");
+    DBG_SET_NAME(bt3, "Button3");
+    bt3->MoveTo(200, 100);
+    bt3->Resize(120, 40);
+    bt3->SetRoundType(RoundNone);
 
-		dlg->AddWidget(bt3);
+    dlg->AddWidget(bt3);
 
-		PushButton* bt4 = new PushButton(icons()->icon_16x16(0), "Hello World!");
-		DBG_SET_NAME(bt4, "Button4");
-		bt4->MoveTo(400, 100);
-		bt4->Resize(120, 40);
-		bt4->SetRoundRadius(10.f);
+    PushButton* bt4 = new PushButton(icons()->pixel_icon(0), "Hello World!");
+    DBG_SET_NAME(bt4, "Button4");
+    bt4->MoveTo(400, 100);
+    bt4->Resize(120, 40);
+    bt4->SetRoundRadius(10.f);
 
-		dlg->AddWidget(bt4);
+    dlg->AddWidget(bt4);
 
-		win.Exec();
-		Window::Terminate();
-	}
+    win.Exec();
+    Window::Terminate();
+  }
 
-	ASSERT_TRUE(true);
+  ASSERT_TRUE(true);
 }
 
 /**
@@ -111,65 +111,65 @@ TEST_F(ButtonTest1, SetIcon1)
  */
 TEST_F(ButtonTest1, PreferSizing1)
 {
-	if (Window::Initialize()) {
+  if (Window::Initialize()) {
 
-		Window win(640, 480, "UI Editor");
+    Window win(640, 480, "UI Editor");
 
-		Dialog* frame = new Dialog("ButtonTest1");
-		frame->Resize(640, 480);
+    Dialog* frame = new Dialog("ButtonTest1");
+    frame->Resize(640, 480);
 
-		win.AddFrame(frame);
+    win.AddFrame(frame);
 
-		PushButton* bt1 =
-		        new PushButton(icons()->icon_16x16(0),
-		                "Hello World!");
-		DBG_SET_NAME(bt1, "Button1");
-		//bt1->SetIcon(icons()->icon_16x16(0));
-		bt1->MoveTo(200, 200);
+    PushButton* bt1 =
+        new PushButton(icons()->pixel_icon(0),
+                       "Hello World!");
+    DBG_SET_NAME(bt1, "Button1");
+    //bt1->SetIcon(icons()->pixel_icon(0));
+    bt1->MoveTo(200, 200);
 
-		Size prefer = bt1->GetPreferredSize();
+    Size prefer = bt1->GetPreferredSize();
 
-		DBG_PRINT_MSG("Preferred size: %d, %d", prefer.width(),
-		        prefer.height());
+    DBG_PRINT_MSG("Preferred size: %d, %d", prefer.width(),
+                  prefer.height());
 
-		bt1->Resize(bt1->GetPreferredSize());
+    bt1->Resize(bt1->GetPreferredSize());
 
-		frame->AddWidget(bt1);
+    frame->AddWidget(bt1);
 
-		PushButton* bt2 = new PushButton("Hello World!");
-		DBG_SET_NAME(bt2, "Button2");
-		//bt1->SetIcon(icons()->icon_16x16(0));
-		bt2->MoveTo(400, 200);
+    PushButton* bt2 = new PushButton("Hello World!");
+    DBG_SET_NAME(bt2, "Button2");
+    //bt1->SetIcon(icons()->pixel_icon(0));
+    bt2->MoveTo(400, 200);
 
-		bt2->Resize(bt2->GetPreferredSize());
+    bt2->Resize(bt2->GetPreferredSize());
 
-		frame->AddWidget(bt2);
+    frame->AddWidget(bt2);
 
-		PushButton* bt3 =
-		        new PushButton(icons()->icon_16x16(0),
-		                "Hello World!");
-		DBG_SET_NAME(bt3, "Button3");
-		bt3->MoveTo(200, 100);
-		bt3->Resize(bt3->GetPreferredSize());
-		bt3->SetRoundType(RoundNone);
+    PushButton* bt3 =
+        new PushButton(icons()->pixel_icon(0),
+                       "Hello World!");
+    DBG_SET_NAME(bt3, "Button3");
+    bt3->MoveTo(200, 100);
+    bt3->Resize(bt3->GetPreferredSize());
+    bt3->SetRoundType(RoundNone);
 
-		frame->AddWidget(bt3);
+    frame->AddWidget(bt3);
 
-		PushButton* bt4 =
-		        new PushButton(icons()->icon_16x16(0),
-		                "Hello World!");
-		DBG_SET_NAME(bt4, "Button4");
-		bt4->MoveTo(400, 100);
-		bt4->Resize(bt4->GetPreferredSize());
-		bt4->SetRoundRadius(10.f);
+    PushButton* bt4 =
+        new PushButton(icons()->pixel_icon(0),
+                       "Hello World!");
+    DBG_SET_NAME(bt4, "Button4");
+    bt4->MoveTo(400, 100);
+    bt4->Resize(bt4->GetPreferredSize());
+    bt4->SetRoundRadius(10.f);
 
-		frame->AddWidget(bt4);
+    frame->AddWidget(bt4);
 
-		win.Exec();
-		Window::Terminate();
-	}
+    win.Exec();
+    Window::Terminate();
+  }
 
-	ASSERT_TRUE(true);
+  ASSERT_TRUE(true);
 }
 
 /**
@@ -178,49 +178,49 @@ TEST_F(ButtonTest1, PreferSizing1)
  * Expected result:
  */
 TEST_F(ButtonTest1, PreferSizing2) {
-	if (Window::Initialize()) {
+  if (Window::Initialize()) {
 
-		Window win(640, 480, "UI Editor");
+    Window win(640, 480, "UI Editor");
 
-		Dialog* frame = new Dialog("ButtonTest1");
-		frame->Resize(640, 480);
+    Dialog* frame = new Dialog("ButtonTest1");
+    frame->Resize(640, 480);
 
-		win.AddFrame(frame);
+    win.AddFrame(frame);
 
-		PushButton* bt1 =
-		        new PushButton(icons()->icon_16x16(0), String());
-		DBG_SET_NAME(bt1, "Button1");
-		//bt1->SetIcon(icons()->icon_16x16(0));
-		bt1->MoveTo(200, 200);
+    PushButton* bt1 =
+        new PushButton(icons()->pixel_icon(0), String());
+    DBG_SET_NAME(bt1, "Button1");
+    //bt1->SetIcon(icons()->pixel_icon(0));
+    bt1->MoveTo(200, 200);
 
-		Size prefer = bt1->GetPreferredSize();
+    Size prefer = bt1->GetPreferredSize();
 
-		DBG_PRINT_MSG("Preferred size: %d, %d", prefer.width(),
-		        prefer.height());
+    DBG_PRINT_MSG("Preferred size: %d, %d", prefer.width(),
+                  prefer.height());
 
-		bt1->Resize(bt1->GetPreferredSize());
+    bt1->Resize(bt1->GetPreferredSize());
 
-		frame->AddWidget(bt1);
+    frame->AddWidget(bt1);
 
-		PushButton* bt2 =
-		        new PushButton(icons()->icon_16x16(0), String());
-		DBG_SET_NAME(bt2, "Button2");
-		bt2->MoveTo(300, 200);
-		bt2->SetRoundType(RoundNone);
+    PushButton* bt2 =
+        new PushButton(icons()->pixel_icon(0), String());
+    DBG_SET_NAME(bt2, "Button2");
+    bt2->MoveTo(300, 200);
+    bt2->SetRoundType(RoundNone);
 
-		Size prefer2 = bt2->GetPreferredSize();
+    Size prefer2 = bt2->GetPreferredSize();
 
-		DBG_PRINT_MSG("Preferred size: %d, %d", prefer2.width(),
-		        prefer2.height());
+    DBG_PRINT_MSG("Preferred size: %d, %d", prefer2.width(),
+                  prefer2.height());
 
-		bt2->Resize(bt2->GetPreferredSize());
+    bt2->Resize(bt2->GetPreferredSize());
 
-		frame->AddWidget(bt2);
+    frame->AddWidget(bt2);
 
-		win.Exec();
-		Window::Terminate();
-	}
+    win.Exec();
+    Window::Terminate();
+  }
 
-	ASSERT_TRUE(true);
+  ASSERT_TRUE(true);
 }
 

@@ -34,7 +34,7 @@ TEST_F(ToolButtonTest1, Foo1)
     ToolButton * btn = new ToolButton();
     {
       RefPtr<Action> action(
-          new Action(icons()->icon_32x32(Icons::IMAGE_RGB_ALPHA),
+          new Action(icons()->pixel_icon(Icons::IMAGE_RGB_ALPHA),
                      "ToolButton Example"));
       btn->SetAction(action);
     }
