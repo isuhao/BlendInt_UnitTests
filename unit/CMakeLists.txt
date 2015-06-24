@@ -27,9 +27,12 @@ add_subdirectory(bezier)
 add_subdirectory(button)
 add_subdirectory(filebutton)
 add_subdirectory(toolbutton)
+add_subdirectory(tabbutton)
+
 add_subdirectory(framesplitter)
 
 add_subdirectory(slider)
+add_subdirectory(tab)
 
 add_subdirectory(label)
 add_subdirectory(combobox)
@@ -95,8 +98,7 @@ add_subdirectory(clock)
 #add_subdirectory(ScrollBar)
 #add_subdirectory(Image)
 #add_subdirectory(ScrollArea)
-#add_subdirectory(Tab)
-#add_subdirectory(TabButton)
+
 #add_subdirectory(ButtonGroup)
 
 #add_subdirectory(Expander)
